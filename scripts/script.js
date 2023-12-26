@@ -1,6 +1,5 @@
 const wiek = document.getElementById("wiek");
 
-console.log(wiek);
 
 wiek.addEventListener(
     "focusout",
@@ -22,11 +21,16 @@ imie.addEventListener(
 
 const button = document.getElementById("submit");
 
+const wzrost = document.getElementById("wzrost");
+
+const waga = document.getElementById("waga");
+
+const bmi = Number(waga) / (Number(wzrost) * Number(wzrost));
+
 button.addEventListener(
     "click",
     function(item){
         item.preventDefault();
-        console.log(wiek.value, imie.value)
-        alert(`${wiek.value} ${imie.value}`);
+        alert(bmi);
     }
 )
