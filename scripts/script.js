@@ -25,17 +25,14 @@ button.addEventListener(
     "click",
     function(item){
         item.preventDefault();
-        const wiek = document.getElementById("wiek").value;
         const wzrost = document.getElementById("wzrost").value;
         const mWzrost = Number(wzrost) / 100;
         const waga = document.getElementById("waga").value;
         const bmi = Number(waga) / (Number(mWzrost) * Number(mWzrost));
 
-        console.log('WZ:',wzrost, 'mWZ:',mWzrost,'Wag', waga,'BMI', bmi);
-
         const result = getResult(bmi)
         console.log(result);
-        showResult(result, wiek, wzrost, waga);
+        showResult(result, wzrost, waga);
     }
 )
 
@@ -64,10 +61,10 @@ function getResult (bmi){
 
 }
 
-function showResult (result, wiek) {
+function showResult (result) {
 
     console.log("Wynik", result);
     const score = document.getElementById("wynik");
-    score.innerText = ("Wynik: " + result + " Wiek: " + wiek);
+    score.innerText = ("Wynik: " + result);
     document.getElementById("wynik").classList.add("show-wynik")
 }
