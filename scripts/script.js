@@ -21,7 +21,6 @@ imie.addEventListener(
 const button = document.getElementById("submit");
 
 
-
 button.addEventListener(
     "click",
     function(item){
@@ -34,35 +33,41 @@ button.addEventListener(
 
         console.log('WZ:',wzrost, 'mWZ:',mWzrost,'Wag', waga,'BMI', bmi);
 
-        switch(bmi) {
-            case(Number(bmi) < 16):
-                console.log("You are only bonse")
-                break;
-            case(Number(bmi) >= 16)&&(Number(bmi) < 17):
-                console.log("You are slim")
-                break;
-            case(Number(bmi) >= 17)&&(Number(bmi) < 18.5):
-                console.log("You are skiny")
-                break;
-            case((Number(bmi) >= 18.5)&&(Number(bmi) < 24.9)):
-                console.log("You are ok");
-                break;
-            case((Number(bmi) >= 24.9)&&(Number(bmi) < 29.9)):
-                console.log("You are fluffy");
-                break;
-            case((Number(bmi) >= 29.8)&&(Number(bmi) < 34.9)):
-                console.log("You are big")
-                break;
-            case((Number(bmi) >= 34.9)&&(Number(bmi) < 39.9)):
-                console.log("You are MONSTER")
-                break;
-            case(Number(bmi) >= 39.9):
-                console.log("You are GORLOCK THE DESTROYER OF WORLDS!!!")
-                break;
-        
-
-        }
-        
-        
+        const result = getResult(bmi)
+        console.log(result);
+        showResult(result, wiek, wzrost, waga);
     }
 )
+
+function getResult (bmi){
+
+    switch(bmi > 0) {
+        case(Number(bmi) < 16):
+            return" You are only bones";
+        case(Number(bmi) >= 16)&&(Number(bmi) < 17):
+            return "You are slim";
+        case(Number(bmi) >= 17)&&(Number(bmi) < 18.5):
+            return"You are skinny";
+        case((Number(bmi) >= 18.5)&&(Number(bmi) < 24.9)):
+            return"You are OK";
+        case((Number(bmi) >= 24.9)&&(Number(bmi) < 29.9)):
+            return"You are fluffy";
+        case((Number(bmi) >= 29.8)&&(Number(bmi) < 34.9)):
+            return"You are BIG";
+        case((Number(bmi) >= 34.9)&&(Number(bmi) < 39.9)):
+            return"You are MONSTER";
+        case(Number(bmi) >= 39.9):
+            return"You are GORLOCK THE DESTROYER OF WORLDS";
+        default:
+            return"DEFAULT";
+    }
+
+}
+
+function showResult (result, wiek) {
+
+    console.log("Wynik", result);
+    const score = document.getElementById("wynik");
+    score.innerText = ("Wynik: " + result + " Wiek: " + wiek);
+    document.getElementById("wynik").classList.add("show-wynik")
+}
