@@ -24,19 +24,6 @@ body
     margin:5vh 0;
     box-shadow: 12px 12px 2px 1px rgba(47, 47, 80, 0.2);   
 }
-.wynik
-{
-    background-color: beige;
-    padding:12px;
-    border-radius:14px;
-    box-shadow: 12px 12px 2px 1px rgba(39, 39, 74, 0.2);   
-    width:200px;
-    opacity:0;
-}
-.pokaz-wynik
-{
-    opacity:1;
-}
 input
 {
     width:100%;
@@ -64,4 +51,17 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.wynik
+{
+    background-color: beige;
+    padding:12px;
+    border-radius:14px;
+    box-shadow: 12px 12px 2px 1px rgba(39, 39, 74, 0.2);   
+    width:200px;
+    opacity:0;
+}
+.show-wynik
+{
+    opacity:1;
 }
