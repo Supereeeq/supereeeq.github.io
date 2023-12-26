@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../style/style1.css">
+    <title>Bmi- calculator</title>
+    
 </head>
 <body>
-    <p>Nie wyswietlaj tego pls</p>
-    
+    <header>
+        <a href="../index.html" class="homepage">
+            <img src="../images/logo.png" class="logo">
+        </a>
+    </header>
+    <div id="container" class="container">
+        <div id="formularz">
+            <form method="POST">
+                <label for="wiek">Podaj Wiek</label><br>
+                <input type="number" name="wiek" id="wiek"/><br><br>
+
+                <label for="imie">Podaj Imię</label><br>
+                <input type="text" name="imie" id="imie" ><br><br>
+
+                <label for="wzrost">Podaj Wzrost (cm)</label><br>
+                <input type="number" name="wzrost" id="wzrost" /><br><br>
+
+                <label for="waga">Podaj Wagę</label><br>
+                <input type="number" name="waga" id="waga" /><br><br>
+
+                <button id="submit" type="submit" class="submit">Wyślij</button>
+            </form>
+        </div>
+    </div>
+    <div id="wynik" class="wynik">
+    </div>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

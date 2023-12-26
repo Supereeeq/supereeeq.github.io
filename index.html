@@ -1,34 +1,55 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
-    <title>Document</title>
-    
+    <title>Health&Life</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ol>
+                <li>
+                    <img src="./images/menu.png" class="menu">
+                    <ul>
+                        <li>
+                            <a href="./podstrona/index.html" id="position1" class="position">
+                                Kalkulator BMI
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="position2" class="position">
+                                Pozycja 2
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="position3" class="position">
+                                Pozycja 3
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="position4" class="position">
+                                Pozycja 4
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ol>
+        </nav>
+        <a href="#" class="homepage">
+            <img src="./images/logo.png" class="logo">
+        </a>
+    </header>
     <div id="container" class="container">
-        <div id="formularz">
-            <form method="POST">
-                <label for="wiek">Podaj Wiek</label><br>
-                <input type="number" name="wiek" id="wiek"/><br><br>
+        
 
-                <label for="imie">Podaj Imię</label><br>
-                <input type="text" name="imie" id="imie" ><br><br>
-
-                <label for="wzrost">Podaj Wzrost (cm)</label><br>
-                <input type="number" name="wzrost" id="wzrost" /><br><br>
-
-                <label for="waga">Podaj Wagę</label><br>
-                <input type="number" name="waga" id="waga" /><br><br>
-
-                <button id="submit" type="submit" class="submit">Wyślij</button>
-            </form>
-        </div>
     </div>
-    <div id="wynik" class="wynik">
-    </div>
-    <script src="./scripts/script.js"></script>
+    
 </body>
 </html>
