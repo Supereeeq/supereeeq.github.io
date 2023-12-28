@@ -73,13 +73,3 @@ function showResult(answer) {
     score.innerText = ("Twoje dzienne\n zapotrzebowanie kalorii to\nokoło " + Math.round(answer) + " cal");
     document.getElementById("not_result").classList.add("yes_result");
 }
-
-/*
-function showResult (answer) {
-
-    const score = document.getElementById("not_result");
-    score.innerText = ("Wynik: " +);
-    document.getElementById("not_result").classList.add("yes_result")
-
-}
-*/

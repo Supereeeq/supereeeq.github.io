@@ -1,88 +1,87 @@
-body
-{
+body {
     background-color: rgb(2, 224, 165);
-    color:black;
-    font-size:24px;
-    font-family:sans-serif;
-    padding:0;
-    margin:0;
-    min-width:100%;
-    height:1300px;
-}   
-header
-{
-    height:100px;
-    padding:0;
-    margin:0;
+    color: black;
+    font-size: 24px;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+}
+header {
+    position:sticky;
+    top:0px;
+    left:0px;
+    height: 100px;
+    width:600px;
+    padding: 0;
+    margin: 0;
     background-color: rgb(0, 194, 29);
-    position: sticky;
+    width:100vw;
 }
-.menu
-{
-    height:60px;
-    height:60px;
-    padding:0;
-    margin:0;
+
+.menu {
+    height: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
 }
-li
-{
-    list-style:none;
+
+li {
+    list-style: none;
 }
+
 nav {
     position: absolute;
-    top:-5px;
-    font-size:26px;
-    width:130px;
-} 
-nav > ol > li > ul
-{
+    top: -5px;
+    font-size: 26px;
+    width: 130px;
+}
+
+nav > ol > li > ul {
     position: relative;
-    font-size:20px;
-    width:150px;
-    left:-43px; 
+    font-size: 20px;
+    left: -43px;
     top: 12px;
+    width:118px;
     background-color: rgb(122, 212, 119);
 }
-nav > ol > li > ul > li
-{
-    position:relative;  
-    display:inline-block;
-    top: 12px;
-    width: 200px;
-    height:50px;
-    margin-bottom:50px;
-    padding:8px;
-    position:absolute;
-    left:-20px;
-}
-nav > ol > li > ul > li
-{
+
+nav > ol > li > ul > li {
+    position: relative;
+    display: block; 
+    width: 150px; 
+    height:200px;
+    left:-37px;
+    height: auto; 
+    padding: 35px 0;
+    font-size: 18px;
     display:none;
 }
-nav > ol > li:hover > ul > li
-{
-    display:block;
+
+nav > ol > li:hover > ul > li {
+    display: block;
 }
-a.position
-{
-    color:black;
-    text-decoration:none;
+
+a.position {
+    color: black;
+    text-decoration: none;
 }
-li:hover > a.position   
-{
+
+li:hover > a.position {
     color: rgb(62, 63, 65);
 }
-.logo
-{
-    width:250px;
-    height:100px;
-    padding:0;
+
+.logo {
+    width: 250px;
+    height: 100px;
+    padding: 0;
+    margin-left:calc(50vw - 950px);
 }
-a.homepage
-{
-    color:black;
+
+a.homepage {
+    color: black;
     text-decoration: none;
-    padding:0;
+    padding: 0;
     text-align: right;
     display: block;
 }
@@ -91,7 +90,7 @@ a.homepage
     a.homepage {
         text-align: center;
     }
-    av > ol > li > ul
+    nav > ol > li > ul
     {
         position: relative;
         width:200px;
@@ -116,6 +115,11 @@ a.homepage
     nav > ol > li:hover > ul > li
     {
         display:block;
+    }
+    .logo {
+        width: 250px;
+        height: 100px;
+        padding: 0;
     }
 }
 /*  Nowy Kod    */
@@ -322,18 +326,87 @@ input::-webkit-inner-spin-button {
 {
     opacity:1;
 }
-.not_wrong
-{
-    position:absolute;
-    width:500px;
-    height:180px;
-    background-color: rgb(201, 85, 50);
-    left:150px;
-    top:1000px;
-    opacity:0;
-    text-align: center;
-}
-.yes_wrong
-{
-    opacity:1;
+@media screen and (max-width: 767px) {
+    body
+    {
+        height:1100px;
+    }
+    header
+    {
+        height:110px;
+    }
+   .sex,
+   .size,
+   .training,
+   .goal
+   {
+        width:450px;
+        height:170px;
+        position:absolute;
+        left:250px;;
+   }
+   .sex
+   {
+    top:10px;
+   }
+   .size
+   {
+    top:210px;
+   }
+   .training
+   {
+    top:410px;
+   }
+   .goal
+   {
+    top:610px;
+   }
+   .height, 
+   .weight,
+   .age
+   {
+    top:100px;
+   }
+   .size > input,
+   .training > input,
+   .goal > input
+   {
+        height:50px;
+        width:80px
+   }
+   .label_female
+    {
+        position:absolute;
+        left:270px;
+        top:115px;
+    }
+    .female
+    {
+        position:absolute;
+        left:400px;
+        top:125px;
+    }
+    .submit
+    {
+        position:absolute;
+        top:800px;
+        left:330px;
+        font-size:20px;
+        background-color: aliceblue;
+    }
+    .not_result
+    {
+        position:absolute;
+        width:400px;
+        height:180px;
+        background-color: rgb(245, 193, 125);
+        left:280px;
+        top:875px;
+        opacity: 1;
+    }
+    .yes_result
+    {
+        opacity:1;
+        border:2px solid rgb(201, 201, 201);
+    }
 }

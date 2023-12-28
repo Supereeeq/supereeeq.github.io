@@ -103,34 +103,35 @@ a.homepage
     a.homepage {
         text-align: center;
     }
-    av > ol > li > ul
-{
-    position: relative;
-    width:200px;
-    left:-43px; 
-    top: 12px;
-    background-color: rgb(122, 212, 119);
-}
-nav > ol > li > ul > li
-{
-    position:relative;  
-    display:inline-block;
-    top: 12px;
-    width: 200px;
-    height:50px;
-    margin-bottom:50px;
-    padding:8px;
-}
-nav > ol > li > ul > li
-{
-    display:none;
-}
-nav > ol > li:hover > ul > li
-{
-    display:block;
-}
+    nav > ol > li > ul
+    {
+        position: relative;
+        width:200px;
+        left:-43px; 
+        top: 12px;
+        background-color: rgb(122, 212, 119);
+    }
+    nav > ol > li > ul > li
+    {
+        position:relative;  
+        display:inline-block;
+        top: 12px;
+        width: 200px;
+        height:50px;
+        margin-bottom:50px;
+        padding:8px;
+    }
+    nav > ol > li > ul > li
+    {
+        display:none;
+    }
+    nav > ol > li:hover > ul > li
+    {
+        display:block;
+    }
+    }
 /*   nowy kod    */
-}
+
 * {
     box-sizing: border-box;
 }
@@ -198,4 +199,8 @@ input::-webkit-inner-spin-button {
 .show-wynik
 {
     opacity:1;
+}
+@media screen and (min-width: 600px) {
+
+
 }
