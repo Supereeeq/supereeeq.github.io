@@ -40,7 +40,7 @@ function getResult(goalWeight, exercise, age, height, weight, genderMale, gender
         TDEE = BMR * 1.2;
     } else if (exercise === "rarely_exercise") {
         TDEE = BMR * 1.375;
-    } else if (exercise === "moderately_exercise") {
+    } else if (exercise === "moderatly_exercise") {
         TDEE = BMR * 1.555;
     } else if (exercise === "often_exercise") {
         TDEE = BMR * 1.735;
