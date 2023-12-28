@@ -25,14 +25,22 @@ button.addEventListener(
     "click",
     function(item){
         item.preventDefault();
-        const wzrost = document.getElementById("wzrost").value;
-        const mWzrost = Number(wzrost) / 100;
-        const waga = document.getElementById("waga").value;
-        const bmi = Number(waga) / (Number(mWzrost) * Number(mWzrost));
 
-        const result = getResult(bmi)
-        console.log(result);
-        showResult(result, wzrost, waga);
+        if (document.getElementById("wzrost").value.trim().length > 0 && document.getElementById("waga").value.trim().length > 0) {
+
+            const wzrost = document.getElementById("wzrost").value;
+            const waga = document.getElementById("waga").value;
+            const mWzrost = Number(wzrost) / 100;
+            const bmi = Number(waga) / (Number(mWzrost) * Number(mWzrost));
+
+            const result = getResult(bmi)
+            showResult(result, wzrost, waga, bmi);
+        }
+        else
+        {
+            const bmi = 0;
+            const result = getResult(bmi)
+        }
     }
 )
 
@@ -40,31 +48,31 @@ function getResult (bmi){
 
     switch(bmi > 0) {
         case(Number(bmi) < 16):
-            return" You are only bones";
+            return Math.round(bmi) + "\nJesteś wygłodzony";
         case(Number(bmi) >= 16)&&(Number(bmi) < 17):
-            return "You are slim";
+            return Math.round(bmi) + "\nJesteś wychudzony";
         case(Number(bmi) >= 17)&&(Number(bmi) < 18.5):
-            return"You are skinny";
+            return Math.round(bmi) + "\nMasz nidowagę";
         case((Number(bmi) >= 18.5)&&(Number(bmi) < 24.9)):
-            return"You are OK";
+            return Math.round(bmi) + "\nMasz dobrą masę";
         case((Number(bmi) >= 24.9)&&(Number(bmi) < 29.9)):
-            return"You are fluffy";
+            return Math.round(bmi) + "\nMasz nadwagę";
         case((Number(bmi) >= 29.8)&&(Number(bmi) < 34.9)):
-            return"You are BIG";
+            return Math.round(bmi) + "\nMasz otyłość I stopnia";
         case((Number(bmi) >= 34.9)&&(Number(bmi) < 39.9)):
-            return"You are MONSTER";
+            return Math.round(bmi) + "\nMasz otyłość II stopnia";
         case(Number(bmi) >= 39.9):
-            return"You are GORLOCK THE DESTROYER OF WORLDS";
+            return Math.round(bmi)  + "\nMasz otyłość III stopnia";
         default:
-            return"DEFAULT";
+            return "\nProszę podać wzrost i wagę";
     }
 
 }
 
-function showResult (result) {
+function showResult (result,) {
 
-    console.log("Wynik", result);
     const score = document.getElementById("wynik");
     score.innerText = ("Wynik: " + result);
     document.getElementById("wynik").classList.add("show-wynik")
+
 }

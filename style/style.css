@@ -51,10 +51,8 @@ nav > ol > li > ul > li
     height:50px;
     margin-bottom:50px;
     padding:8px;
-}
-nav > ol > li > ul > li:last-child
-{
-    border:none;
+    position:absolute;
+    left:-20px;
 }
 nav > ol > li > ul > li
 {

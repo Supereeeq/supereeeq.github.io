@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kalorii</title>
+    <link rel="stylesheet" href="../style/style_kalorie.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ol>
+                <li>
+                    <img src="../images/menu.png" class="menu">
+                    <ul>
+                        <li>
+                            <a href="../podstrona/bmi_calculator.html" id="position1" class="position">
+                                Kalkulator BMI
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="calories_calculator.html" id="position2" class="position">
+                                Kalkulator <br> Zapotrzebowania <br> Kalorycznego
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="position3" class="position">
+                                Pozycja 3
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" id="position4" class="position">
+                                Pozycja 4
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ol>
+        </nav>
+        <a href="../index.html" class="homepage">
+            <img src="../images/logo.png" class="logo">
+        </a>
+    </header>
+    
+    <article id="kalorie" class="kalorie">
+        <form method="POST">
+            <section class="sex">
+                <label for="gender" class="label_gender">Podaj płeć</label><br>
+                <label for="male" class="label_male">Mężczyzna</label>
+                <input type="radio" id="male" class="male" name="gender">
+                <label for="female" class="label_female" >Kobieta</label>
+                <input type="radio" id="female" class="female" name="gender">
+            </section>
+            <section class="size">
+                <label for="weight" class="label_weight" >Waga</label>
+                <input type="number" id="weight" class="weight">
+                <label for="height" class="label_height">Wzrost</label>
+                <input type="number" id="height" class="height">
+                <label for="age" class="label_age">Wiek</label>
+                <input type="number" id="age" class="age">
+            </section>
+            <section class="training">
+               <label for="excersize" class="label_excersize">Jak często ćwiczysz?</label>
+               <select name="exercise" id="exercise" class="excersize">
+                    <option value="not_exercise">Wcale</option>
+                    <option value="rarely_exercise">1-3razy / tydzień</option>
+                    <option value="moderatly_exercise">3-5razy / tydzień</option>
+                    <option value="often_exercise">6-7rezy / tydzień</option>
+                    <option value="extremly_exercise">2x dziennie</option>
+               </select>
+            </section>
+            <section class="goal">
+                <label for="goal_weight" class="label_goal_weight">Waga docelowa</label>
+                <input type="number" id="goal_weight" class="goal_weight">
+            </section>
+            <section>
+                <input type="submit" value="SPRAWDŹ" class="submit" id="submit">
+            </section>
+            <section class="not_result" id="not_result">
+
+            </section>
+            <section class="not_wrong">
+
+            </section>
+        </form>
+    </article>
+    <script src="../scripts/script_calories.js"></script>
+</body>
+</html>

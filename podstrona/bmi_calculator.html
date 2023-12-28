@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css?v=1.0.4">
-    <title>Health&Life</title>
+    <link rel="stylesheet" href="../style/style1.css?v=1.0.3">
+    <title>Bmi- calculator</title>
+    
 </head>
 <body>
     <header>
         <nav>
             <ol>
                 <li>
-                    <img src="./images/menu.png" class="menu">
+                    <img src="../images/menu.png" class="menu">
                     <ul>
                         <li>
-                            <a href="./podstrona/bmi_calculator.html" id="position1" class="position">
+                            <a href="bmi_calculator.html" id="position1" class="position">
                                 Kalkulator BMI
                             </a>
                         </li>
 
                         <li>
-                            <a href="./podstrona/calories_calculator.html" id="position2" class="position">
+                            <a href="../podstrona/calories_calculator.html" id="position2" class="position">
                                 Kalkulator <br> Zapotrzebowania <br> Kalorycznego
                             </a>
                         </li>
@@ -42,14 +43,25 @@
 
             </ol>
         </nav>
-        <a href="#" class="homepage">
-            <img src="./images/logo.png" class="logo">
+        <a href="../index.html" class="homepage">
+            <img src="../images/logo.png" class="logo">
         </a>
     </header>
     <div id="container" class="container">
-        
+        <div id="formularz">
+            <form method="POST">
+                <label for="wzrost">Podaj Wzrost (cm)</label><br>
+                <input type="number" name="wzrost" id="wzrost" /><br><br>
 
+                <label for="waga">Podaj Wagę</label><br>
+                <input type="number" name="waga" id="waga" /><br><br>
+
+                <button id="submit" type="submit" class="submit">Wyślij</button>
+            </form>
+        </div>
     </div>
-    
+    <div id="wynik" class="wynik">
+    </div>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
