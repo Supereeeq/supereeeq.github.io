@@ -329,7 +329,7 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 767px) {
     body
     {
-        height:1100px;
+        height:1000px;
     }
     header
     {
@@ -364,18 +364,12 @@ input::-webkit-inner-spin-button {
     top:610px;
     left:55vw;
    }
-   .height, 
-   .weight,
-   .age
-   {
-    top:100px;
-   }
    .size > input,
    .training > input,
    .goal > input
    {
         height:4vh;
-        width:20vw;
+        width:15vw;
    }
    .label_gender
    {
@@ -409,27 +403,97 @@ input::-webkit-inner-spin-button {
        left:60vw;
        top:12vh;
    }
-    .submit
+    .label_weight
     {
         position:absolute;
-        top:800px;
-        left:330px;
+        left:2vw;
+        top:20px;
+        font-size:0.9em;
+    }
+    .weight
+    {
+        position:absolute;
+        left:10px;
+        top:8vh;
+        width:120px;
+        height:30px;
         font-size:20px;
-        background-color: aliceblue;
+        
+    }
+    .label_height
+    {
+        position:absolute;
+        left:27vw;
+        top:20px;
+        font-size:0.9em;
+    }
+    .height
+    {
+        position:absolute;
+        left:30vw;
+        top:8vh;
+        width:120px;
+        height:30px;
+        font-size:20px;
+    }
+    .label_age
+    {
+        position:absolute;
+        left:60vw;
+        top:20px;
+        font-size:0.9em;
+    }
+    .age
+    {
+        position:absolute;
+        left:60vw;
+        top:8vh;
+        width:120px;
+        height:30px;
+        font-size:20px;
+    }
+    .label_excersize
+    {
+        top:1px;
+        left:2vw;
+    }
+    .excersize
+    {
+        left:20vw;
+        top:10vh;
+        width:40vw;
+        height:5vh;
+    }
+    .label_goal_weight
+    {
+        left:10vw;
+        top:2vh;
+    }
+    .goal_weight
+    {
+        left:30vw;
+        top:8vh;
+        width:80vw;
+    }
+    .submit
+    {
+        height:5vh;
+        width:80vw;
+        top:85vh;
+        left:56vw;
     }
     .not_result
     {
         position:absolute;
-        width:400px;
+        width:500px;
         height:180px;
-        background-color: rgb(245, 193, 125);
-        left:280px;
-        top:875px;
-        opacity: 1;
+        background-color: antiquewhite;
+        left:150px;
+        top:1000px;
+        opacity:0;
     }
     .yes_result
     {
         opacity:1;
-        border:2px solid rgb(201, 201, 201);
     }
 }
