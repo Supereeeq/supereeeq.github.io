@@ -89,6 +89,9 @@ li:hover > a.position
     width:250px;
     height:100px;
     padding:0;
+    position: absolute;
+    top:0;
+    right:0;
 }
 a.homepage
 {

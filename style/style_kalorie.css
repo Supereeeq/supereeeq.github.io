@@ -340,26 +340,29 @@ input::-webkit-inner-spin-button {
    .training,
    .goal
    {
-        width:450px;
-        height:170px;
+        width:80vw;
+        height:15vh;
         position:absolute;
-        left:250px;;
    }
    .sex
    {
     top:10px;
+    left:55vw;
    }
    .size
    {
     top:210px;
+    left:55vw;
    }
    .training
    {
     top:410px;
+    left:55vw;
    }
    .goal
    {
     top:610px;
+    left:55vw;
    }
    .height, 
    .weight,
@@ -371,21 +374,41 @@ input::-webkit-inner-spin-button {
    .training > input,
    .goal > input
    {
-        height:50px;
-        width:80px
+        height:4vh;
+        width:20vw;
+   }
+   .label_gender
+   {
+       display:block;
+       text-align:center;
+       position:absolute;
+       top:10px;
+       left:20vw;
+   }
+   .label_male
+   {
+       position:absolute;
+       left:2vw;
+       top:7vh;
+   }
+   .male
+   {
+       position:absolute;
+       left:17vw;
+       top:12vh;
    }
    .label_female
-    {
-        position:absolute;
-        left:270px;
-        top:115px;
-    }
-    .female
-    {
-        position:absolute;
-        left:400px;
-        top:125px;
-    }
+   {
+       position:absolute;
+       left:50vw;
+       top:7vh;
+   }
+   .female
+   {
+       position:absolute;
+       left:60vw;
+       top:12vh;
+   }
     .submit
     {
         position:absolute;

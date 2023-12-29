@@ -68,11 +68,14 @@ li:hover > a.position {
     color: rgb(62, 63, 65);
 }
 
-.logo {
-    width: 250px;
-    height: 100px;
-    padding: 0;
-    margin-left:calc(50vw - 185px);
+.logo
+{
+    width:250px;
+    height:100px;
+    padding:0;
+    position: absolute;
+    top:0;
+    right:0;
 }
 
 a.homepage {
