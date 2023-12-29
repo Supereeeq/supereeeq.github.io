@@ -479,7 +479,7 @@ input::-webkit-inner-spin-button {
     {
         height:5vh;
         width:80vw;
-        top:100vh;
+        top:90vh;
         left:56vw;
     }
     .not_result
@@ -489,7 +489,7 @@ input::-webkit-inner-spin-button {
         height:180px;
         background-color: antiquewhite;
         left:150px;
-        top:1000px;
+        top:800px;
         opacity:0;
     }
     .yes_result
@@ -501,5 +501,10 @@ input::-webkit-inner-spin-button {
       }
     .menu-list {
         z-index: 1; 
-      }
+    }
+    .submit:active
+    {
+        color:rgb(62, 63, 65);
+        background-color: rgb(224, 230, 236);
+    }
 }
