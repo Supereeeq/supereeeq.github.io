@@ -117,4 +117,10 @@ a.homepage {
     {
         display:block;
     }
+    header {
+        position: relative;
+      }
+    .menu-list {
+        z-index: 1; 
+      }
 }
