@@ -1,23 +1,3 @@
-/*
-wiek.addEventListener(
-    "focusout",
-    function(item){
-        console.log(wiek.value);
-    }
-)
-
-const imie = document.getElementById("imie");
-
-imie.addEventListener(
-    "focusout",
-     function(item)
-     {
-        console.log(imie.value);
-     }
-    )
-
-*/
-
 const button = document.getElementById("submit");
 
 
@@ -72,6 +52,14 @@ function getResult (bmi){
 function showResult (result,) {
 
     const score = document.getElementById("wynik");
+        score.style.textAlign = "center";
+        score.style.display = "flex";
+        score.style.alignItems = "center";
+        score.style.justifyContent = "center";
+        score.style.boxShadow = "10px 10px 5px #888888"; 
+        score.style.position = "relative";
+        score.style.top = "65vh";
+        score.style.left = "calc(50vw - 100px)";
     score.innerText = ("Wynik: " + result);
     document.getElementById("wynik").classList.add("show-wynik")
 

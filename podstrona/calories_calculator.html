@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Kalorii</title>
     <link rel="stylesheet" href="../style/style_kalorie.css?v=1.0.8">
+    <link rel="stylesheet" href="../style/style_header.css">
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
                         </li>
 
                         <li>
-                            <a href="/calories_calculator.html" id="position2" class="position">
+                            <a href="calories_calculator.html" id="position2" class="position">
                                 Kalkulator <br> Zapotrzebowania <br> Kalorycznego
                             </a>
                         </li>
@@ -55,7 +56,7 @@
     <article id="kalorie" class="kalorie">
         <form method="POST">
             <section class="sex">
-                <label for="gender" class="label_gender">Podaj płeć</label><br>
+                <p class="label_gender">Podaj płeć</p><br>
                 <label for="male" class="label_male">Mężczyzna</label>
                 <input type="radio" id="male" class="male" name="gender">
                 <label for="female" class="label_female" >Kobieta</label>
@@ -70,7 +71,7 @@
                 <input type="number" id="age" class="age">
             </section>
             <section class="training">
-               <label for="excersize" class="label_excersize">Jak często ćwiczysz?</label>
+               <p class="label_excersize">Jak często ćwiczysz?</p>
                <select name="exercise" id="exercise" class="excersize">
                     <option value="not_exercise">Wcale</option>
                     <option value="rarely_exercise">1-3razy / tydzień</option>
