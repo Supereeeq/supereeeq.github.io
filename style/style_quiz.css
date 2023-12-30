@@ -15,3 +15,63 @@
     margin-right:auto;
     padding:6px 4px;
 }
+.odpowiedz
+{
+    position: absolute;
+    position: absolute;
+    display: inline-block;
+
+}
+.odpowiedz-label
+{
+    position: absolute;
+}
+.odpowiedz1
+{
+    top:140px;
+    left:10px;
+    background-color: aquamarine;
+    height:200px;
+}
+.odpowiedz-label1
+{
+    position: absolute;
+    top:140px;
+    left:30px;
+}
+.odpowiedz2
+{
+    position: absolute;
+    top:200px;
+    left:10px;
+}
+.odpowiedz-label2
+{
+    position: absolute;
+    top:200px;
+    left:30px;
+}
+.odpowiedz3
+{
+    position: absolute;
+    top:260px;
+    left:10px;
+}
+.odpowiedz-label3
+{
+    position: absolute;
+    top:260px;
+    left:30px;
+}
+.odpowiedz4
+{
+    position: absolute;
+    top:320px;
+    left:10px;
+}
+.odpowiedz-label4
+{
+    position: absolute;
+    top:320px;
+    left:30px;
+}
