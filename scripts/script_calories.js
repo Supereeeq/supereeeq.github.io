@@ -44,7 +44,7 @@ function getResult(goalWeight, exercise, age, height, weight, genderMale, gender
         TDEE = BMR * 1.555;
     } else if (exercise === "often_exercise") {
         TDEE = BMR * 1.735;
-    } else if (exercise === "extremely_exercise") {
+    } else if (exercise === "extremly_exercise") {
         TDEE = BMR * 1.9;
     } else {
         console.log("2if NIE działa");
@@ -72,4 +72,6 @@ function showResult(answer) {
         score.style.boxShadow = "10px 10px 5px #888888"; 
     score.innerText = ("Twoje dzienne\n zapotrzebowanie kalorii to\nokoło " + Math.round(answer) + " cal");
     document.getElementById("not_result").classList.add("yes_result");
+    window.scrollBy(0, window.innerHeight);
+
 }

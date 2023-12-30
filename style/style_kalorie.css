@@ -1,3 +1,7 @@
+html
+{
+    scroll-behavior: smooth;
+}
 .kalorie
 {
     width:800px;
