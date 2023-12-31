@@ -29,13 +29,14 @@ html
     text-align:center;
     position:absolute;
     top:2px;
-    left:160px;
+    left:140px;
 }
 .label_male
 {
     position:absolute;
     left:30px;
     top:115px;
+    font-size:30px;
 }
 .male
 {
@@ -48,6 +49,7 @@ html
     position:absolute;
     left:300px;
     top:115px;
+    font-size:30px;
 }
 .female
 {
@@ -212,14 +214,13 @@ input::-webkit-inner-spin-button {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
       }
-      *, *:before, *:after {
+    *, *:before, *:after {
         -webkit-box-sizing: inherit;
         -moz-box-sizing: inherit;
         box-sizing: inherit;
         }
     body
     {
-        height:1000px;
         width:100vw;
         padding: 0;
         margin:0;
@@ -227,7 +228,9 @@ input::-webkit-inner-spin-button {
     .kalorie
     {
         z-index: -1;
-        width:100vw;
+        width:80vw;
+        left:10vw;
+        display: flex;
     }
    .sex,
    .size,
@@ -236,27 +239,24 @@ input::-webkit-inner-spin-button {
    {
         width:80vw;
         height:15vh;
+        left:0;
         position:absolute;
    }
    .sex
    {
     top:10px;
-    left:55vw;
    }
    .size
    {
     top:210px;
-    left:55vw;
    }
    .training
    {
     top:410px;
-    left:55vw;
    }
    .goal
    {
     top:610px;
-    left:55vw;
    }
    .size > input,
    .training > input,
@@ -270,14 +270,14 @@ input::-webkit-inner-spin-button {
        display:block;
        text-align:center;
        position:absolute;
-       top:10px;
+       top:-30px;
        left:20vw;
    }
    .label_male
    {
        position:absolute;
        left:2vw;
-       top:7vh;
+       top:6vh;
    }
    .male
    {
@@ -289,7 +289,7 @@ input::-webkit-inner-spin-button {
    {
        position:absolute;
        left:50vw;
-       top:7vh;
+       top:6vh;
    }
    .female
    {
@@ -348,8 +348,9 @@ input::-webkit-inner-spin-button {
     }
     .label_excersize
     {
-        top:1px;
-        left:2vw;
+        top:-30px;
+        left:0px;
+        font-size: 30px;
     }
     .excersize
     {
@@ -360,7 +361,7 @@ input::-webkit-inner-spin-button {
     }
     .label_goal_weight
     {
-        left:10vw;
+        left:5vw;
         top:2vh;
     }
     .goal_weight
@@ -373,8 +374,8 @@ input::-webkit-inner-spin-button {
     {
         height:5vh;
         width:80vw;
-        top:90vh;
-        left:56vw;
+        top:100vh;
+        left:0;
     }
     .not_result
     {
@@ -382,8 +383,7 @@ input::-webkit-inner-spin-button {
         width:500px;
         height:180px;
         background-color: antiquewhite;
-        left:150px;
-        top:800px;
+        top:120vh;
         opacity:0;
     }
     .yes_result
