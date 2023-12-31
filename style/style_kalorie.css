@@ -380,10 +380,11 @@ input::-webkit-inner-spin-button {
     .not_result
     {
         position:absolute;
-        width:500px;
-        height:180px;
+        width:280px;
+        height:150px;
         background-color: antiquewhite;
         top:120vh;
+        left:0;
         opacity:0;
     }
     .yes_result
