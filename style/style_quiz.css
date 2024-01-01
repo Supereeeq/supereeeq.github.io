@@ -1,77 +1,88 @@
+header
+{
+    margin-bottom:30px;
+}
+.main
+{
+    max-width: 780px;
+    margin:0 auto;
+}
 .quiz
 {
-    width:500px;
-    height:300px;
+    width:auto;
     background-color:   rgb(205, 246, 184);
     position:relative;
-    top:calc(50vh - 150px - 100px);
-    left:calc(50vw - 250px);
     box-shadow: 12px 12px 2px 1px rgba(47, 47, 80, 0.2);
+    padding:16px;
 }
 .title
 {
-    font-size:36px;
-    margin-left:auto;
-    margin-right:auto;
+    font-size:38px;
     padding:6px 4px;
+    margin: 0 auto;
+    text-align: center;
 }
 .odpowiedz
 {
-    position: absolute;
-    position: absolute;
-    display: inline-block;
-
+    height: 28px;
+    width:28px;
+    margin-right: 16px;
+}
+.pytanie
+{
+    font-size:34px;
+    margin-bottom:16px;
+    font-weight: 600;
+}
+.odpowiedzContainer
+{
+    padding: 16px 0;
 }
 .odpowiedz-label
 {
     position: absolute;
+    font-size:30px;
 }
-.odpowiedz1
+.question
 {
-    top:140px;
-    left:10px;
-    background-color: aquamarine;
-    height:200px;
+    margin-bottom:30px
 }
-.odpowiedz-label1
+.submit
 {
-    position: absolute;
-    top:140px;
-    left:30px;
+    background-color: rgb(150, 150, 135);
+    width:200px;
+    height:50px;
+    font-size:36px;
+    margin:0;
+    padding:4px;
 }
-.odpowiedz2
+.submit:hover
 {
-    position: absolute;
-    top:200px;
-    left:10px;
+    background-color: rgb(119, 119, 110);
+    color: rgba(65, 63, 63);
 }
-.odpowiedz-label2
+.wynik
 {
-    position: absolute;
-    top:200px;
-    left:30px;
+    opacity: 0;
+    height:100px;
+    width:300px;
+    background-color: aliceblue;
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    box-shadow: 12px 12px 2px 1px rgba(47, 47, 80, 0.2);
+    font-size:44px;
+    text-align: center;
 }
-.odpowiedz3
+.wynik-show
 {
-    position: absolute;
-    top:260px;
-    left:10px;
+    opacity:1;
+    background-color:rgb(84, 218, 84);
+    color:rgb(39, 112, 39);
 }
-.odpowiedz-label3
+.wynik-hide
 {
-    position: absolute;
-    top:260px;
-    left:30px;
-}
-.odpowiedz4
-{
-    position: absolute;
-    top:320px;
-    left:10px;
-}
-.odpowiedz-label4
-{
-    position: absolute;
-    top:320px;
-    left:30px;
+    opacity:1;
+    background-color:rgb(200, 50, 50);
+    color: rgb(121, 3, 3);
 }
