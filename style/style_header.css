@@ -8,7 +8,7 @@ body {
     min-width: 100%;
 }
 header {
-    position:sticky;
+    position:absolute;
     top:0px;
     left:0px;
     height: 100px;
@@ -129,7 +129,7 @@ a.homepage {
     }
     .logo {
         position:absolute;
-        width: 50vw;
+        width: 20vh;
         height: 10vh;
         padding: 0;
         top:0;
