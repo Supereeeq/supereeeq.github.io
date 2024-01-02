@@ -20,7 +20,7 @@ button.addEventListener("click", function (item) {
     } else {
         console.log(":(");
     }
-    showResult(answer);
+
 });
 
 function getResult(goalWeight, exercise, age, height, weight, genderMale, genderFemale) {
