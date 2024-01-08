@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../style/style_bmi.css">
-    <link rel="stylesheet" href="../style/style_header.css?v1.0.9">
-    <title>Bmi- calculator</title>
-    
+    <title>Clicker</title>
+    <link rel="stylesheet" href="../style/style_header.css">
+    <link rel="stylesheet" href="../style/clicker.css">
+
 </head>
 <body>
     <header>
@@ -16,7 +16,7 @@
                     <img src="../images/menu.png" class="menu" id="menu-icon">
                     <ul class="menu-list">
                         <li>
-                            <a href="bmi_calculator.html" id="position1" class="position">
+                            <a href="./bmi_calculator.html" id="position1" class="position">
                                 Kalkulator BMI
                             </a>
                         </li>
@@ -28,8 +28,8 @@
                         </li>
 
                         <li>
-                            <a href="#" id="position3" class="position">
-                                Pozycja 3
+                            <a href="./quiz.html" id="position3" class="position">
+                                Quiz
                             </a>
                         </li>
 
@@ -39,6 +39,7 @@
                             </a>
                         </li>
 
+                    
                     </ul>
                 </li>
 
@@ -52,22 +53,16 @@
         </a>
     </header>
 
-    <script src="../scripts/menu.js"></script>
     <div id="container" class="container">
-        <div id="formularz">
-            <form method="POST">
-                <label for="wzrost">Podaj Wzrost (cm)</label><br>
-                <input type="number" name="wzrost" id="wzrost" /><br><br>
-
-                <label for="waga">Podaj Wagę</label><br>
-                <input type="number" name="waga" id="waga" /><br><br>
-
-                <button id="submit" type="submit" class="submit">Wyślij</button>
-            </form>
+        <div id="carrot" clas="carrot">
+            <img src="../images/marchew.png" alt="marchewka" id="zdj-carrot" class="zdj-carrot">
         </div>
+
     </div>
-    <div id="wynik" class="wynik">
-    </div>
-    <script src="../scripts/script_bmi.js"></script>
+
+    
+
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/clicker.js"></script>
 </body>
 </html>

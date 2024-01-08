@@ -1,0 +1,56 @@
+.container
+{
+    background-color: rgb(183, 197, 181);
+    height:600px;
+    width:800px;
+    position: relative;
+    padding:16px;
+    left: calc(50vw - 408px);
+    top: 120px;
+}
+#carrot
+{
+    height:400px;
+    position: inherit;
+    padding:0;
+    width:400px;
+    left:200px;
+}
+.zdj-carrot
+{
+    height:400px;
+}
+.zdj-carrot:hover
+{
+    cursor: grab;
+}
+@keyframes move {
+    0%, 100% 
+    {
+        rotate: 1deg;
+    }
+    50% 
+    {
+        rotate: -2deg;
+    }
+}
+.zdj-carrot-clicked
+{
+    animation: scale 0.1s ease-in-out;
+}
+@keyframes scale {
+    0%
+    {
+        scale: 102%;
+    }
+    50% 
+    {
+        scale: 100%;
+    }
+}
+.wynik
+{
+    background-color: black;
+    height:100px;
+    width:200px;
+}

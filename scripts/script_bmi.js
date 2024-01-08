@@ -2,7 +2,7 @@ const button = document.getElementById("submit");
 
 
 button.addEventListener(
-    "click",
+    "onclick",
     function(item){
         item.preventDefault();
 
@@ -26,25 +26,34 @@ button.addEventListener(
 
 function getResult (bmi){
 
-    switch(bmi > 0) {
-        case(Number(bmi) < 16):
+    switch(bmi>0){
+        case bmi < 16:
             return Math.round(bmi) + "\nJesteś wygłodzony";
-        case(Number(bmi) >= 16)&&(Number(bmi) < 17):
-            return Math.round(bmi) + "\nJesteś wychudzony";
-        case(Number(bmi) >= 17)&&(Number(bmi) < 18.5):
-            return Math.round(bmi) + "\nMasz nidowagę";
-        case((Number(bmi) >= 18.5)&&(Number(bmi) < 24.9)):
-            return Math.round(bmi) + "\nMasz dobrą masę";
-        case((Number(bmi) >= 24.9)&&(Number(bmi) < 29.9)):
-            return Math.round(bmi) + "\nMasz nadwagę";
-        case((Number(bmi) >= 29.8)&&(Number(bmi) < 34.9)):
-            return Math.round(bmi) + "\nMasz otyłość I stopnia";
-        case((Number(bmi) >= 34.9)&&(Number(bmi) < 39.9)):
-            return Math.round(bmi) + "\nMasz otyłość II stopnia";
-        case(Number(bmi) >= 39.9):
-            return Math.round(bmi)  + "\nMasz otyłość III stopnia";
+            break;
+        case bmi < 17:
+            return Math.round(bmi) + "\nJesteś wygłodzony";
+            break;
+        case bmi < 18.5:
+            return Math.round(bmi) + "\nJesteś wygłodzony";
+            break;
+        case bmi < 24.9:
+            return Math.round(bmi) + "\nJesteś wygłodzony";
+            break;
+        case bmi < 29.9:
+            return Math.round(bmi) + "\nJesteś wygłodzony";
+            break;
+        case bmi < 34.9:
+            return Math.round(bmi) + "\nJesteś wygłodzony";
+            break;
+        case bmi < 39.9:
+            return Math.round(bmi) + "\nJesteś wygłodzony";
+            break;
+        case bmi > 39.9:
+            return Math.round(bmi) + "\nJesteś wygłodzony";
+            break;
         default:
             return "\nProszę podać wzrost i wagę";
+
     }
 
 }
