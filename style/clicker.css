@@ -2,10 +2,10 @@
 {
     background-color: #1abc9c;
     height:650px;
-    width:800px;
+    width:700px;
     position: relative;
     padding:16px;
-    left: calc(50vw - 408px);
+    left: calc(50vw - 358px);
     top: 120px;
 }
 #carrot
@@ -14,25 +14,15 @@
     position: inherit;
     padding:0;
     width:400px;
-    left:200px;
+    left:150px;
 }
 .zdj-carrot
 {
-    height:400px;
+    height:400px; 
 }
 .zdj-carrot:hover
 {
     cursor: grab;
-}
-@keyframes move {
-    0%, 100% 
-    {
-        rotate: 1deg;
-    }
-    50% 
-    {
-        rotate: -2deg;
-    }
 }
 .zdj-carrot-clicked
 {
@@ -48,6 +38,7 @@
         scale: 100%;
     }
 }
+
 .wynik
 {
     height:100px;
@@ -57,7 +48,7 @@
 .button
 {
     height: 150px;
-    width:200px;
+    width:320px;
     display: inline-block;
     position: absolute;
     font-size:40px;
@@ -75,18 +66,11 @@
     background-color: aqua;
     box-shadow: 4px 4px 8px rgb(32, 32, 32);
     bottom: 16px;
-    left:316px;
-}
-.button3
-{
-    background-color: aqua;
-    box-shadow: 4px 4px 8px rgb(32, 32, 32);
     right:16px;
-    bottom:16px;
 }
 .button:last-child
 {
-    margin:none;
+    margin:0;
 }
 .button-clicked
 {
@@ -96,4 +80,28 @@
 .button:hover
 {
     background-color: rgb(5, 241, 241);
+}
+.opis1
+{
+    position:absolute;
+    font-size:50px;
+    bottom:-35px;
+    left:130px;
+}
+.cursor
+{
+    user-select: none;
+    pointer-events: none;
+}
+.opis2
+{
+    position:absolute;
+    font-size:50px;
+    bottom:-35px;
+    left:120px;
+}
+.cursor2x
+{
+    user-select: none;
+    pointer-events: none;
 }
