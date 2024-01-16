@@ -1,6 +1,5 @@
 .container
 {
-    background-color: #1abc9c;
     height:650px;
     width:700px;
     position: relative;
@@ -41,7 +40,7 @@
 
 .wynik
 {
-    height:100px;
+    height:70px;
     font-size: 70px;
     text-align:center;
 }
