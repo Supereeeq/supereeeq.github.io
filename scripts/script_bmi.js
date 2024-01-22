@@ -2,7 +2,7 @@ const button = document.getElementById("submit");
 
 
 button.addEventListener(
-    "onclick",
+    "click",
     function(item){
         item.preventDefault();
 
@@ -26,33 +26,35 @@ button.addEventListener(
 
 function getResult (bmi){
 
-    switch(bmi>0){
-        case bmi < 16:
+    if(bmi > 0){
+        if( bmi < 16){
             return Math.round(bmi) + "\nJesteś wygłodzony";
-            break;
-        case bmi < 17:
-            return Math.round(bmi) + "\nJesteś wygłodzony";
-            break;
-        case bmi < 18.5:
-            return Math.round(bmi) + "\nJesteś wygłodzony";
-            break;
-        case bmi < 24.9:
-            return Math.round(bmi) + "\nJesteś wygłodzony";
-            break;
-        case bmi < 29.9:
-            return Math.round(bmi) + "\nJesteś wygłodzony";
-            break;
-        case bmi < 34.9:
-            return Math.round(bmi) + "\nJesteś wygłodzony";
-            break;
-        case bmi < 39.9:
-            return Math.round(bmi) + "\nJesteś wygłodzony";
-            break;
-        case bmi > 39.9:
-            return Math.round(bmi) + "\nJesteś wygłodzony";
-            break;
-        default:
-            return "\nProszę podać wzrost i wagę";
+        }
+        else if( bmi < 17){
+            return Math.round(bmi) + "\nJesteś wychudzony";
+        }
+        else if( bmi < 18.5){
+            return Math.round(bmi) + "\nMasz niedowagę";
+        }
+        else if( bmi < 24.9){
+            return Math.round(bmi) + "\nMasz wagę prawidłową";
+        }
+        else if( bmi < 29.9){
+            return Math.round(bmi) + "\nMasz nadwagę";
+        }
+        else if( bmi < 34.9){
+            return Math.round(bmi) + "\nI stopień otyłości";
+        }
+        else if( bmi < 39.9){
+            return Math.round(bmi) + "\nII stopień otyłości";
+        }
+        else if( bmi >= 39.9){
+            return Math.round(bmi) + "\nIII stopień otyłości";
+        }
+        else
+        {
+            return "\nProszę podać wzrost i wagę";  
+        }
 
     }
 
