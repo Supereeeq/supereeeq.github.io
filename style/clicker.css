@@ -1,6 +1,11 @@
+body
+{
+    height: auto;
+    padding:0;
+}
 .container
 {
-    height:650px;
+    height:auto;
     width:700px;
     position: relative;
     padding:16px;
@@ -9,15 +14,17 @@
 }
 #carrot
 {
-    height:400px;
+    height:auto;
     position: inherit;
     padding:0;
     width:400px;
-    left:150px;
+    left:185px;
 }
 .zdj-carrot
 {
-    height:400px; 
+    height:270px; 
+    user-select: none;
+    pointer-events: none;
 }
 .zdj-carrot:hover
 {
@@ -58,18 +65,12 @@
     background-color: aqua;
     box-shadow: 4px 4px 8px rgb(32, 32, 32);
     left:16px;
-    bottom:16px;
 }
 .button2
 {
     background-color: aqua;
     box-shadow: 4px 4px 8px rgb(32, 32, 32);
-    bottom: 16px;
     right:16px;
-}
-.button:last-child
-{
-    margin:0;
 }
 .button-clicked
 {
@@ -91,6 +92,8 @@
 {
     user-select: none;
     pointer-events: none;
+    user-select: none;
+    pointer-events: none;
 }
 .opis2
 {
@@ -103,4 +106,9 @@
 {
     user-select: none;
     pointer-events: none;
+}
+.plus
+{
+    height:30px;
+    position:absolute;
 }

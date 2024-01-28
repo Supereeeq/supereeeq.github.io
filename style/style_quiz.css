@@ -1,11 +1,6 @@
-header
+body
 {
-    margin-bottom:30px;
-}
-.main
-{
-    max-width: 780px;
-    margin:0 auto;
+    height: 100vh;
 }
 .quiz
 {
@@ -14,75 +9,113 @@ header
     position:relative;
     box-shadow: 12px 12px 2px 1px rgba(47, 47, 80, 0.2);
     padding:16px;
+    height:300px;
+    width:600px;
+    position: absolute;
+    top: 150px;
+    left: calc(50vw - 316px);
 }
-.title
+.pytanie
 {
     font-size:38px;
     padding:6px 4px;
     margin: 0 auto;
-    text-align: center;
+    font-weight:600;
 }
 .odpowiedz
 {
-    height: 28px;
-    width:28px;
-    margin-right: 16px;
-}
-.pytanie
-{
-    font-size:34px;
-    margin-bottom:16px;
-    font-weight: 600;
-}
-.odpowiedzContainer
-{
-    padding: 16px 0;
-}
-.odpowiedz-label
-{
-    position: absolute;
-    font-size:30px;
-}
-.question
-{
-    margin-bottom:30px
+    height:45px;
 }
 .submit
 {
-    background-color: rgb(150, 150, 135);
-    width:200px;
-    height:50px;
-    font-size:36px;
-    margin:0;
-    padding:4px;
+    height: 60px;
+    width:140px;
+    display: inline-block;
+    position: absolute;
+    left:16px;
+    bottom:16px;
+    font-size:40px;
+    text-align:center;
+    background-color: rgb(191, 235, 205);
+    box-shadow: 4px 4px 8px rgb(32, 32, 32);
+    left:16px;
 }
 .submit:hover
 {
-    background-color: rgb(119, 119, 110);
-    color: rgba(65, 63, 63);
+    background-color: rgb(169, 211, 182);
+    box-shadow: inset 4px 4px 8px rgb(32, 32, 32);
 }
-.wynik
+.healthBar
 {
-    opacity: 0;
-    height:100px;
-    width:300px;
-    background-color: aliceblue;
     position:absolute;
-    right:10px;
-    bottom:10px;
-    box-shadow: 12px 12px 2px 1px rgba(47, 47, 80, 0.2);
-    font-size:44px;
+    right:16px;
+    bottom:16px;
+    background-color: rgb(213, 228, 212);
+    height:50px;
+    width:200px;
+    background-color: rgb(191, 235, 205);
+    box-shadow: 4px 4px 8px rgb(32, 32, 32);
+    border-radius:32px;
+}
+.life
+{
+    background-color: rgb(214, 40, 63);
+    height:50px;
+    width:50px;
+}
+.life1
+{
+    position:absolute;
+    left:0;
+    top:0;
+    border-radius:32px 0 0 32px;
+}
+.life2
+{
+    position:absolute;
+    left:75px;
+    top:0;
+}
+.life3
+{
+    position:absolute;
+    right:0;
+    top:0;
+    border-radius:0 32px 32px 0;
+}
+.napisIloscZyc
+{
+    position:absolute;
+    right:52px;
+    bottom: 52px;
+    font-size:20px;
+}
+.koniec
+{
+    text-align: center;
+    height:max-content;
+    padding:8px;
+    width:max-content;
+    display:block;
+    margin:auto;
+    position: absolute;
+    top:90px;
+    left:190px;
+    background-color: rgb(255,255,255);
+}
+.iloscWygranych
+{
     text-align: center;
 }
-.wynik-show
+.playAgain
 {
-    opacity:1;
-    background-color:rgb(84, 218, 84);
-    color:rgb(39, 112, 39);
+    height:50px;
+    width: 100px;
+    background-color: rgb(240, 40, 30);
+    margin:16px auto;
+    padding:4px;
 }
-.wynik-hide
+.noLives
 {
-    opacity:1;
-    background-color:rgb(200, 50, 50);
-    color: rgb(121, 3, 3);
+    display: none;
 }

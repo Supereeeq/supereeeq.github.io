@@ -80,6 +80,7 @@ li:hover > a.position {
     position:absolute;
     right: calc(50vw - 125px);
     top:0;
+    user-select: none;
 }
 
 a.homepage {
@@ -99,16 +100,17 @@ a.homepage {
     .menu
     {
         height:6vh;
+        position:relative;
         padding: 0;
-        top:0;
-        left:0;
+        top:-8px;
+        left:-8px;
         margin:0;
     }
     nav > ol > li > ul
     {
         position: relative;
         width:200px;
-        top:0;
+        top:-7px;
         left:-43px; 
         background-color: rgb(122, 212, 119);
     }
