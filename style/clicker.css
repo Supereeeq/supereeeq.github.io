@@ -66,11 +66,41 @@ body
     box-shadow: 4px 4px 8px rgb(32, 32, 32);
     left:16px;
 }
+.button1:hover::before
+{
+    position:absolute;
+    top:0;
+    left:-128px;
+    height:auto;
+    width:120px;
+    color:rgb(177, 177, 177);
+    padding:4px;
+    content: attr(tooltip);
+    font-size:18px;
+    background-color: rgb(32, 32, 32);
+    border:2px solid rgb(218,165, 32);
+    box-shadow: -2px -2px 4px rgb(32, 32, 32);
+}
 .button2
 {
     background-color: aqua;
     box-shadow: 4px 4px 8px rgb(32, 32, 32);
     right:16px;
+}
+.button2:hover::after
+{
+    position:absolute;
+    top:0;
+    right:-128px;
+    height:auto;
+    width:120px;
+    color:rgb(177, 177, 177);
+    padding:4px;
+    content: attr(tooltip);
+    font-size:18px;
+    background-color: rgb(32, 32, 32);
+    border:2px solid rgb(218,165, 32);
+    box-shadow: 2px 2px 4px rgb(32, 32, 32);
 }
 .button-clicked
 {
