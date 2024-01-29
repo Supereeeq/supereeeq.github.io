@@ -238,23 +238,26 @@ function showNumberOfLifes ()
 
         if(numberOfLifes > 2)
         {
-            let life3 = document.createElement("div");
+            let life3 = document.createElement("img");
             life3.classList.add("life3");
             life3.classList.add("life");
+            life3.src = "../images/heart.png"
             healthBar.appendChild(life3);
         }
         if(numberOfLifes > 1)
         {
-            let life2 = document.createElement("div");
+            let life2 = document.createElement("img");
             life2.classList.add("life2");   
             life2.classList.add("life");
+            life2.src = "../images/heart.png"
             healthBar.appendChild(life2);
         }
         if(numberOfLifes > 0)
         {
-            let life1 = document.createElement("div");
+            let life1 = document.createElement("img");
             life1.classList.add("life1");
             life1.classList.add("life");
+            life1.src = "../images/heart.png"
             healthBar.appendChild(life1);
         }
         else
