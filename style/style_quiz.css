@@ -2,14 +2,14 @@ body
 {
     height: 100vh;
 }
-.quiz
+.container
 {
     width:auto;
     background-color:   rgb(205, 246, 184);
     position:relative;
     box-shadow: 12px 12px 2px 1px rgba(47, 47, 80, 0.2);
     padding:16px;
-    height:300px;
+    height:350px;
     width:600px;
     position: absolute;
     top: 150px;
@@ -17,7 +17,7 @@ body
 }
 .pytanie
 {
-    font-size:38px;
+    font-size:34px;
     padding:6px 4px;
     margin: 0 auto;
     font-weight:600;
@@ -106,6 +106,7 @@ body
 .iloscWygranych
 {
     text-align: center;
+    padding: 4px;
 }
 .playAgain
 {
@@ -114,6 +115,54 @@ body
     background-color: rgb(240, 40, 30);
     margin:16px auto;
     padding:4px;
+}
+.reset
+{
+    height:50px;
+}
+.Answer
+{
+    position: absolute;
+    top:16px;
+    right:16px;
+    height:70px;
+    width:70px;
+}
+.goodAnswer
+{
+    display:none
+}
+.wrongAnswer
+{
+    display:none
+}
+.show
+{
+    display:block
+}
+.odpowiedz1
+{
+    position:absolute;
+    left:32px;
+    top:160px;
+}
+.odpowiedz2
+{
+    position:absolute;
+    left:32px;
+    top:230px;
+}
+.odpowiedz3
+{
+    position:absolute;
+    right:32px;
+    top:160px;
+}
+.odpowiedz4
+{
+    position:absolute;
+    right:32px;
+    top:230px;  
 }
 .noLives
 {

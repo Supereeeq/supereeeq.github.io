@@ -1,103 +1,233 @@
-let zapytanie = {
-    pytanie: "Co?",
-    odpowiedz1: "A",
-    odpowiedz2: "B",
-    odpowiedz3: "C",
-    odpowiedz4: "D",
-    poprawnaOdpowiedz: "B"
-}
 
-let quiz = document.getElementById("quiz")
-let submit = document.getElementById("submit")
-let numberOfLifes = 0;
+let questions = [
+    {
+        pytanie: "Jaka jest średnia temperatura ciała człowieka?",
+        odpowiedzi: ["A) 37°C", "B) 38°C", "C) 36°C", "D) 39°C"],
+        poprawnaOdpowiedz: "A"
+    },
+    {
+        pytanie: "Która witamina jest wytwarzana, gdy skóra jest wystawiona na działanie światła słonecznego?",
+        odpowiedzi: ["A) Witamina A", "B) Witamina C", "C) Witamina D", "D) Witamina E"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Jaki procent ciała stanowi woda?",
+        odpowiedzi: ["A) 50%", "B) 60%", "C) 70%", "D) 80%"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Co jest elektrownią komórki?",
+        odpowiedzi: ["A) Jądro komórkowe", "B) Mitochondrium", "C) Rybosom", "D) Aparat Golgiego"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Które zmysły są zwykle najbardziej wyostrzone u noworodków?",
+        odpowiedzi: ["A) Wzrok i słuch", "B) Węch i smak", "C) Dotyk i wzrok", "D) Słuch i dotyk"],
+        poprawnaOdpowiedz: "A"
+    },
+    {
+        pytanie: "Który pierwiastek chemiczny jest głównym składnikiem ciała?",
+        odpowiedzi: ["A) Węgiel", "B) Tlen", "C) Azot", "D) Wodór"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Który z narządów człowieka jest największy?",
+        odpowiedzi: ["A) Wątroba", "B) Płuca", "C) Skóra", "D) Serce"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Ile kości składa się na ludzką czaszkę?",
+        odpowiedzi: ["A) 22", "B) 24", "C) 26", "D) 28"],
+        poprawnaOdpowiedz: "A"
+    },
+    {
+        pytanie: "Co to jest hemoglobina?",
+        odpowiedzi: ["A) Białko w mięśniach", "B) Rodzaj komórek krwi", "C) Cukier we krwi", "D) Hormon tarczycy"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Jak nazywa się jednostka funkcjonalna nerwu?",
+        odpowiedzi: ["A) Komórka", "B) Neuron", "C) Światłoczułość", "D) Receptor"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Jaka część mózgu odpowiada za pamięć?",
+        odpowiedzi: ["A) Kora mózgowa", "B) Hipokamp", "C) Mózg środkowy", "D) Rdzeń przedłużony"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Który z tych narządów nie jest częścią układu trawiennego?",
+        odpowiedzi: ["A) Wątroba", "B) Trzustka", "C) Płuca", "D) Jelito cienkie"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Jaki jest składnik podstawowy komórek roślinnych?",
+        odpowiedzi: ["A) Celuloza", "B) Skrobia", "C) Lipidy", "D) Białka"],
+        poprawnaOdpowiedz: "A"
+    },
+    {
+        pytanie: "Co to jest aktywność fizyczna?",
+        odpowiedzi: ["A) Ćwiczenia wykonywane w domu", "B) Ruchy wykonywane w pracy", "C) Działania prowadzące do utraty energii", "D) Spędzanie czasu na zewnątrz"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Które z następujących warzyw jest bogate w witaminę C?",
+        odpowiedzi: ["A) Marchewka", "B) Ziemniak", "C) Brokuły", "D) Seler"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Co to jest cholesterol?",
+        odpowiedzi: ["A) Rodzaj cukru", "B) Tłuszcz", "C) Białko", "D) Hormon"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Co to jest anemia?",
+        odpowiedzi: ["A) Wysoki poziom cukru we krwi", "B) Niedobór żelaza", "C) Choroba skóry", "D) Nadmiar czerwonych krwinek"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Jakie są główne funkcje witaminy A?",
+        odpowiedzi: ["A) Poprawa wzroku i wzrost kości", "B) Wzmacnianie odporności i gojenie ran", "C) Produkcja krwinek czerwonych i białych", "D) Utrzymanie zdrowej skóry i błon śluzowych"],
+        poprawnaOdpowiedz: "D"
+    },
+    {
+        pytanie: "Co to jest dieta zrównoważona?",
+        odpowiedzi: ["A) Dieta zawierająca równą ilość białka, węglowodanów i tłuszczów", "B) Dieta składająca się wyłącznie z warzyw", "C) Dieta oparta na fast foodach", "D) Dieta bezglutenowa"],
+        poprawnaOdpowiedz: "A"
+    },
+    {
+        pytanie: "Czym jest BMI?",
+        odpowiedzi: ["A) Mierniką masy ciała", "B) Międzynarodowym wskaźnikiem masy ciała", "C) Międzynarodowym miernikiem biologicznym", "D) Międzynarodowym miernikiem budowy ciała"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Jak nazywa się substancja, która występuje w papierosach i może prowadzić do uzależnienia?",
+        odpowiedzi: ["A) Nikotyna", "B) Kofeina", "C) Alkohol", "D) Kokaina"],
+        poprawnaOdpowiedz: "A"
+    },
+    {
+        pytanie: "Co to jest stres?",
+        odpowiedzi: ["A) Reakcja organizmu na zagrożenie", "B) Stan spokoju i relaksu", "C) Ujemna emocja", "D) Zmęczenie fizyczne"],
+        poprawnaOdpowiedz: "A"
+    },
+    {
+        pytanie: "Jakie są skutki palenia papierosów na zdrowie?",
+        odpowiedzi: ["A) Wzrost poziomu energii", "B) Poprawa zdolności płuc", "C) Wzrost ryzyka chorób serca i płuc", "D) Utrata wagi"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Co to jest depresja?",
+        odpowiedzi: ["A) Zmniejszenie poziomu cholesterolu we krwi", "B) Stan niskiego nastroju i beznadziejności", "C) Wysoki poziom energii", "D) Silne pragnienie snu"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Jaki wpływ na zdrowie ma regularne wykonywanie ćwiczeń fizycznych?",
+        odpowiedzi: ["A) Zwiększenie ryzyka chorób serca", "B) Poprawa ogólnej kondycji fizycznej", "C) Spadek poziomu stresu", "D) Wzrost ryzyka otyłości"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Co to jest cukrzyca?",
+        odpowiedzi: ["A) Zaburzenie równowagi hormonalnej", "B) Choroba układu oddechowego", "C) Stan niskiego poziomu cukru we krwi", "D) Choroba charakteryzująca się podwyższonym poziomem cukru we krwi"],
+        poprawnaOdpowiedz: "D"
+    },
+    {
+        pytanie: "Jaki wpływ na zdrowie ma regularne picie wody?",
+        odpowiedzi: ["A) Wzrost ryzyka odwodnienia", "B) Poprawa funkcji nerek", "C) Zmniejszenie ryzyka kamieni nerkowych", "D) Wzrost ryzyka otyłości"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Co to jest zdrowe odżywianie?",
+        odpowiedzi: ["A) Konsumowanie dużej ilości przetworzonych produktów", "B) Spożywanie różnorodnych i zrównoważonych posiłków", "C) Dieta oparta na fast foodach", "D) Jedzenie tylko owoców i warzyw"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Jakie są główne korzyści płynące z regularnego snu?",
+        odpowiedzi: ["A) Zwiększenie poziomu stresu", "B) Poprawa pamięci i koncentracji", "C) Wzrost ryzyka chorób serca", "D) Zwiększenie ryzyka depresji"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Czym jest autyzm?",
+        odpowiedzi: ["A) Chorobą zakaźną", "B) Zaburzeniem rozwojowym", "C) Częstą alergią", "D) Stanem emocjonalnym"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Jakie są główne objawy udaru mózgu?",
+        odpowiedzi: ["A) Ból głowy i zmęczenie", "B) Problemy z mową i widzeniem", "C) Wzrost apetytu i masy ciała", "D) Wzrost częstości akcji serca"],
+        poprawnaOdpowiedz: "B"
+    },
+    {
+        pytanie: "Co to jest osteoporoza?",
+        odpowiedzi: ["A) Stan nadmiernego wzrostu kości", "B) Choroba zakaźna", "C) Choroba charakteryzująca się osłabieniem kości", "D) Stan podwyższonego ciśnienia krwi"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Jakie są główne przyczyny otyłości?",
+        odpowiedzi: ["A) Regularne ćwiczenia fizyczne", "B) Zdrowe odżywianie", "C) Spożywanie nadmiaru kalorii i brak aktywności fizycznej", "D) Brak snu"],
+        poprawnaOdpowiedz: "C"
+    },
+    {
+        pytanie: "Czym jest alergia?",
+        odpowiedzi: ["A) Reakcją organizmu na zmianę pogody", "B) Nadwrażliwością na określone substancje", "C) Stanem braku apetytu", "D) Spadkiem poziomu cukru we krwi"],
+        poprawnaOdpowiedz: "B"
+    },
+]
+
+
+let currentQuestionIndex = 0;
+let quiz = document.getElementById("quiz");
+let submit = document.getElementById("submit");
+let numberOfLifes = 3;
 let numberOfWins = 0;
-showNumberOfLifes(numberOfLifes);
-zapytaj();
+let goodAnswer = document.getElementById("goodAnswer");
+let wrongAnswer = document.getElementById("wrongAnswer");
+let healthBar = document.getElementById("healthBar")
 
+
+zapytaj();
+showNumberOfLifes();
 
 function zapytaj() {
-    if(numberOfLifes !== 0){
+    if (currentQuestionIndex < questions.length && numberOfLifes > 0) {
+
+        let currentQuestion = questions[currentQuestionIndex];
+
+
+        quiz.innerHTML = "";
 
         let pytanie = document.createElement("div");
-        pytanie.innerText = zapytanie.pytanie;
-        pytanie.classList.add("pytanie")
+        pytanie.innerText = currentQuestion.pytanie;
+        pytanie.classList.add("pytanie");
         quiz.appendChild(pytanie);
 
-        let odpowiedz1 = document.createElement("div");
-        odpowiedz1.classList.add("odpowiedz");
-        quiz.appendChild(odpowiedz1);
+        currentQuestion.odpowiedzi.forEach((answer, index) => {
+            let odpowiedzDiv = document.createElement("div");
+            odpowiedzDiv.classList.add("odpowiedz");
+            odpowiedzDiv.classList.add("odpowiedz" + (index + 1));
+            quiz.appendChild(odpowiedzDiv);
 
-            let zawartosc1 = document.createElement("input");
-            zawartosc1.setAttribute("type", "radio");
-            zawartosc1.setAttribute("name", "odpowiedz")
-            zawartosc1.id = "odpowiedz1"
-            odpowiedz1.appendChild(zawartosc1)
+            let input = document.createElement("input");
+            input.type = "radio";
+            input.setAttribute("name", "odpowiedz");
+            input.id = "odpowiedz" + index;
+            odpowiedzDiv.appendChild(input);
 
-            let label1 = document.createElement("label");
-            label1.setAttribute("for", "odpowiedz1");
-            label1.textContent = zapytanie.odpowiedz1;
-            odpowiedz1.appendChild(label1)
+            let label = document.createElement("label");
+            label.setAttribute("for", "odpowiedz" + index);
+            label.textContent = answer;
+            odpowiedzDiv.appendChild(label);
+        });
 
-        let odpowiedz2 = document.createElement("div");
-        odpowiedz2.classList.add("odpowiedz");
-        quiz.appendChild(odpowiedz2);
-
-            let zawartosc2 = document.createElement("input");
-            zawartosc2.setAttribute("type", "radio");
-            zawartosc2.setAttribute("name", "odpowiedz")
-            zawartosc2.id = "odpowiedz2"
-            odpowiedz2.appendChild(zawartosc2)
-
-            let label2 = document.createElement("label");
-            label2.setAttribute("for", "odpowiedz2");
-            label2.textContent = zapytanie.odpowiedz2;
-            odpowiedz2.appendChild(label2)
-
-        let odpowiedz3 = document.createElement("div");
-        odpowiedz3.classList.add("odpowiedz");
-        quiz.appendChild(odpowiedz3);
-
-            let zawartosc3 = document.createElement("input");
-            zawartosc3.setAttribute("type", "radio");
-            zawartosc3.setAttribute("name", "odpowiedz")
-            zawartosc3.id = "odpowiedz3"
-            odpowiedz3.appendChild(zawartosc3)
-
-            let label3 = document.createElement("label");
-            label3.setAttribute("for", "odpowiedz3");
-            label3.textContent = zapytanie.odpowiedz3;
-            odpowiedz3.appendChild(label3)
-
-        let odpowiedz4 = document.createElement("div");
-        odpowiedz4.classList.add("odpowiedz");
-        quiz.appendChild(odpowiedz4);
-        
-            let zawartosc4 = document.createElement("input");
-            zawartosc4.setAttribute("type", "radio");
-            zawartosc4.setAttribute("name", "odpowiedz")
-            zawartosc4.id = "odpowiedz4"
-            odpowiedz4.appendChild(zawartosc4)
-
-            let label4 = document.createElement("label");
-            label4.setAttribute("for", "odpowiedz4");
-            label4.textContent = zapytanie.odpowiedz4;
-            odpowiedz4.appendChild(label4)
-
-    }
-    else
+        currentQuestionIndex++;
+    } 
+    else 
     {
-        let healthBar = document.getElementById("healthBar")
-
-        submit.classList.add("noLives")
-        healthBar.classList.add("noLives")
-
+        // End of quiz
+        endQuiz();
     }
 }
 
 function showNumberOfLifes () 
 {
-    if(numberOfLifes !== 0){
-        let healthBar = document.getElementById("healthBar")
 
         healthBar.innerHTML = ""; //Usuwanie zawartości 
 
@@ -116,7 +246,7 @@ function showNumberOfLifes ()
         if(numberOfLifes > 1)
         {
             let life2 = document.createElement("div");
-            life2.classList.add("life2");
+            life2.classList.add("life2");   
             life2.classList.add("life");
             healthBar.appendChild(life2);
         }
@@ -127,12 +257,12 @@ function showNumberOfLifes ()
             life1.classList.add("life");
             healthBar.appendChild(life1);
         }
-        if(numberOfLifes < 1)
+        else
         {
-            console.log("Koniec żyć")
-        }  
-    }
-    else
+            endQuiz();
+        }
+
+    if (numberOfLifes == 0)
     {
         let koniec = document.createElement("div");
             koniec.classList.add("koniec");
@@ -142,21 +272,56 @@ function showNumberOfLifes ()
             iloscWygranych.classList.add("iloscWygranych");
             iloscWygranych.innerText = "Ilość wygranych to: " + numberOfWins;
 
+            let link = document.createElement("a");
+            link.href = "../podstrona/quiz.html"
+
             let playAgain = document.createElement("div")
             playAgain.classList.add("playAgain")
 
+            let reset = document.createElement("img")
+            reset.src = "../images/reset.png";
+            reset.classList.add("reset")
+
             quiz.appendChild(koniec);
             koniec.appendChild(iloscWygranych);
-            koniec.appendChild(playAgain);
+            koniec.appendChild(link);
+            link.appendChild(playAgain)
+            playAgain.appendChild(reset)
         
     }
+}
+
+function endQuiz(){
+    let koniec = document.createElement("div");
+            koniec.classList.add("koniec");
+            koniec.innerText = "Koniec gry"
+
+            let iloscWygranych = document.createElement("div")
+            iloscWygranych.classList.add("iloscWygranych");
+            iloscWygranych.innerText = "Ilość wygranych to: " + numberOfWins;
+
+            let link = document.createElement("a");
+            link.href = "../podstrona/quiz.html"
+
+            let playAgain = document.createElement("div")
+            playAgain.classList.add("playAgain")
+
+            let reset = document.createElement("img")
+            reset.src = "../images/reset.png";
+            reset.classList.add("reset")
+
+            quiz.appendChild(koniec);
+            koniec.appendChild(iloscWygranych);
+            koniec.appendChild(link);
+            link.appendChild(playAgain)
+            playAgain.appendChild(reset)
 }
 
 
 submit.addEventListener("click", function() {
     if(numberOfLifes !== 0){
+
         const radioInputs = document.querySelectorAll('input[type="radio"][name="odpowiedz"]');
-    
         let checkedLabelValue = null;
 
         radioInputs.forEach(function(input) {
@@ -168,258 +333,54 @@ submit.addEventListener("click", function() {
         });
 
         if (checkedLabelValue !== null) {
-            if (checkedLabelValue === zapytanie.poprawnaOdpowiedz) 
-            {
-                console.log("Correct answer!");
-                numberOfWins ++;
-
+            let currentQuestion = questions[currentQuestionIndex - 1];
+            console.log("Correct answer:", currentQuestion.poprawnaOdpowiedz);
+            console.log("Selected answer:", checkedLabelValue[0]);
+            if (checkedLabelValue[0] === currentQuestion.poprawnaOdpowiedz) {
+                numberOfWins++;
+                showGoodAnswer();
+                showNumberOfLifes();
+                if(numberOfLifes == 0){
+                    endQuiz();
+                }
             } 
             else 
             {
                 console.log("Incorrect answer!");
+                numberOfLifes--;
+                showNumberOfLifes();   
+                showBadAnswer();
 
-                numberOfLifes -= 1;
-                showNumberOfLifes(numberOfLifes);
             }
-        } 
-        else 
-        {
+        
+            zapytaj();
+        } else {
             console.log("No input is checked.");
-
         }
+    
     }
+    else if( numberOfLifes == 0)
+    {
+        endQuiz();
+    }
+    
 });
 
+function showGoodAnswer() {
+    goodAnswer.classList.add("show");
 
-
-
-
-/*
-// const questions = ["Co wspiera zdrowe kości?", "A) Żelazo", "B) Magnez", "C) Wapń", "D) Potas"];
-// showQuestion(questions);
-
-
-// function showQuestion(questions) {
-//     const quiz = document.getElementById("question");
-
-//     questions.forEach((item, index) => {
-        
-//         if (index === 0){
-//             const pytanie = document.createElement("div");
-//             pytanie.id = ("pytanie");
-//             pytanie.classList.add  ("pytanie");
-//             pytanie.innerText = `${item}`;
-//             quiz.appendChild(pytanie);
-//         }
-//         else if (index === 1){
-//             const odpowiedzContainer1 = document.createElement("div");
-//             odpowiedzContainer1.classList.add("odpowiedzContainer")
-//             const odpowiedzInput = document.createElement("input");
-//             odpowiedzInput.type = "radio";
-//             odpowiedzInput.id = "input1";
-//             odpowiedzInput.name = "odpowiedzi"
-//             odpowiedzInput.classList.add("odpowiedz1");
-//             odpowiedzInput.classList.add("odpowiedz");
-//             odpowiedzContainer1.appendChild(odpowiedzInput);
-//             const odpowiedzLabel = document.createElement("label");
-//             odpowiedzLabel.classList.add ("odpowiedz-label1");
-//             odpowiedzLabel.classList.add ("odpowiedz-label");
-//             odpowiedzLabel.htmlFor = "input1";
-//             odpowiedzLabel.innerText = `${item}`;
-//             odpowiedzContainer1.appendChild(odpowiedzLabel);
-//             quiz.appendChild(odpowiedzContainer1)
-//         }else if (index === 2){
-//             const odpowiedzContainer2 = document.createElement("div");
-//             odpowiedzContainer2.classList.add("odpowiedzContainer")
-//             const odpowiedzInput = document.createElement("input");
-//             odpowiedzInput.type = "radio";
-//             odpowiedzInput.classList.add ("odpowiedz2");
-//             odpowiedzInput.classList.add ("odpowiedz");
-//             odpowiedzInput.id = "input2";
-//             odpowiedzInput.name = "odpowiedzi"
-//             odpowiedzContainer2.appendChild(odpowiedzInput);
-//             const odpowiedzLabel = document.createElement("label");
-//             odpowiedzLabel.id = ("odpowiedz");
-//             odpowiedzLabel.classList.add ("odpowiedz-label2");
-//             odpowiedzLabel.classList.add ("odpowiedz-label");
-//             odpowiedzLabel.htmlFor = "input2";
-//             odpowiedzLabel.innerText = `${item}`;
-//             odpowiedzContainer2.appendChild(odpowiedzLabel);
-//             quiz.appendChild(odpowiedzContainer2);
-//         }else if (index === 3){
-//             const odpowiedzContainer3 = document.createElement("div");
-//             odpowiedzContainer3.classList.add("odpowiedzContainer")
-//             const odpowiedzInput = document.createElement("input");
-//             odpowiedzInput.type = "radio";
-//             odpowiedzInput.classList.add ("odpowiedz3");
-//             odpowiedzInput.classList.add ("odpowiedz");
-//             odpowiedzInput.id = "input3"
-//             odpowiedzInput.name = "odpowiedzi"
-//             odpowiedzContainer3.appendChild(odpowiedzInput);
-//             const odpowiedzLabel = document.createElement("label");
-//             odpowiedzLabel.id = ("odpowiedz");
-//             odpowiedzLabel.classList.add ("odpowiedz-label3");
-//             odpowiedzLabel.classList.add ("odpowiedz-label");
-//             odpowiedzLabel.htmlFor = "input3"
-//             odpowiedzLabel.innerText = `${item}`;
-//             odpowiedzContainer3.appendChild(odpowiedzLabel);
-//             quiz.appendChild(odpowiedzContainer3);
-//         }else if (index === 4){
-//             const odpowiedzContainer4 = document.createElement("div");
-//             odpowiedzContainer4.classList.add("odpowiedzContainer")
-//             const odpowiedzInput = document.createElement("input");
-//             odpowiedzInput.type = "radio";
-//             odpowiedzInput.classList.add ("odpowiedz4");
-//             odpowiedzInput.classList.add ("odpowiedz");
-//             odpowiedzInput.id = "input4"
-//             odpowiedzInput.name = "odpowiedzi"
-//             odpowiedzContainer4.appendChild(odpowiedzInput);
-//             const odpowiedzLabel = document.createElement("label");
-//             odpowiedzLabel.id = ("odpowiedz");
-//             odpowiedzLabel.classList.add ("odpowiedz-label4");
-//             odpowiedzLabel.classList.add ("odpowiedz-label");
-//             odpowiedzLabel.htmlFor = "input4"
-//             odpowiedzLabel.innerText = `${item}`;
-//             odpowiedzContainer4.appendChild(odpowiedzLabel);
-//             quiz.appendChild(odpowiedzContainer4);
-//         }
-//     });
-// }
-hideQuestions();
-const quiz = document.getElementById("quiz");
-
-const questionsArray = [
-    {
-        name: "Ile costam",
-        answers: [
-            "Jeden",
-            "Dwa",
-            "Trzy"
-        ],
-        correct: "Jeden"
-    },
-    {
-        name: "Ile costam 2",
-        answers: [
-            "Jeden",
-            "Dwa",
-            "Trzy"
-        ],
-        correct: "Dwa"
-    },
-];
-
-function createQuestion(obj) {
-    let question = document.createElement("div");
-    question.classList.add("question");
-
-    let title = document.createElement("h3");
-    title.textContent = obj.name;
-
-    question.appendChild(title)
-
-    return question;
+    setTimeout(function() {
+        goodAnswer.classList.remove("show");
+    }, 1000);
 }
 
-function createAnswer(answer) {
-    let answerContainer = document.createElement("div");
+function showBadAnswer() {
+    wrongAnswer.classList.add("show");
 
-    let input = document.createElement("input");
-    input.type = "radio";
-    input.classList.add ("odpowiedz");
-    input.name = "odpowiedzi"
-
-    let label = document.createElement("label");
-    label.id = ("odpowiedz");
-    label.classList.add ("odpowiedz-label");
-
-    label.textContent = answer;
-
-    answerContainer.appendChild(input);
-    answerContainer.appendChild(label);
-    return answerContainer;
+    setTimeout(function() {
+        wrongAnswer.classList.remove("show");
+    }, 1000);
 }
 
-function hideQuestions() {
-    const hid_answer = document.querySelectorAll(".question");
-    console.log(hid_answer);
-}
-
-questionsArray.map((obj) => {
-    //console.log(obj)
-    let hello = createQuestion(obj);
-
-    quiz.appendChild(hello);
-    obj.answers.map((ans) => quiz.appendChild(createAnswer(ans)))
-
-    
-})
 
 
-
-// let questionMap = questionsArray.map((obj) => obj.name);
-
-// console.log(questionMap.len);
-
-
-// document.addEventListener("keydown", function(event) {
-//     if (event.key === "Enter") {
-
-//         const checked = document.querySelector("input[type=radio]:checked");
-//         const result = document.getElementById("wynik");
-//         if(checked.id === "input3")
-//         {
-//             result.classList.remove("wynik-hide");
-//             result.innerText = "Poprawna odpowiedź";
-//             result.classList.add("wynik-show");
-//         }else
-//         {
-//             result.classList.remove("wynik-show");
-//             result.innerText = "Zła odpowiedź";
-//             result.classList.add("wynik-hide");
-//         }
-//     }
-//     else if (event.key === "1")
-//     {
-//         const input = document.getElementById("input1");
-//         input.checked = true;
-//     }
-//     else if (event.key === "2")
-//     {
-//         const input = document.getElementById("input2");
-//         input.checked = true;
-//     }
-//     else if (event.key === "3")
-//     {
-//         const input = document.getElementById("input3");
-//         input.checked = true;
-//     }
-//     else if (event.key === "4")
-//     {
-//         const input = document.getElementById("input4");
-//         input.checked = true;
-//     }
-//   });
-
-// const button = document.getElementById("submit");
-
-// button.addEventListener("click", function(item)
-//     {        
-//         const checked = document.querySelector("input[type=radio]:checked");
-//         const result = document.getElementById("wynik");
-//         if(checked.id === "input3")
-//         {
-//             result.classList.remove("wynik-hide");
-//             result.innerText = "Poprawna odpowiedź";
-//             result.classList.add("wynik-show");
-//         }else
-//         {
-//             result.classList.remove("wynik-show");
-//             result.innerText = "Zła odpowiedź";
-//             result.classList.add("wynik-hide");
-//         }
-        
-//     }
-// )
-
-*/
