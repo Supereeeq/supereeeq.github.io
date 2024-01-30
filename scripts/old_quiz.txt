@@ -456,3 +456,87 @@ function showBadAnswer() {
 }
 */
 
+
+
+
+function send (){
+    let wartosc = wpis.value;
+    wpis.value = "";
+
+    if (ilosc >= 5) { 
+        console.log("You've reached the maximum limit for items.");
+    } 
+    else if (wartosc.trim() !== "" && wartosc.length < 23) {
+        let zrobienie = document.createElement("div");
+        zrobienie.classList.add("zrobienie");
+
+        let odznacz = document.createElement("input");
+        odznacz.classList.add("odznacz");
+        odznacz.setAttribute("type", "radio");
+
+        let tekst = document.createElement("p");
+        tekst.classList.add("tekst");
+        tekst.innerText = wartosc.trim();
+
+        let dotts = document.createElement("img");
+        dotts.classList.add("dotts");
+        dotts.src = "../images/dotts.png";
+
+        container.appendChild(zrobienie);
+        zrobienie.appendChild(odznacz);
+        zrobienie.appendChild(tekst);
+        tekst.appendChild(dotts);
+
+        ilosc++;
+
+        dotts.addEventListener("click", function() {
+            let options = document.createElement("div");
+            options.classList.add("options");
+
+            let usun = document.createElement("div");
+            usun.classList.add("usun");
+            usun.innerText = "Usuń";
+
+            let smietnik = document.createElement("img");
+            smietnik.classList.add("smietnik");
+            smietnik.src = "../images/smietnik.png";
+
+            let edytuj = document.createElement("div");
+            edytuj.classList.add("edytuj");
+            edytuj.innerText = "Edytuj";
+
+            let pencil = document.createElement("img");
+            pencil.classList.add("pencil");
+            pencil.src = "../images/pencil.png";
+
+            zrobienie.appendChild(options);
+            options.appendChild(usun);
+            usun.appendChild(smietnik);
+            options.appendChild(edytuj);
+            edytuj.appendChild(pencil);
+
+            // Delete task functionality
+            usun.addEventListener("click", function() {
+                container.removeChild(zrobienie);
+                ilosc--;
+            });
+
+            // Edit task functionality
+            edytuj.addEventListener click", function() {
+                let editInput = document.createElement("input");
+                editInput.classList.add("editInput");
+                editInput.value = tekst.innerText;
+                tekst.parentNode.replaceChild(editInput, tekst);
+                editInput.focus();
+
+                editInput.addEventListener("blur", function() {
+                    tekst.innerText = editInput.value.trim();
+                    editInput.parentNode.replaceChild(tekst, editInput);
+                });
+            });
+        });
+
+    } else if (wartosc.trim().length > 30) {
+        console.log("Dokończysz to");
+    }
+}
