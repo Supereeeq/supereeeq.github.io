@@ -1,0 +1,12 @@
+[
+    {
+        "pytanie": "Jaka jest średnia temperatura ciała człowieka?",
+        "odpowiedzi": ["A) 37°C", "B) 38°C", "C) 36°C", "D) 39°C"],
+        "poprawnaOdpowiedz": "A"
+    },
+    {
+        "pytanie": "Która witamina jest wytwarzana, gdy skóra jest wystawiona na działanie światła słonecznego?",
+        "odpowiedzi": ["A) Witamina A", "B) Witamina C", "C) Witamina D", "D) Witamina E"],
+        "poprawnaOdpowiedz": "C"
+    }
+]
