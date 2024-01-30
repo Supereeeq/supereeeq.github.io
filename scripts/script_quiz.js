@@ -221,7 +221,6 @@ function zapytaj() {
     } 
     else 
     {
-        // End of quiz
         endQuiz();
     }
 }

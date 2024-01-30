@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clicker</title>
+    <link rel="stylesheet" href="../style/to_do.css">
     <link rel="stylesheet" href="../style/style_header.css">
-    <link rel="stylesheet" href="../style/clicker.css">
     <link rel="icon" href="../images/favicon.ico">
-
+    <title>Health&Life</title>
 </head>
 <body>
     <header>
         <nav>
             <ol>
                 <li>
-                    <img src="../images/menu.png" class="menu" id="menu-icon">
+                    <img src="../images/menu.png" class="menu" id="menu-icon" alt="logo">
                     <ul class="menu-list">
                         <li>
                             <a href="./bmi_calculator.html" id="position1" class="position">
@@ -39,13 +38,12 @@
                                 Clicker
                             </a>
                         </li>
-                        
+
                         <li>
                             <a href="./to_do.html" id="position5" class="position">
                                 To do
                             </a>
                         </li>
-
                     
                     </ul>
                 </li>
@@ -54,33 +52,25 @@
         </nav>
 
         
-    <div id="homer" class="homer">
+
         <a href="../index.html" class="homepage">
             <img src="../images/logo.png" class="logo">
         </a>
-    </div>
     </header>
 
+    <script src="../scripts/menu.js"></script>
+
     <div id="container" class="container">
-        <div id="carrot" class="carrot">
-            <img src="../images/marchew.png" alt="marchewka" id="zdj-carrot" class="zdj-carrot">
-        </div>
-        <div id="wynik" class="wynik">
-        </div>
-        <div id="progress" class="progress" style="---width: 10">
+        <p id="title" class="title">
+            Rzeczy do zrobienia
+        </p>
+        <div id="things" class="things">
 
-        </div>
-        <div id="button1" class="button1 button" tooltip="Jak go kupisz, będziesz dostawał automatycznie punkty co jakiś czas">
+        </div>  
+        
 
-        </div>
-        <div id="button2" class="button2 button" tooltip="Jak go kupisz, twoje kliknięcia będą 2 razy mocniejsze">
-
-        </div>
     </div>
 
-    
-
-    <script src="../scripts/menu.js"></script>
-    <script src="../scripts/clicker.js"></script>
+    <script src="../scripts/to_do.js"></script>
 </body>
 </html>

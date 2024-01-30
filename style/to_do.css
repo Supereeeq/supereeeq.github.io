@@ -1,0 +1,84 @@
+body
+{
+    height:100vh;
+}
+.container
+{
+    background-color: beige;
+    height:500px;
+    width:600px;
+    position: absolute;
+    left: calc(50vw - 300px);
+    top: calc(50vh - 200px);
+    text-align:center;
+}
+.title
+{
+    font-size:34px;
+    font-weight:500px;
+    padding:16px;
+    margin:0;
+    border-bottom:2px dashed black;
+}
+.things
+{
+    height:60px;
+    width:400px;
+    background-color: rgb(139, 168, 248);
+    box-shadow: 2px 2px 4px black;
+    margin:20px auto;
+    text-align: left;
+    border-radius: 24px;
+}
+.wpis
+{
+    background-color: rgb(157, 179, 240);
+    border:none;
+    height:58px;
+    width:330px;
+    font-size:30px;
+    border-radius: 24px 0 0 24px;
+}
+.submit
+{
+    background-color: rgb(169, 186, 233);
+    border:none;
+    height:58px;
+    width:65px;
+    position: relative;
+    top:-5px;
+    border-radius: 0 24px 24px 0;
+    margin-bottom: 20px;
+}
+.submit:hover
+{
+    cursor:pointer;
+}
+.zrobienie
+{
+    background-color: rgb(144, 167, 230);
+    border-radius: 24px;
+    border:none;
+    height:60px;
+    width:400px;
+    position: relative;
+    top:-5px;
+    padding:5px;
+    margin-bottom:10px;
+    box-shadow: 4px 4px 8px black;
+}
+.odznacz
+{
+    position: absolute;
+    left:4px;
+    top:25px;
+}
+.tekst
+{
+    width:380px;
+    font-size:28px;
+    position: absolute;
+    right:0;
+    text-align: left;
+    
+}
