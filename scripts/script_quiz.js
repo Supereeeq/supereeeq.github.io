@@ -1,4 +1,3 @@
-
 let questions = [
     {
         pytanie: "Jaka jest średnia temperatura ciała człowieka?",
@@ -66,11 +65,6 @@ let questions = [
         poprawnaOdpowiedz: "A"
     },
     {
-        pytanie: "Co to jest aktywność fizyczna?",
-        odpowiedzi: ["A) Ćwiczenia wykonywane w domu", "B) Ruchy wykonywane w pracy", "C) Działania prowadzące do utraty energii", "D) Spędzanie czasu na zewnątrz"],
-        poprawnaOdpowiedz: "C"
-    },
-    {
         pytanie: "Które z następujących warzyw jest bogate w witaminę C?",
         odpowiedzi: ["A) Marchewka", "B) Ziemniak", "C) Brokuły", "D) Seler"],
         poprawnaOdpowiedz: "C"
@@ -81,95 +75,141 @@ let questions = [
         poprawnaOdpowiedz: "B"
     },
     {
-        pytanie: "Co to jest anemia?",
-        odpowiedzi: ["A) Wysoki poziom cukru we krwi", "B) Niedobór żelaza", "C) Choroba skóry", "D) Nadmiar czerwonych krwinek"],
-        poprawnaOdpowiedz: "B"
-    },
-    {
-        pytanie: "Jakie są główne funkcje witaminy A?",
-        odpowiedzi: ["A) Poprawa wzroku i wzrost kości", "B) Wzmacnianie odporności i gojenie ran", "C) Produkcja krwinek czerwonych i białych", "D) Utrzymanie zdrowej skóry i błon śluzowych"],
-        poprawnaOdpowiedz: "D"
-    },
-    {
-        pytanie: "Co to jest dieta zrównoważona?",
-        odpowiedzi: ["A) Dieta zawierająca równą ilość białka, węglowodanów i tłuszczów", "B) Dieta składająca się wyłącznie z warzyw", "C) Dieta oparta na fast foodach", "D) Dieta bezglutenowa"],
-        poprawnaOdpowiedz: "A"
-    },
-    {
-        pytanie: "Czym jest BMI?",
-        odpowiedzi: ["A) Mierniką masy ciała", "B) Międzynarodowym wskaźnikiem masy ciała", "C) Międzynarodowym miernikiem biologicznym", "D) Międzynarodowym miernikiem budowy ciała"],
-        poprawnaOdpowiedz: "B"
-    },
-    {
         pytanie: "Jak nazywa się substancja, która występuje w papierosach i może prowadzić do uzależnienia?",
         odpowiedzi: ["A) Nikotyna", "B) Kofeina", "C) Alkohol", "D) Kokaina"],
         poprawnaOdpowiedz: "A"
     },
     {
         pytanie: "Co to jest stres?",
-        odpowiedzi: ["A) Reakcja organizmu na zagrożenie", "B) Stan spokoju i relaksu", "C) Ujemna emocja", "D) Zmęczenie fizyczne"],
+        odpowiedzi: ["A) Reakcja na zagrożenie", "B) Stan spokoju i relaksu", "C) Ujemna emocja", "D) Zmęczenie fizyczne"],
         poprawnaOdpowiedz: "A"
     },
     {
         pytanie: "Jakie są skutki palenia papierosów na zdrowie?",
-        odpowiedzi: ["A) Wzrost poziomu energii", "B) Poprawa zdolności płuc", "C) Wzrost ryzyka chorób serca i płuc", "D) Utrata wagi"],
+        odpowiedzi: ["A) Wzrost energii", "B) Poprawa zdolności płuc", "C) Wzrost ryzyka chorób", "D) Utrata wagi"],
         poprawnaOdpowiedz: "C"
     },
     {
         pytanie: "Co to jest depresja?",
-        odpowiedzi: ["A) Zmniejszenie poziomu cholesterolu we krwi", "B) Stan niskiego nastroju i beznadziejności", "C) Wysoki poziom energii", "D) Silne pragnienie snu"],
+        odpowiedzi: ["A) Złamanie kości", "B) Stan niskiego nastroju", "C) Wysoki poziom energii", "D) Silne pragnienie snu"],
         poprawnaOdpowiedz: "B"
     },
     {
         pytanie: "Jaki wpływ na zdrowie ma regularne wykonywanie ćwiczeń fizycznych?",
-        odpowiedzi: ["A) Zwiększenie ryzyka chorób serca", "B) Poprawa ogólnej kondycji fizycznej", "C) Spadek poziomu stresu", "D) Wzrost ryzyka otyłości"],
+        odpowiedzi: ["A) Zwiększenie ryzyka chorób", "B) Poprawa kondycji", "C) Spadek stresu", "D) Wzrost ryzyka otyłości"],
         poprawnaOdpowiedz: "B"
     },
     {
         pytanie: "Co to jest cukrzyca?",
-        odpowiedzi: ["A) Zaburzenie równowagi hormonalnej", "B) Choroba układu oddechowego", "C) Stan niskiego poziomu cukru we krwi", "D) Choroba charakteryzująca się podwyższonym poziomem cukru we krwi"],
+        odpowiedzi: ["A) Zaburzenie hormonów", "B) Choroba płuc", "C) Niski poziom cukru", "D) Wysoki poziom cukru"],
         poprawnaOdpowiedz: "D"
     },
     {
-        pytanie: "Jaki wpływ na zdrowie ma regularne picie wody?",
-        odpowiedzi: ["A) Wzrost ryzyka odwodnienia", "B) Poprawa funkcji nerek", "C) Zmniejszenie ryzyka kamieni nerkowych", "D) Wzrost ryzyka otyłości"],
-        poprawnaOdpowiedz: "C"
+    pytanie: "Co to jest najmniejsza jednostka życia?",
+    odpowiedzi: ["A) Komórka", "B) Molekuła", "C) Organizm", "D) DNA"],
+    poprawnaOdpowiedz: "A"
     },
     {
-        pytanie: "Co to jest zdrowe odżywianie?",
-        odpowiedzi: ["A) Konsumowanie dużej ilości przetworzonych produktów", "B) Spożywanie różnorodnych i zrównoważonych posiłków", "C) Dieta oparta na fast foodach", "D) Jedzenie tylko owoców i warzyw"],
-        poprawnaOdpowiedz: "B"
+    pytanie: "Gdzie znajduje się serce w ciele człowieka?",
+    odpowiedzi: ["A) Po lewej stronie klatki piersiowej", "B) Po prawej stronie klatki piersiowej", "C) W brzuchu", "D) W plecach"],
+    poprawnaOdpowiedz: "A"
     },
     {
-        pytanie: "Jakie są główne korzyści płynące z regularnego snu?",
-        odpowiedzi: ["A) Zwiększenie poziomu stresu", "B) Poprawa pamięci i koncentracji", "C) Wzrost ryzyka chorób serca", "D) Zwiększenie ryzyka depresji"],
-        poprawnaOdpowiedz: "B"
+    pytanie: "Które z tych narządów filtruje krew?",
+    odpowiedzi: ["A) Wątroba", "B) Żołądek", "C) Płuca", "D) Nerki"],
+    poprawnaOdpowiedz: "D"
     },
+
     {
-        pytanie: "Czym jest autyzm?",
-        odpowiedzi: ["A) Chorobą zakaźną", "B) Zaburzeniem rozwojowym", "C) Częstą alergią", "D) Stanem emocjonalnym"],
-        poprawnaOdpowiedz: "B"
+    pytanie: "Jaka jest funkcja płuc?",
+    odpowiedzi: ["A) Wydzielanie hormonów", "B) Pobieranie tlenu i usuwanie dwutlenku węgla", "C) Trawienie pokarmu", "D) Kontrola ciśnienia krwi"],
+    poprawnaOdpowiedz: "B"
     },
+
     {
-        pytanie: "Jakie są główne objawy udaru mózgu?",
-        odpowiedzi: ["A) Ból głowy i zmęczenie", "B) Problemy z mową i widzeniem", "C) Wzrost apetytu i masy ciała", "D) Wzrost częstości akcji serca"],
-        poprawnaOdpowiedz: "B"
+    pytanie: "Jak nazywa się największy kość w ludzkim ciele?",
+    odpowiedzi: ["A) Kość udowa", "B) Kość ramienna", "C) Kość miedniczna", "D) Kość krzyżowa"],
+    poprawnaOdpowiedz: "A"
     },
+
     {
-        pytanie: "Co to jest osteoporoza?",
-        odpowiedzi: ["A) Stan nadmiernego wzrostu kości", "B) Choroba zakaźna", "C) Choroba charakteryzująca się osłabieniem kości", "D) Stan podwyższonego ciśnienia krwi"],
-        poprawnaOdpowiedz: "C"
+    pytanie: "Który z tych zmysłów jest związany z węchem?",
+    odpowiedzi: ["A) Smak", "B) Wzrok", "C) Słuch", "D) Węch"],
+    poprawnaOdpowiedz: "D"
     },
+
     {
-        pytanie: "Jakie są główne przyczyny otyłości?",
-        odpowiedzi: ["A) Regularne ćwiczenia fizyczne", "B) Zdrowe odżywianie", "C) Spożywanie nadmiaru kalorii i brak aktywności fizycznej", "D) Brak snu"],
-        poprawnaOdpowiedz: "C"
+    pytanie: "Jak nazywa się proces, w którym organizm przekształca pokarm w energię?",
+    odpowiedzi: ["A) Trawienie", "B) Fotosynteza", "C) Respiracja", "D) Metabolizm"],
+    poprawnaOdpowiedz: "D"
     },
+
     {
-        pytanie: "Czym jest alergia?",
-        odpowiedzi: ["A) Reakcją organizmu na zmianę pogody", "B) Nadwrażliwością na określone substancje", "C) Stanem braku apetytu", "D) Spadkiem poziomu cukru we krwi"],
-        poprawnaOdpowiedz: "B"
+    pytanie: "Które z tych składników odżywczych dostarcza najwięcej energii?",
+    odpowiedzi: ["A) Białka", "B) Tłuszcze", "C) Węglowodany", "D) Witaminy"],
+    poprawnaOdpowiedz: "B"
     },
+
+    {
+    pytanie: "Co to jest diabetes?",
+    odpowiedzi: ["A) Choroba serca", "B) Choroba płuc", "C) Choroba związana z poziomem cukru we krwi", "D) Choroba nerek"],
+    poprawnaOdpowiedz: "C"
+    },
+
+    {
+    pytanie: "Jaka część układu nerwowego odpowiada za przekazywanie sygnałów do mózgu?",
+    odpowiedzi: ["A) Neurony", "B) Móżdżek", "C) Rdzeń kręgowy", "D) Synapsy"],
+    poprawnaOdpowiedz: "C"
+    },
+
+    {
+    pytanie: "Która witamina jest niezbędna dla utrzymania zdrowych kości?",
+    odpowiedzi: ["A) Witamina A", "B) Witamina C", "C) Witamina D", "D) Witamina K"],
+    poprawnaOdpowiedz: "C"
+    },
+
+    {
+    pytanie: "Co to jest cholesterol?",
+    odpowiedzi: ["A) Hormon", "B) Cukier", "C) Tłuszcz", "D) Białko"],
+    poprawnaOdpowiedz: "C"
+    },
+
+    {
+    pytanie: "Jak nazywa się proces, w którym organizm zwalcza infekcje?",
+    odpowiedzi: ["A) Immunizacja", "B) Reakcja alergiczna", "C) Odporność", "D) Stan zapalny"],
+    poprawnaOdpowiedz: "C"
+    },
+
+    {
+    pytanie: "Który z tych narządów odpowiada za produkcję moczu?",
+    odpowiedzi: ["A) Wątroba", "B) Płuca", "C) Nerki", "D) Śledziona"],
+    poprawnaOdpowiedz: "C"
+    },
+
+    {
+    pytanie: "Co to jest anemia?",
+    odpowiedzi: ["A) Nadmiar żelaza we krwi", "B) Niedobór czerwonych krwinek lub hemoglobiny", "C) Zaburzenia w krzepnięciu krwi", "D) Infekcja bakteryjna"],
+    poprawnaOdpowiedz: "B"
+    },
+
+    {
+    pytanie: "Który z tych organizmów jest odpowiedzialny za przeziębienie?",
+    odpowiedzi: ["A) Bakterie", "B) Wirusy", "C) Grzyby", "D) Pasożyty"],
+    poprawnaOdpowiedz: "B"
+    },
+
+    {
+    pytanie: "Jakie jest podstawowe źródło witaminy C?",
+    odpowiedzi: ["A) Mięso", "B) Warzywa i owoce", "C) Nabiał", "D) Zboża"],
+    poprawnaOdpowiedz: "B"
+    },
+
+    {
+    pytanie: "Który z tych składników jest niezbędny dla budowy i naprawy tkanek w organizmie?",
+    odpowiedzi: ["A) Białko", "B) Tłuszcz", "C) Węglowodany", "D) Błonnik"],
+    poprawnaOdpowiedz: "A"
+    },
+    
 ]
 
 
@@ -219,9 +259,15 @@ function zapytaj() {
 
         currentQuestionIndex++;
     } 
-    else 
+    else if(numberOfLifes <= 0)
     {
         endQuiz();
+    }
+    else if(currentQuestionIndex == questions.length && numberOfLifes > 0)
+    {
+        currentQuestionIndex++;
+        showWin();
+        console.log("Wygrałeś")
     }
 }
 
@@ -321,7 +367,7 @@ function endQuiz(){
 
 
 submit.addEventListener("click", function() {
-    if(numberOfLifes !== 0){
+    if(numberOfLifes !== 0 && currentQuestionIndex <= questions.length){
 
         const radioInputs = document.querySelectorAll('input[type="radio"][name="odpowiedz"]');
         let checkedLabelValue = null;
@@ -354,6 +400,7 @@ submit.addEventListener("click", function() {
                 showBadAnswer();
 
             }
+
         
             zapytaj();
         } else {
@@ -384,5 +431,11 @@ function showBadAnswer() {
     }, 1000);
 }
 
+function showWin ()
+{
+    let youWon = document.createElement("div")
+    youWon.classList.add("youWon")
+    youWon.innerText = "Wygrałeś!"
 
-
+    quiz.appendChild(youWon)
+}
