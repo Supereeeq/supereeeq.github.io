@@ -1,0 +1,52 @@
+.pojemnik
+{
+    height:120px;
+    width:250px;
+    display: flex;
+}
+button
+{
+    height:60px;
+    width:150px;
+    font-size: 24px;
+    position: relative;
+    top:30px;
+    z-index: 1;
+}
+button:hover
+{
+    cursor: pointer;
+}
+.lewy
+{
+    height:100%;
+    width:20%;
+    z-index: 2;
+}
+.prawy
+{
+    height:100%;
+    width:20%;
+    position: absolute;
+    right:0;
+    top:0;
+    z-index: 2;
+}
+.gorny
+{
+    height:50%;
+    width:60%;
+    position: absolute;
+    right:20%;
+    top:0;
+    z-index: 2;
+}
+.dolny
+{
+    height:50%;
+    width:60%;
+    position: absolute;
+    right:20%;
+    bottom:0;
+    z-index: 2;
+}

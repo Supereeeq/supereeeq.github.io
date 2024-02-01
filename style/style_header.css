@@ -7,13 +7,14 @@ body {
     padding: 0;
     margin: 0;
     min-width: 100%;
+    height:100vh;
 }
 header {
     position:absolute;
     top:0px;
     left:0px;
     height: 100px;
-    width:600px;
+    width:100vw;
     padding: 0;
     margin: 0;
     background-color: rgb(144, 223, 120);
@@ -21,7 +22,6 @@ header {
 }
 
 .menu {
-    height: 60px;
     height: 60px;
     padding: 0;
     margin: 0;
@@ -89,6 +89,10 @@ a.homepage {
     padding: 0;
     text-align: right;
     display: block;
+}
+.menu-list
+{
+    z-index: 3;
 }
 @media screen and (max-width: 767px) {
     header

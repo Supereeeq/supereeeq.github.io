@@ -30,10 +30,6 @@ body {
     display: block;
 }
 
-.dieta:hover {
-    animation: przybliz 2s ease-in-out infinite alternate;
-}
-
 @keyframes przybliz {
     0% {
         transform: scale(1);
