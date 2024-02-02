@@ -167,7 +167,7 @@ function howManyAdd(q){
     case 2:
       points = points + 4;
       break;
-    case 4:
+    case 3:
       points = points + 8;
       break;
   }
