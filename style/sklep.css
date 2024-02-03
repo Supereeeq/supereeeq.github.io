@@ -1,6 +1,6 @@
 .container
 {
-    height:700px;
+    height:fit-content;
     width:1000px;
     padding:16px;
     background-color: aliceblue;
@@ -11,58 +11,66 @@
     border:2px dashed rgb(200,180,180);
     display:grid;
 }
-.upper
-{
-    height: 200px;
-    width:auto;
-    border-bottom: 4px dashed rgb(200, 180, 190);
-}
-.tytul
-{
-    text-align: center;
-    font-size:42px;
-    text-transform: uppercase;
-}
 .medium
 {
     width:auto;
+    height:fit-content;
     border-bottom: 4px dashed rgb(200, 180, 190);
     text-align: center;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 .search
 {
     width:500px;
-    height:30px;
+    height:50px;
     border-radius:24px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+    display: flex;
+    box-shadow: 2px 2px 4px black;
+}
+.searchbar
+{
+    width:420px;
+    height:45px;
+    border-radius:24px 0 0 24px;
+    font-size: 32px;
+    padding-left: 10px;
+    border: 2px solid black;
+}
+.find
+{
+    width:850px;
+    height:27px;
+    text-align: center;
+    padding:10px;
+    background-color: rgb(200,200,200);
+    border-radius:0 24px 24px 0;
+    border: 2px solid black;
+    border-left: none;
+}
+.find:hover
+{
+    cursor: pointer;
+    background-color: rgb(180,180,180);
 }
 .lower
 {
-    height:400px;
-    width:auto;
+    height:550px;
+    width:1000px;
     display:flex;
+    margin:0;
 }
 .kategorie
 {
     height: auto;
     width: 200px;
-    background-color: brown ;
     padding:8px;
 }
 .pojemnikTypu
 {
     padding: 14px 0;
-}
-.waga
-{
-    width:190px;
-    margin:auto;
-    height:80px;
-    background-color: aliceblue;
-    border-bottom:4px dashed rgb(200,180,180);
-}
-.odchudzanie
-{
-    margin-bottom:20px;
 }
 .koszt
 {
@@ -74,8 +82,8 @@
     padding-top: 16px;
     text-align: center;
 }
-label:hover, 
-input:hover
+.lower label:hover, 
+.lower input:hover
 {
     cursor: pointer;
 }
@@ -97,4 +105,13 @@ input:hover
     height:auto;
     width:800px;
     background-color: blueviolet;
+}
+.ocena
+{
+    width:190px;
+    margin:auto;
+    height:80px;
+    background-color: aliceblue;
+    border-bottom:4px dashed rgb(200,180,180);
+    text-align:center;
 }

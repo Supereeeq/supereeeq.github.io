@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../style/sklep.css">
     <link rel="stylesheet" href="../style/style_header.css">
     <link rel="icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../fonts/font_shop/css/fontello.css">
     <title>Health&Life</title>
 </head>
 <body>
@@ -59,19 +60,16 @@
     </header>
 
     <div id="container" class="container">
-        <div class="upper">
-            <div id="tytul" class="tytul">
-                <h1>sklep</h1>
-            </div>
-        </div>
+        
         
         <div id="medium" class="medium">
             <div id="search" class="search">
-                <input type="text" min="1" max="20" class="searchbar" id="searchbar">
+                <input type="text" min="1" max="20" class="searchbar" id="searchbar" placeholder="Wyszukaj">
                 <div id="find" class="find">
-                    
+                    <i class="icon-search"></i>
                 </div>
             </div>
+        </div>
 
         <div class="lower">
             <div id="kategorie" class="kategorie">
@@ -79,7 +77,7 @@
                 <div id="koszt" class="koszt">
                     <input type="range" class="cena" id="cena" min="10" max="200" value="200" step="2">
                     <!-- <label for="cena">Cena</label> -->
-                    <p id="pokazCeny" class="pokazCeny"> Cena:</p>
+                    <p id="pokazCeny" class="pokazCeny">Max. Cena:</p>
 
                 </div>
 
@@ -91,7 +89,7 @@
 
                     <div id="ubraniePojemnik pojemnikTypu" class="ubraniePojemnik pojemnikTypu">
                         <input type="checkbox" id="ubranie" class="ubranie" checked>
-                        <label for="ubranie">Ubrania</label>
+                        <label for="ubranie">Ubranie</label>
                     </div>
 
                     <div id="dietaPojemnik pojemnikTypu" class="dietaPojemnik pojemnikTypu">
@@ -104,6 +102,13 @@
                         <input type="checkbox" id="plan" class="plan" checked>
                         <label for="plan">Plan Treningowy</label>
                     </div>
+                </div>
+
+                <div id="ocena" class="ocena">
+                    <input type="range" min="0" max="5" id="ranking" class="ranking" value="0">
+                    <br>
+                    <label for="ranking" id="pokazOceny">Min. Ocena: 0</label>
+
                 </div>
 
             </div>
