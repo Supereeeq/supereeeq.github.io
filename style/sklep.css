@@ -13,7 +13,7 @@
 }
 .upper
 {
-    height:200px;
+    height: 200px;
     width:auto;
     border-bottom: 4px dashed rgb(200, 180, 190);
 }
@@ -23,9 +23,21 @@
     font-size:42px;
     text-transform: uppercase;
 }
+.medium
+{
+    width:auto;
+    border-bottom: 4px dashed rgb(200, 180, 190);
+    text-align: center;
+}
+.search
+{
+    width:500px;
+    height:30px;
+    border-radius:24px;
+}
 .lower
 {
-    height:500px;
+    height:400px;
     width:auto;
     display:flex;
 }
@@ -35,6 +47,10 @@
     width: 200px;
     background-color: brown ;
     padding:8px;
+}
+.pojemnikTypu
+{
+    padding: 14px 0;
 }
 .waga
 {

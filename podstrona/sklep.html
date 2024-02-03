@@ -64,18 +64,17 @@
                 <h1>sklep</h1>
             </div>
         </div>
+        
+        <div id="medium" class="medium">
+            <div id="search" class="search">
+                <input type="text" min="1" max="20" class="searchbar" id="searchbar">
+                <div id="find" class="find">
+                    
+                </div>
+            </div>
 
         <div class="lower">
             <div id="kategorie" class="kategorie">
-                <div id="waga" class="waga">
-                    <input type="radio" id="odchudzanie" class="odchudzanie" name="waga">
-                    <label for="odchudzanie">Odchudzanie</label>
-                    <br>
-                    
-                    
-                    <input type="radio" id="masa" class="masa" name="waga">
-                    <label for="masa">Masa</label>
-                </div>
 
                 <div id="koszt" class="koszt">
                     <input type="range" class="cena" id="cena" min="10" max="200" value="200" step="2">
@@ -85,19 +84,25 @@
                 </div>
 
                 <div id="typ" class="typ">
-                    <div id="jedzeniePojemnik" class="jedzeniePojemnik">
+                    <div id="jedzeniePojemnik pojemnikTypu" class="jedzeniePojemnik pojemnikTypu">
                         <input type="checkbox" id="jedzenie" class="jedzenie" checked>
                         <label for="jedzenie">Jedzenie</label>
                     </div>
 
-                    <div id="ubraniePojemnik" class="ubraniePojemnik">
+                    <div id="ubraniePojemnik pojemnikTypu" class="ubraniePojemnik pojemnikTypu">
                         <input type="checkbox" id="ubranie" class="ubranie" checked>
                         <label for="ubranie">Ubrania</label>
                     </div>
 
-                    <div id="dietaPojemnik" class="dietaPojemnik">
+                    <div id="dietaPojemnik pojemnikTypu" class="dietaPojemnik pojemnikTypu">
                         <input type="checkbox" id="dieta" class="dieta" checked>
                         <label for="dieta">Dieta</label>
+                    </div>
+
+                    
+                    <div id="planPojemnik pojemnikTypu" class="planPojemnik pojemnikTypu">
+                        <input type="checkbox" id="plan" class="plan" checked>
+                        <label for="plan">Plan Treningowy</label>
                     </div>
                 </div>
 
