@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/to_do.css">
+    <link rel="stylesheet" href="../style/sklep.css">
     <link rel="stylesheet" href="../style/style_header.css">
     <link rel="icon" href="../images/favicon.ico">
     <title>Health&Life</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav>
             <ol>
                 <li>
@@ -58,6 +58,61 @@
         </a>
     </header>
 
+    <div id="container" class="container">
+        <div class="upper">
+            <div id="tytul" class="tytul">
+                <h1>sklep</h1>
+            </div>
+        </div>
+
+        <div class="lower">
+            <div id="kategorie" class="kategorie">
+                <div id="waga" class="waga">
+                    <input type="radio" id="odchudzanie" class="odchudzanie" name="waga">
+                    <label for="odchudzanie">Odchudzanie</label>
+                    <br>
+                    
+                    
+                    <input type="radio" id="masa" class="masa" name="waga">
+                    <label for="masa">Masa</label>
+                </div>
+
+                <div id="koszt" class="koszt">
+                    <input type="range" class="cena" id="cena" min="10" max="200" value="200" step="2">
+                    <!-- <label for="cena">Cena</label> -->
+                    <p id="pokazCeny" class="pokazCeny"> Cena:</p>
+
+                </div>
+
+                <div id="typ" class="typ">
+                    <div id="jedzeniePojemnik" class="jedzeniePojemnik">
+                        <input type="checkbox" id="jedzenie" class="jedzenie" checked>
+                        <label for="jedzenie">Jedzenie</label>
+                    </div>
+
+                    <div id="ubraniePojemnik" class="ubraniePojemnik">
+                        <input type="checkbox" id="ubranie" class="ubranie" checked>
+                        <label for="ubranie">Ubrania</label>
+                    </div>
+
+                    <div id="dietaPojemnik" class="dietaPojemnik">
+                        <input type="checkbox" id="dieta" class="dieta" checked>
+                        <label for="dieta">Dieta</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="przedmioty" class="przedmioty">
+                
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/sklep.js"></script>
 
 </body>
 </html>

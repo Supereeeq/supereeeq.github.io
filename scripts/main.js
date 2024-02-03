@@ -12,18 +12,18 @@ let wybieranie =
 [
     {
         nazwa:"Kalkulator BMI",
-        link:"./podstrona/bmi_calculator.html",
-        innerCode:'<a href="./podstrona/calories_calculator.html"><div id="BMI" class="BMI front"><p>Kalkulator BMI</p><img src="./images/BMI.jpg" alt="Kalkulator BMI"></div></a>'
+        link:"./podstrona/kalkulatory/bmi_calculator.html",
+        innerCode:'<a href="./podstrona/kalkulatory/calories_calculator.html"><div id="BMI" class="BMI front"><p>Kalkulator BMI</p><img src="./images/BMI.jpg" alt="Kalkulator BMI"></div></a>'
     },
     {
         nazwa:"Kalkulator Kalorii",
-        link:"./podstrona/calories_calculator.html",
-        innerCode: '<a href = "./podstrona/bmi_calculator.html"><div id="kalorie" class="kalorie front"><p>Kalkulator Kalorii</p><img src="./images/kalorie.jpg" alt="Kalkulator kalorii "></div></a>'
+        link:"./podstrona/kalkulatory/calories_calculator.html",
+        innerCode: '<a href="./podstrona/kalkulatory/bmi_calculator.html"><div id="kalorie" class="kalorie front"><p>Kalkulator Kalorii</p><img src="./images/kalorie.jpg" alt="Kalkulator kalorii "></div></a>'
     },
     {
         nazwa:"Kliker",
         link:"./podstrona/clicker.html",
-        innerCode: '<a href="./podstrona/clicker.html"><div id="kliker" class="kliker front"><p>Gra Cliker</p><img src="./images/kliker.png" alt="Gra Kliker"></div></a>'
+        innerCode: '<a href="./podstrona/gry/clicker.html"><div id="kliker" class="kliker front"><p>Gra Cliker</p><img src="./images/kliker.png" alt="Gra Kliker"></div></a>'
     },
     {
         nazwa:"Quiz",
@@ -34,6 +34,11 @@ let wybieranie =
         nazwa:"To do",
         link:"./podstrona/to_do.html",
         innerCode: '<a href="./podstrona/to_do.html"><div id="do" class="do front"><p>To do</p><img src="./images/do.png" alt="To do"></div></a>'
+    },
+    {
+        nazwa:"Button",
+        link:"./podstrona/gry/button.html",
+        innerCode:'<a href="./podstrona/gry/button.html"><div id="button" class="button front"><p>Button</p><img src="./images/button.png" alt="Button the game"></div></a>'
     }
 ]
 createFront()

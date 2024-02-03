@@ -67,7 +67,7 @@ function showButton1() {
     button1.removeChild(existingCursor)
   }
   let cursor = document.createElement("img");
-  cursor.src = "../images/cursor-auto.png";
+  cursor.src = "../../images/cursor-auto.png";
   cursor.classList.add("cursor");
   cursor.height = 100;
   cursor.width = 100;  
@@ -124,7 +124,7 @@ function showButton2() {
     button2.removeChild(existingCursor)
   }
   let cursor = document.createElement("img");
-  cursor.src = "../images/cursor2x.png";
+  cursor.src = "../../images/cursor2x.png";
   cursor.classList.add("cursor2x");
   cursor.height = 100;
   cursor.width = 100;  
@@ -412,16 +412,16 @@ function animatePlus (q)
   plus.classList.add("plus");
   switch(q){
     case 0:
-      plus.src = "../images/plus1.png";
+      plus.src = "../../images/plus1.png";
       break;
     case 1:
-      plus.src = "../images/plus2.png";
+      plus.src = "../../images/plus2.png";
       break;
     case 2:
-      plus.src = "../images/plus4.png";
+      plus.src = "../../images/plus4.png";
       break;
     case 3:
-      plus.src = "../images/plus8.png";
+      plus.src = "../../images/plus8.png";
       break;
   }
 

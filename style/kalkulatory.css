@@ -1,0 +1,29 @@
+body
+{
+    height:100vh;
+}
+.container
+{
+    background-color: beige;
+    height:fit-content;
+    width:600px;
+    position: absolute;
+    left: calc(50vw - 300px);
+    top: calc(50vh - 200px);
+    text-align:center;
+    padding:16px;
+}
+a
+{
+    color: black;
+    text-decoration: none;
+}
+h1
+{
+    padding-bottom: 16px;
+    border-bottom:2px dashed rgb(150,100,100)
+}
+h1:hover
+{
+    color:rgb(50,50,50)
+}

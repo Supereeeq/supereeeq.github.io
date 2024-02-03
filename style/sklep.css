@@ -1,0 +1,84 @@
+.container
+{
+    height:700px;
+    width:1000px;
+    padding:16px;
+    background-color: aliceblue;
+    box-shadow: 4px 4px 8px black;
+    position: relative;
+    top:120px;
+    margin: auto;
+    border:2px dashed rgb(200,180,180);
+    display:grid;
+}
+.upper
+{
+    height:200px;
+    width:auto;
+    border-bottom: 4px dashed rgb(200, 180, 190);
+}
+.tytul
+{
+    text-align: center;
+    font-size:42px;
+    text-transform: uppercase;
+}
+.lower
+{
+    height:500px;
+    width:auto;
+    display:flex;
+}
+.kategorie
+{
+    height: auto;
+    width: 200px;
+    background-color: brown ;
+    padding:8px;
+}
+.waga
+{
+    width:190px;
+    margin:auto;
+    height:80px;
+    background-color: aliceblue;
+    border-bottom:4px dashed rgb(200,180,180);
+}
+.odchudzanie
+{
+    margin-bottom:20px;
+}
+.koszt
+{
+    width:190px;
+    margin:auto;
+    height:80px;
+    background-color: aliceblue;
+    border-bottom:4px dashed rgb(200,180,180);
+    padding-top: 16px;
+    text-align: center;
+}
+label:hover, 
+input:hover
+{
+    cursor: pointer;
+}
+.typ
+{
+    
+    width:190px;
+    margin:auto;
+    height:fit-content;
+    background-color: aliceblue;
+    border-bottom:4px dashed rgb(200,180,180);
+}
+.typ > label
+{
+    display: block;
+}
+.przedmioty
+{
+    height:auto;
+    width:800px;
+    background-color: blueviolet;
+}

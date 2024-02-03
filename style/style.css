@@ -120,6 +120,10 @@ body {
     bottom: 200px;
 }
 
+.scroll:hover
+{
+    cursor: pointer;
+}
 .poprzedniaFunkcja,
 .obecnaFunkcja,
 .nastepnaFunkcja {
@@ -240,6 +244,29 @@ p {
 }
 
 .quiz:hover > img {
+    animation: przybliz 2s ease-in-out infinite alternate;
+}
+
+.button > img
+{
+    height: 160px;
+    position: absolute;
+    left:-58px;
+    top:0;
+}
+
+.button > p
+{
+    position: absolute;
+    z-index: 3;
+}
+
+
+.button:hover > p {
+    color: rgb(230, 230, 230);
+}
+
+.button:hover > img {
     animation: przybliz 2s ease-in-out infinite alternate;
 }
 

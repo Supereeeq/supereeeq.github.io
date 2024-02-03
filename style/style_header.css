@@ -10,7 +10,7 @@ body {
     height:100vh;
 }
 header {
-    position:absolute;
+    position:fixed;
     top:0px;
     left:0px;
     height: 100px;
@@ -19,6 +19,7 @@ header {
     margin: 0;
     background-color: rgb(144, 223, 120);
     width:100vw;
+    z-index: 5;
 }
 
 .menu {
