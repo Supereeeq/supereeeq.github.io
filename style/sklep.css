@@ -57,7 +57,7 @@
 }
 .lower
 {
-    height:550px;
+    height:fit-content;
     width:1000px;
     display:flex;
     margin:0;
@@ -100,12 +100,6 @@
 {
     display: block;
 }
-.przedmioty
-{
-    height:auto;
-    width:800px;
-    background-color: blueviolet;
-}
 .ocena
 {
     width:190px;
@@ -114,4 +108,62 @@
     background-color: aliceblue;
     border-bottom:4px dashed rgb(200,180,180);
     text-align:center;
+}
+.przedmioty
+{
+    height:auto;
+    width:800px;
+    display: grid;
+}
+.rzad
+{
+    width:800px;
+    height:300px;
+    display: flex;
+}
+.okno
+{
+    height:250px;
+    width:220px;
+    padding:8px;
+    background-color: aliceblue;
+    margin:16px;
+    overflow: hidden;
+    border: 2px solid rgb(197, 197, 150);
+}
+.okno:hover
+{
+    background-color: rgb(233, 233, 233);   
+    cursor: pointer;
+}
+.zdj
+{
+    height:150px;
+    width:200px;
+    overflow: hidden;
+}
+.zdj > img
+{
+    height:150px;
+}
+.opis
+{
+    font-size: 20px;
+}
+.ocenaProduktu
+{
+    padding: 0;
+    margin-top: -20px;
+    height:16px;
+
+}
+.ocenaProduktu > img
+{
+    height:16px;
+    padding: 0 4px;
+}
+.cenaProduktu
+{
+    padding:10px 0;
+    font-size: 30px;
 }
