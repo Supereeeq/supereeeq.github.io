@@ -129,6 +129,8 @@ let szukaj = document.getElementById("find")
 
 let wyszukaj = document.getElementById("wyszukaj")
 
+let sort = document.getElementById("sortuj")
+
 generuj()
 
 
@@ -159,6 +161,42 @@ wyszukaj.addEventListener("click",function()
 {
     generuj();
 })
+
+sort.addEventListener("input",function()
+{
+    let wartoscInputa = sort.value
+    if(wartoscInputa == "brak")
+    {
+        produkty.sort((a,b) => a.tags.localeCompare(b.tags)) 
+    }
+    else if(wartoscInputa == "goraCena")
+    {
+        produkty.sort((a,b) => a.cena - b.cena) 
+    }
+    else if(wartoscInputa == "dolCena")
+    {
+        produkty.sort((a,b) => b.cena -  a.cena) 
+    }
+    else if(wartoscInputa == "goraNazwa")
+    {
+        produkty.sort((a,b) => a.name.localeCompare(b.name)) 
+    }
+    else if(wartoscInputa == "dolNazwa")
+    {
+        produkty.sort((a,b) => b.name.localeCompare(a.name)) 
+    }
+    else if(wartoscInputa == "goraGwiazdki")
+    {
+        produkty.sort((a,b) => a.stars - b.stars) 
+    }
+    else if(wartoscInputa == "dolGwiazdki")
+    {
+        produkty.sort((a,b) => b.stars -  a.stars) 
+    }
+
+    generuj();
+})
+
 
 function generuj() {
     przedmioty.innerHTML = "";
@@ -227,7 +265,6 @@ function generuj() {
 
                                 iloscOceny -= 1;
                                 ocenaProduktu.appendChild(gwiazdka);
-                                console.log("wykonane -1")
 
                             } else if (iloscOceny >= 0.5) 
                             {                     

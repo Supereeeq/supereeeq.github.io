@@ -14,11 +14,12 @@
 .medium
 {
     width:auto;
-    height:fit-content;
+    height:150px;
     border-bottom: 4px dashed rgb(200, 180, 190);
     text-align: center;
     padding-bottom: 16px;
     margin-bottom: 16px;
+    display: flex;
 }
 .search
 {
@@ -29,6 +30,7 @@
     text-align: left;
     display: flex;
     box-shadow: 2px 2px 4px black;
+    margin:auto;
 }
 .searchbar
 {
@@ -54,6 +56,37 @@
 {
     cursor: pointer;
     background-color: rgb(180,180,180);
+}
+.sort
+{
+    position: absolute;
+    right:16px;
+    top:20px;
+}
+.sort > p
+{
+    font-size: 14px;
+    background-color: aliceblue;
+    position: relative;
+    top:25px;
+    left:20px;
+    width:80px;
+}
+.sort > select
+{
+    height:fit-content;
+    padding:10px;
+    width:190px;
+    border: 2px solid rgb(200,150,150);
+    background-color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 4px black;
+}
+.sort > select > option
+{
+    font-size:24px;
+    border-bottom: 2px solid black;
 }
 .lower
 {
