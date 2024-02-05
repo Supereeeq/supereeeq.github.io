@@ -15,6 +15,7 @@ function showEmpty()
 
     let wpis = document.createElement("input");
     wpis.classList.add("wpis");
+    wpis.placeholder = "Co masz do zrobienia?"
     wpis.id = "wpis";
 
     let submit = document.createElement("input");
@@ -72,7 +73,9 @@ function send (){
             ilosc++;
 
             dotts.addEventListener("click", function() {
-                if (licznikOpcji % 2 !== 0) {
+                let options = zrobienie.querySelector(".options");
+
+                if (!options) {
                     createOptions(zrobienie, tekst);   
                 }
                 else 
@@ -178,6 +181,7 @@ function wpiszNowyTekst(tekst, zrobienie) { //from here
     tekst.addEventListener("blur", function() {
         // Call a function to save the edited text when the element loses focus
         zapiszEdycje(tekst, zrobienie);
+        hideOptions();
     });
 
 }
