@@ -131,6 +131,10 @@ let wyszukaj = document.getElementById("wyszukaj")
 
 let sort = document.getElementById("sortuj")
 
+let zmienWyswietlanie = document.getElementById("widok")
+
+let wyswietlanie = "galeria"
+
 generuj()
 
 
@@ -197,123 +201,227 @@ sort.addEventListener("input",function()
     generuj();
 })
 
+zmienWyswietlanie.addEventListener("click",function()
+{
+    if(wyswietlanie == "galeria")
+    {
+        wyswietlanie = "lista"
+    }
+    else if(wyswietlanie == "lista")
+    {
+        wyswietlanie = "galeria"
+    }
+    console.log(wyswietlanie)
+    generuj()
+})
+
 
 function generuj() {
     przedmioty.innerHTML = "";
+    zmienWyswietlanie.innerHTML = ""
+
     let numerOkna = 1;
-
-    let rzadPierwszy = document.createElement("div")
-    rzadPierwszy.classList.add("rzad")
-    rzadPierwszy.classList.add("rzad1")
-
-
-    let rzadDrugi = document.createElement("div")
-    rzadDrugi.classList.add("rzad")
-    rzadDrugi.classList.add("rzad2")
-
-
-    let rzadTrzeci = document.createElement("div")
-    rzadTrzeci.classList.add("rzad")
-    rzadTrzeci.classList.add("rzad3")
-
-
-    let rzadCzwarty = document.createElement("div")
-    rzadCzwarty.classList.add("rzad")
-    rzadCzwarty.classList.add("rzad4")
-
-    let rzadPiaty = document.createElement("div")
-    rzadPiaty.classList.add("rzad")
-    rzadPiaty.classList.add("rzad5")
-
-    for (let i = 0; i < produkty.length; i++) 
+    if(wyswietlanie == "galeria")
     {
-        if (cena.value >= produkty[i].cena) 
+        zmienWyswietlanie.innerHTML = '<img src="../images/lista.png"</img>'
+
+        let rzadPierwszy = document.createElement("div")
+        rzadPierwszy.classList.add("rzad")
+        rzadPierwszy.classList.add("rzad1")
+
+
+        let rzadDrugi = document.createElement("div")
+        rzadDrugi.classList.add("rzad")
+        rzadDrugi.classList.add("rzad2")
+
+
+        let rzadTrzeci = document.createElement("div")
+        rzadTrzeci.classList.add("rzad")
+        rzadTrzeci.classList.add("rzad3")
+
+
+        let rzadCzwarty = document.createElement("div")
+        rzadCzwarty.classList.add("rzad")
+        rzadCzwarty.classList.add("rzad4")
+
+        let rzadPiaty = document.createElement("div")
+        rzadPiaty.classList.add("rzad")
+        rzadPiaty.classList.add("rzad5")
+
+        for (let i = 0; i < produkty.length; i++) 
         {
-            if (jedzenie.checked || ubranie.checked || dieta.checked || plan.checked) 
+            if (cena.value >= produkty[i].cena) 
             {
-                if (
-                    (jedzenie.checked && produkty[i].type === "jedzenie") ||
-                    (ubranie.checked && produkty[i].type === "ubranie") ||
-                    (dieta.checked && produkty[i].type === "dieta") ||
-                    (plan.checked && produkty[i].type === "plan")
-                )
+                if (jedzenie.checked || ubranie.checked || dieta.checked || plan.checked) 
                 {
-                    if 
-                    (
-                        produkty[i].cena <= cena.value &&
-                        produkty[i].stars >= ranking.value
+                    if (
+                        (jedzenie.checked && produkty[i].type === "jedzenie") ||
+                        (ubranie.checked && produkty[i].type === "ubranie") ||
+                        (dieta.checked && produkty[i].type === "dieta") ||
+                        (plan.checked && produkty[i].type === "plan")
                     )
                     {
-
-                        let okno = document.createElement("div");
-                        okno.classList.add("okno");
-                        okno.classList.add("okno" + numerOkna);
-                        okno.innerHTML = '<div class="zdj' + numerOkna +' zdj"><img src="' + produkty[i].image +'"></div><div class="opis' + numerOkna + ' opis"><p>' + produkty[i].name + '</p></div>'
-                
-                        let ocenaProduktu = document.createElement("div");
-                        ocenaProduktu.classList.add("ocenaProduktu");
-
-                        
-                        let iloscOceny = produkty[i].stars;
-                        
-                        while (iloscOceny > 0) 
+                        if 
+                        (
+                            produkty[i].cena <= cena.value &&
+                            produkty[i].stars >= ranking.value
+                        )
                         {
-                            if (iloscOceny >= 1) 
-                            {         
-                                let gwiazdka = document.createElement("img");
-                                gwiazdka.src = '../images/star.png';
 
-                                iloscOceny -= 1;
-                                ocenaProduktu.appendChild(gwiazdka);
-
-                            } else if (iloscOceny >= 0.5) 
-                            {                     
-                                let polGwiazdki = document.createElement("img");
-                                polGwiazdki.src = '../images/halfStar.png';
-
-                                iloscOceny -= 0.5;
-                                ocenaProduktu.appendChild(polGwiazdki);
-                               
-                            }
-                        }
-                        
-                        okno.appendChild(ocenaProduktu);
-
-
-                        let cenaProduktu = document.createElement("div")
-                        cenaProduktu.classList.add("cenaProduktu")
-                        cenaProduktu.innerText = produkty[i].cena + "zł"
-
-                        okno.appendChild(cenaProduktu)
-
-                        if(numerOkna < 4)
-                        {
-                            rzadPierwszy.appendChild(okno)
-                            przedmioty.append(rzadPierwszy)
-                        }
-                        else if(numerOkna < 7)
-                        {    
-                            przedmioty.append(rzadDrugi)
-                            rzadDrugi.appendChild(okno)
-                        }
-                        else if(numerOkna < 10)
-                        {    
-                            przedmioty.append(rzadTrzeci)
-                            rzadTrzeci.appendChild(okno)
-                        }
-                        else if(numerOkna < 13)
-                        {    
-                            przedmioty.append(rzadCzwarty)
-                            rzadCzwarty.appendChild(okno)
-                        }
-                        else if(numerOkna < 16)
-                        {
-                            przedmioty.appendChild(rzadPiaty)
-                            rzadPiaty.appendChild(okno)
-                        }
-
-                        numerOkna++;
+                            let okno = document.createElement("div");
+                            okno.classList.add("okno");
+                            okno.classList.add("okno" + numerOkna);
+                            okno.innerHTML = '<div class="zdj' + numerOkna +' zdj"><img src="' + produkty[i].image +'"></div><div class="opis' + numerOkna + ' opis"><p>' + produkty[i].name + '</p></div>'
                     
+                            let ocenaProduktu = document.createElement("div");
+                            ocenaProduktu.classList.add("ocenaProduktu");
+
+                            
+                            let iloscOceny = produkty[i].stars;
+                            
+                            while (iloscOceny > 0) 
+                            {
+                                if (iloscOceny >= 1) 
+                                {         
+                                    let gwiazdka = document.createElement("img");
+                                    gwiazdka.src = '../images/star.png';
+
+                                    iloscOceny -= 1;
+                                    ocenaProduktu.appendChild(gwiazdka);
+
+                                } else if (iloscOceny >= 0.5) 
+                                {                     
+                                    let polGwiazdki = document.createElement("img");
+                                    polGwiazdki.src = '../images/halfStar.png';
+
+                                    iloscOceny -= 0.5;
+                                    ocenaProduktu.appendChild(polGwiazdki);
+                                
+                                }
+                            }
+                            
+                            okno.appendChild(ocenaProduktu);
+
+
+                            let cenaProduktu = document.createElement("div")
+                            cenaProduktu.classList.add("cenaProduktu")
+                            cenaProduktu.innerText = produkty[i].cena + "zł"
+
+                            okno.appendChild(cenaProduktu)
+
+                            if(numerOkna < 4)
+                            {
+                                rzadPierwszy.appendChild(okno)
+                                przedmioty.append(rzadPierwszy)
+                            }
+                            else if(numerOkna < 7)
+                            {    
+                                przedmioty.append(rzadDrugi)
+                                rzadDrugi.appendChild(okno)
+                            }
+                            else if(numerOkna < 10)
+                            {    
+                                przedmioty.append(rzadTrzeci)
+                                rzadTrzeci.appendChild(okno)
+                            }
+                            else if(numerOkna < 13)
+                            {    
+                                przedmioty.append(rzadCzwarty)
+                                rzadCzwarty.appendChild(okno)
+                            }
+                            else if(numerOkna < 16)
+                            {
+                                przedmioty.appendChild(rzadPiaty)
+                                rzadPiaty.appendChild(okno)
+                            }
+
+                            numerOkna++;
+                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    else if (wyswietlanie == "lista") {
+        
+        zmienWyswietlanie.innerHTML = '<img src="../images/galeria.png"</img>'
+
+        let rzadek = document.createElement("div")
+        rzadek.classList.add("rzadek")
+
+        for (let i = 0; i < produkty.length; i++) 
+        {
+            if (cena.value >= produkty[i].cena) 
+            {
+                if (jedzenie.checked || ubranie.checked || dieta.checked || plan.checked) 
+                {
+                    if (
+                        (jedzenie.checked && produkty[i].type === "jedzenie") ||
+                        (ubranie.checked && produkty[i].type === "ubranie") ||
+                        (dieta.checked && produkty[i].type === "dieta") ||
+                        (plan.checked && produkty[i].type === "plan")
+                    )
+                    {
+                        if 
+                        (
+                            produkty[i].cena <= cena.value &&
+                            produkty[i].stars >= ranking.value
+                        )
+                        {
+
+                            let okno = document.createElement("div");
+                            okno.classList.add("okno");
+                            okno.classList.add("oknoLista");
+                            okno.classList.add("okno" + numerOkna);
+                            okno.innerHTML = '<div class="zdj' + numerOkna +' zdj"><img src="' + produkty[i].image +'"></div><div class="opis' + numerOkna + ' opis"><p>' + produkty[i].name + '</p></div>'
+                    
+                            let ocenaProduktu = document.createElement("div");
+                            ocenaProduktu.classList.add("ocenaProduktu");
+
+                            
+                            let iloscOceny = produkty[i].stars;
+                            
+                            while (iloscOceny > 0) 
+                            {
+                                if (iloscOceny >= 1) 
+                                {         
+                                    let gwiazdka = document.createElement("img");
+                                    gwiazdka.src = '../images/star.png';
+
+                                    iloscOceny -= 1;
+                                    ocenaProduktu.appendChild(gwiazdka);
+
+                                } else if (iloscOceny >= 0.5) 
+                                {                     
+                                    let polGwiazdki = document.createElement("img");
+                                    polGwiazdki.src = '../images/halfStar.png';
+
+                                    iloscOceny -= 0.5;
+                                    ocenaProduktu.appendChild(polGwiazdki);
+                                
+                                }
+                            }
+                            
+                            okno.appendChild(ocenaProduktu);
+
+
+                            let cenaProduktu = document.createElement("div")
+                            cenaProduktu.classList.add("cenaProduktu")
+                            cenaProduktu.innerText = produkty[i].cena + "zł"
+
+                            okno.appendChild(cenaProduktu)
+
+
+                            rzadek.appendChild(okno)
+                            przedmioty.append(rzadek)
+           
+
+                            numerOkna++;
+                        
+                        }
                     }
                 }
             }

@@ -21,6 +21,16 @@
     margin-bottom: 16px;
     display: flex;
 }
+.widok
+{
+    height:50px;
+    width:50px;
+    border:2px solid black;
+    position: absolute;
+    top:65px;
+    left:150px;
+
+}
 .search
 {
     width:500px;
@@ -212,6 +222,50 @@
 {
     background-color: rgb(233, 233, 233);   
     cursor: pointer;
+}
+.zdj
+{
+    height: 150px;
+    width:fit-content;
+    margin: auto;
+    overflow: hidden;
+}
+.zdj > img
+{
+    height:150px;
+}
+.opis
+{
+    font-size: 20px;
+}
+.ocenaProduktu
+{
+    padding: 0;
+    margin-top: -20px;
+    height:16px;
+
+}
+.ocenaProduktu > img
+{
+    height:16px;
+    padding: 0 4px;
+}
+.cenaProduktu
+{
+    padding:10px 0;
+    font-size: 30px;
+}
+.rzadek
+{
+    display: grid;
+}
+.oknoLista
+{
+    width:700px;
+}
+.oknoLista .zdj
+{
+    margin:0;
 }
 .zdj
 {
