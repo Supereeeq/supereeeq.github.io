@@ -127,6 +127,8 @@ let przedmioty = document.getElementById("przedmioty")
 
 let szukaj = document.getElementById("find")
 
+let wyszukaj = document.getElementById("wyszukaj")
+
 generuj()
 
 
@@ -149,6 +151,11 @@ ocena.addEventListener("input",function(){
 })
 
 szukaj.addEventListener("click",function()
+{
+    generuj();
+})
+
+wyszukaj.addEventListener("click",function()
 {
     generuj();
 })

@@ -109,6 +109,50 @@
     border-bottom:4px dashed rgb(200,180,180);
     text-align:center;
 }
+.wyszukaj {
+    height: 80px;
+    margin-top: 20px;
+    width: 200px;
+    padding: 8px;
+    font-size: 30px;
+    background-color: rgb(200, 100, 150);
+    box-shadow: 4px 4px 8px black;
+}
+
+.wyszukaj:hover {
+    animation: 10s kolorki infinite, 10s cien infinite;
+}   
+
+@keyframes kolorki {
+    0% {
+        background-color: rgb(200, 100, 150);
+    }
+    25% {
+        background-color: rgb(15, 101, 230);
+    }
+    50% {
+        background-color: rgb(177, 95, 48);
+    }
+    75% {
+        background-color: rgb(85, 177, 48);
+    }
+    100% {
+        background-color: rgb(200, 100, 150);
+    }
+}
+
+@keyframes cien {
+    0% {
+        box-shadow: 4px 4px 8px black;
+    }
+    50% {
+        box-shadow: 4px 4px 8px rgb(133, 133, 133);
+    }
+    100% {
+        box-shadow: 4px 4px 8px black;  
+    }
+}
+
 .przedmioty
 {
     height:auto;
@@ -138,8 +182,9 @@
 }
 .zdj
 {
-    height:150px;
-    width:200px;
+    height: 150px;
+    width:fit-content;
+    margin: auto;
     overflow: hidden;
 }
 .zdj > img
