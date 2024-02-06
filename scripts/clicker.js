@@ -36,6 +36,24 @@ function showButton1() {
     case 3:
       opis1.textContent = "150";
       break;
+    case 4:
+      opis1.textContent = "200";
+      break;
+    case 5:
+      opis1.textContent = "300";
+      break;
+    case 6:
+      opis1.textContent = "500";
+      break;
+    case 7:
+      opis1.textContent = "750";
+      break;
+    case 8:
+      opis1.textContent = "1000";
+      break;
+    deafult:
+      opis1.textContent = "BRAK";
+      break;
   }
 
   button1.appendChild(opis1);
@@ -98,6 +116,7 @@ function backgroundPoints(){
 clicked.addEventListener("click", function() {
   clicked.classList.add("zdj-carrot-clicked");
   howManyAdd(q)
+  background();
 
 });
 
@@ -156,7 +175,7 @@ function changeButton1(){
         showButton1(p);
         setInterval(backgroundPoints, 4000);
       }
-    break;
+      break;
     case 2:
       if (points >= 100)
       {
@@ -166,15 +185,67 @@ function changeButton1(){
         showButton1(p);
         setInterval(backgroundPoints, 3000);
       }
-      case 3:
+      break;
+    case 3:
       if (points >= 150)
       {
         points = points - 150;
         p++;
         showPoints();
         showButtons(p);
-        setInterval(backgroundPoints, 3000);
+        setInterval(backgroundPoints, 2500);
       }
+      break;
+    case 4:
+      if (points >= 200)
+      {
+        points = points - 200;
+        p++;
+        showPoints(points);
+        showButton1(p);
+        setInterval(backgroundPoints, 2200);
+      }
+      break;
+    case 5:
+      if (points >= 300)
+      {
+        points = points - 300;
+        p++;
+        showPoints();
+        showButton1(p);
+        setInterval(backgroundPoints, 2000);
+      }
+      break;
+    case 6:
+      if (points >= 500)
+      {
+        points = points - 500;
+        p++;
+        showPoints();
+        showButton1(p);
+        setInterval(backgroundPoints, 1800);
+      }
+      break;
+    case 7:
+      if (points >= 750)
+      {
+        points = points - 750;
+        p++;
+        showPoints();
+        showButtons(p);
+        setInterval(backgroundPoints, 1500);
+      }
+      break;
+      case 8:
+      if (points >= 1000)
+      {
+        points = points - 1000;
+        p++;
+        showPoints(points);
+        showButton1(p);
+        setInterval(backgroundPoints, 1000);
+      }
+      break;
   }
   
 }
@@ -221,4 +292,14 @@ function changeButton2(){
       }
   }
   
+}
+
+function background(){
+  punkt = document.createElement("img");
+  punkt.height = 200;
+  punkt.src = '../images/dodaj_jeden.png';
+  punkt.alt = 'Moving Image';
+  punkt.style.position = 'absolute';
+  punkt.style.bottom = '0';
+  punkt.style.left = '50%';
 }

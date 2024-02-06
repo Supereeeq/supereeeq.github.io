@@ -14,10 +14,13 @@
     padding:0;
     width:400px;
     left:150px;
+    pointer-events: none;
 }
 .zdj-carrot
 {
     height:400px; 
+    user-select: none;
+    pointer-events: auto;
 }
 .zdj-carrot:hover
 {
@@ -37,7 +40,6 @@
         scale: 100%;
     }
 }
-
 .wynik
 {
     height:70px;
