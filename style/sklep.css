@@ -1,0 +1,301 @@
+.container
+{
+    height:fit-content;
+    width:1000px;
+    padding:16px;
+    background-color: aliceblue;
+    box-shadow: 4px 4px 8px black;
+    position: relative;
+    top:120px;
+    margin: auto;
+    border:2px dashed rgb(200,180,180);
+    display:grid;
+}
+.medium
+{
+    width:auto;
+    height:150px;
+    border-bottom: 4px dashed rgb(200, 180, 190);
+    text-align: center;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    display: flex;
+}
+.widok
+{
+    height:50px;
+    width:50px;
+    border:2px solid black;
+    position: absolute;
+    top:65px;
+    left:150px;
+
+}
+.search
+{
+    width:500px;
+    height:50px;
+    border-radius:24px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+    display: flex;
+    box-shadow: 2px 2px 4px black;
+    margin:auto;
+}
+.searchbar
+{
+    width:420px;
+    height:45px;
+    border-radius:24px 0 0 24px;
+    font-size: 32px;
+    padding-left: 10px;
+    border: 2px solid black;
+}
+.find
+{
+    width:850px;
+    height:27px;
+    text-align: center;
+    padding:10px;
+    background-color: rgb(200,200,200);
+    border-radius:0 24px 24px 0;
+    border: 2px solid black;
+    border-left: none;
+}
+.find:hover
+{
+    cursor: pointer;
+    background-color: rgb(180,180,180);
+}
+.sort
+{
+    position: absolute;
+    right:16px;
+    top:20px;
+}
+.sort > p
+{
+    font-size: 14px;
+    background-color: aliceblue;
+    position: relative;
+    top:25px;
+    left:20px;
+    width:80px;
+}
+.sort > select
+{
+    height:fit-content;
+    padding:10px;
+    width:190px;
+    border: 2px solid rgb(200,150,150);
+    background-color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    box-shadow: 2px 2px 4px black;
+}
+.sort > select > option
+{
+    font-size:24px;
+    border-bottom: 2px solid black;
+}
+.lower
+{
+    height:fit-content;
+    width:1000px;
+    display:flex;
+    margin:0;
+}
+.kategorie
+{
+    height: auto;
+    width: 200px;
+    padding:8px;
+}
+.pojemnikTypu
+{
+    padding: 14px 0;
+}
+.koszt
+{
+    width:190px;
+    margin:auto;
+    height:80px;
+    background-color: aliceblue;
+    border-bottom:4px dashed rgb(200,180,180);
+    padding-top: 16px;
+    text-align: center;
+}
+.lower label:hover, 
+.lower input:hover
+{
+    cursor: pointer;
+}
+.typ
+{
+    
+    width:190px;
+    margin:auto;
+    height:fit-content;
+    background-color: aliceblue;
+    border-bottom:4px dashed rgb(200,180,180);
+}
+.typ > label
+{
+    display: block;
+}
+.ocena
+{
+    width:190px;
+    margin:auto;
+    height:80px;
+    background-color: aliceblue;
+    border-bottom:4px dashed rgb(200,180,180);
+    text-align:center;
+}
+.wyszukaj {
+    height: 80px;
+    margin-top: 20px;
+    width: 200px;
+    padding: 8px;
+    font-size: 30px;
+    background-color: rgb(200, 100, 150);
+    box-shadow: 4px 4px 8px black;
+}
+
+.wyszukaj:hover {
+    animation: 10s kolorki infinite, 10s cien infinite;
+}   
+
+@keyframes kolorki {
+    0% {
+        background-color: rgb(200, 100, 150);
+    }
+    25% {
+        background-color: rgb(15, 101, 230);
+    }
+    50% {
+        background-color: rgb(177, 95, 48);
+    }
+    75% {
+        background-color: rgb(85, 177, 48);
+    }
+    100% {
+        background-color: rgb(200, 100, 150);
+    }
+}
+
+@keyframes cien {
+    0% {
+        box-shadow: 4px 4px 8px black;
+    }
+    50% {
+        box-shadow: 4px 4px 8px rgb(133, 133, 133);
+    }
+    100% {
+        box-shadow: 4px 4px 8px black;  
+    }
+}
+
+.przedmioty
+{
+    height:auto;
+    width:800px;
+    display: grid;
+}
+.rzad
+{
+    width:800px;
+    height:300px;
+    display: flex;
+}
+.okno
+{
+    height:250px;
+    width:220px;
+    padding:8px;
+    background-color: aliceblue;
+    margin:16px;
+    overflow: hidden;
+    border: 2px solid rgb(197, 197, 150);
+}
+.okno:hover
+{
+    background-color: rgb(233, 233, 233);   
+    cursor: pointer;
+}
+.zdj
+{
+    height: 150px;
+    width:fit-content;
+    margin: auto;
+    overflow: hidden;
+}
+.zdj > img
+{
+    height:150px;
+}
+.opis
+{
+    font-size: 20px;
+}
+.ocenaProduktu
+{
+    padding: 0;
+    margin-top: -20px;
+    height:16px;
+
+}
+.ocenaProduktu > img
+{
+    height:16px;
+    padding: 0 4px;
+}
+.cenaProduktu
+{
+    padding:10px 0;
+    font-size: 30px;
+}
+.rzadek
+{
+    display: grid;
+}
+.oknoLista
+{
+    width:700px;
+}
+.oknoLista .zdj
+{
+    margin:0;
+}
+.zdj
+{
+    height: 150px;
+    width:fit-content;
+    margin: auto;
+    overflow: hidden;
+}
+.zdj > img
+{
+    height:150px;
+}
+.opis
+{
+    font-size: 20px;
+}
+.ocenaProduktu
+{
+    padding: 0;
+    margin-top: -20px;
+    height:16px;
+
+}
+.ocenaProduktu > img
+{
+    height:16px;
+    padding: 0 4px;
+}
+.cenaProduktu
+{
+    padding:10px 0;
+    font-size: 30px;
+}

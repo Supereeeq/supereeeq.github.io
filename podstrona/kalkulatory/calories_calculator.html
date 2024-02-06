@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kalorii</title>
+    <link rel="stylesheet" href="../../style/style_kalorie.css?v=1.0.8">
+    <link rel="stylesheet" href="../../style/style_header.css">
+    <link rel="icon" href="../../images/favicon.ico">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ol>
+                <li>
+                    <img src="../../images/menu.png" class="menu" id="menu-icon" alt="logo">
+                    <ul class="menu-list">
+                        <li>
+                            <a href="./../sklep.html" id="position1" class="position">
+                                Sklep
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../kalkulatory.html" id="position2" class="position">
+                                Kalkulatory
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../quiz.html" id="position3" class="position">
+                                Quiz
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../gry.html" id="position4" class="position">
+                                Gry
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../to_do.html" id="position5" class="position">
+                                To do
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </li>
+
+            </ol>
+        </nav>
+
+        
+
+        <a href="../../index.html" class="homepage">
+            <img src="../../images/logo.png" class="logo">
+        </a>
+    </header>
+
+    <script src="../../scripts/menu.js"></script>
+    
+    <article id="kalorie" class="kalorie">
+        <form method="POST">
+            <section class="sex">
+                <p class="label_gender">Podaj płeć</p><br>
+                <label for="male" class="label_male">Mężczyzna</label>
+                <input type="radio" id="male" class="male" name="gender">
+                <label for="female" class="label_female" >Kobieta</label>
+                <input type="radio" id="female" class="female" name="gender">
+            </section>
+            <section class="size">
+                <label for="weight" class="label_weight" >Waga</label>
+                <input type="number" id="weight" class="weight" placeholder="kg" >
+                <label for="height" class="label_height">Wzrost</label>
+                <input type="number" id="height" class="height" placeholder="cm" >
+                <label for="age" class="label_age">Wiek</label>
+                <input type="number" id="age" class="age" placeholder="lata" >
+            </section>
+            <section class="training">
+               <p class="label_excersize">Jak często ćwiczysz?</p>
+               <select name="exercise" id="exercise" class="excersize">
+                    <option value="not_exercise">Wcale</option>
+                    <option value="rarely_exercise">1-3razy / tydzień</option>
+                    <option value="moderatly_exercise">3-5razy / tydzień</option>
+                    <option value="often_exercise">6-7razy / tydzień</option>
+                    <option value="extremly_exercise">2x dziennie</option>
+               </select>
+            </section>
+            <section class="goal">
+                <label for="goal_weight" class="label_goal_weight">Waga docelowa</label>
+                <input type="number" id="goal_weight" class="goal_weight" placeholder="kg" >
+            </section>
+            <section>
+                <input type="submit" value="SPRAWDŹ" class="submit" id="submit">
+            </section>
+            <section class="not_result" id="not_result">
+
+            </section>
+        </form>
+    </article>
+    <script src="../../scripts/script_calories.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[
+    {
+      "name": "ryż niskokaloryczny",
+      "cena": "19.99 zł",
+      "image": "../images/ryz.png",
+      "link": "./sklep/ryz.html",
+      "tags": "ryż niskokaloryczny dieta chudnięcie",
+      "type": "jedzenie"
+    }
+  ]
+  

@@ -1,88 +1,180 @@
-header
+body
 {
-    margin-bottom:30px;
+    height: 100vh;
 }
-.main
-{
-    max-width: 780px;
-    margin:0 auto;
-}
-.quiz
+.container
 {
     width:auto;
     background-color:   rgb(205, 246, 184);
     position:relative;
     box-shadow: 12px 12px 2px 1px rgba(47, 47, 80, 0.2);
     padding:16px;
-}
-.title
-{
-    font-size:38px;
-    padding:6px 4px;
-    margin: 0 auto;
-    text-align: center;
-}
-.odpowiedz
-{
-    height: 28px;
-    width:28px;
-    margin-right: 16px;
+    height:350px;
+    width:600px;
+    position: absolute;
+    top: 150px;
+    left: calc(50vw - 316px);
 }
 .pytanie
 {
     font-size:34px;
-    margin-bottom:16px;
-    font-weight: 600;
+    padding:6px 4px;
+    margin: 0 auto;
+    font-weight:600;
 }
-.odpowiedzContainer
+.odpowiedz
 {
-    padding: 16px 0;
-}
-.odpowiedz-label
-{
-    position: absolute;
-    font-size:30px;
-}
-.question
-{
-    margin-bottom:30px
+    height:45px;
 }
 .submit
 {
-    background-color: rgb(150, 150, 135);
-    width:200px;
-    height:50px;
-    font-size:36px;
-    margin:0;
-    padding:4px;
+    height: 60px;
+    width:140px;
+    display: inline-block;
+    position: absolute;
+    left:16px;
+    bottom:16px;
+    font-size:40px;
+    text-align:center;
+    background-color: rgb(191, 235, 205);
+    box-shadow: 4px 4px 8px rgb(32, 32, 32);
+    left:16px;
 }
 .submit:hover
 {
-    background-color: rgb(119, 119, 110);
-    color: rgba(65, 63, 63);
+    background-color: rgb(169, 211, 182);
+    box-shadow: inset 4px 4px 8px rgb(32, 32, 32);
 }
-.wynik
+.healthBar
 {
-    opacity: 0;
-    height:100px;
-    width:300px;
-    background-color: aliceblue;
     position:absolute;
-    right:10px;
-    bottom:10px;
-    box-shadow: 12px 12px 2px 1px rgba(47, 47, 80, 0.2);
-    font-size:44px;
+    right:16px;
+    bottom:16px;
+    background-color: rgb(213, 228, 212);
+    height:50px;
+    width:200px;
+    background-color: rgb(191, 235, 205);
+    box-shadow: 4px 4px 8px rgb(32, 32, 32);
+    border-radius:32px;
+}
+.life
+{
+    height:50px;
+    width:50px;
+}
+.life1
+{
+    position:absolute;
+    left:0;
+    top:0;
+    border-radius:32px 0 0 32px;
+}
+.life2
+{
+    position:absolute;
+    left:75px;
+    top:0;
+}
+.life3
+{
+    position:absolute;
+    right:0;
+    top:0;
+    border-radius:0 32px 32px 0;
+}
+.napisIloscZyc
+{
+    position:absolute;
+    right:52px;
+    bottom: 52px;
+    font-size:20px;
+}
+.koniec
+{
     text-align: center;
+    height:max-content;
+    padding:8px;
+    width:max-content;
+    display:block;
+    margin:auto;
+    position: absolute;
+    top:90px;
+    left:190px;
+    background-color: rgb(255,255,255);
 }
-.wynik-show
+.iloscWygranych
 {
-    opacity:1;
-    background-color:rgb(84, 218, 84);
-    color:rgb(39, 112, 39);
+    text-align: center;
+    padding: 4px;
 }
-.wynik-hide
+.playAgain
 {
-    opacity:1;
-    background-color:rgb(200, 50, 50);
-    color: rgb(121, 3, 3);
+    height:50px;
+    width: 100px;
+    background-color: rgb(240, 40, 30);
+    margin:16px auto;
+    padding:4px;
+}
+.reset
+{
+    height:50px;
+}
+.Answer
+{
+    position: absolute;
+    top:16px;
+    right:16px;
+    height:70px;
+    width:70px;
+}
+.goodAnswer
+{
+    display:none;
+}
+.wrongAnswer
+{
+    display:none;
+}
+.show
+{
+    display:block;
+    position:absolute;
+    left:-250px;
+    top:120px;
+}
+.odpowiedz1
+{
+    position:absolute;
+    left:32px;
+    top:160px;
+}
+.odpowiedz2
+{
+    position:absolute;
+    left:32px;
+    top:230px;
+}
+.odpowiedz3
+{
+    position:absolute;
+    right:32px;
+    top:160px;
+}
+.odpowiedz4
+{
+    position:absolute;
+    right:32px;
+    top:230px;  
+}
+.noLives
+{
+    display: none;
+}
+.youWon
+{
+    height:50px;
+    width: 100px;
+    background-color: rgb(30, 240, 40);
+    margin:16px auto;
+    padding:16px;
 }

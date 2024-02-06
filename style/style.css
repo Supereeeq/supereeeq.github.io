@@ -1,4 +1,354 @@
-body
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    width: 700px;
+    height: fit-content;
+    margin: 130px auto;
+    background-color: aliceblue;
+    padding: 0 0 16px;
+    position: relative;
+}
+
+.diety {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 2px dashed rgb(56, 56, 56);
+}
+
+.dieta {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes przybliz {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes przyblizMaly {
+    0% {
+        transform: scale(0.3);
+    }
+    100% {
+        transform: scale(0.4);
+    }
+}
+
+.dietyText {
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    left: 120px;
+    color: rgb(244, 244, 244);
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 4px 4px 8px rgb(56, 56, 56), 2px 2px rgb(56, 56, 56);
+}
+
+.sklep {
+    font-size: 40px;
+    font-weight: 500;
+    font-family: serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.promocje {
+    height: 300px;
+    position: relative;
+    margin-bottom: 30px;
+    padding: 0 0 16px;
+    border-bottom: 2px dashed rgb(56, 56, 56);
+}
+
+.promocja {
+    border: 2px dashed rgb(37, 37, 209);
+    width: fit-content;
+    overflow: hidden;
+    position: absolute;
+}
+
+.promocja1 {
+    left: 32px;
+}
+
+.promocja2 {
+    left: 250px;
+}
+
+.promocja3 {
+    right: 32px;
+}
+
+.promocjaZdj {
+    height: 200px;
+}
+
+.promocja:hover .promocjaZdj {
+    animation: przybliz 2s ease-in-out infinite alternate;
+}
+
+.funkcje {
+    height: 300px;
+    text-align: center;
+}
+
+.scrollLewo {
+    position: absolute;
+    left: 20px;
+    bottom: 200px;
+}
+
+.scrollPrawo {
+    position: absolute;
+    right: 20px;
+    bottom: 200px;
+}
+
+.scroll:hover
 {
-    height:100vh;
+    cursor: pointer;
+}
+.poprzedniaFunkcja,
+.obecnaFunkcja,
+.nastepnaFunkcja {
+    height: 180px;
+    width: 130px;
+    position: absolute;
+    box-shadow: 0 24px 32px black, inset 2px 2px 16px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poprzedniaFunkcja {
+    background-color: rgb(134, 134, 134);
+    left: 80px;
+}
+
+.obecnaFunkcja {
+    background-color: rgb(184, 184, 184);
+    left: 250px;
+    height:250px;
+    width:200px;
+    box-shadow: 0 16px 32px black, inset 1px 1px 16px rgb(49, 49, 49);
+}
+
+.nastepnaFunkcja {
+    background-color: rgb(134, 134, 134);
+    right: 80px;
+}
+
+.front {
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+    width: 100px;
+    font-size: 22px;
+    color: rgb(244, 244, 244);
+    text-shadow: 4px 4px 8px rgb(56, 56, 56), 2px 2px rgb(56, 56, 56);
+    text-align: center;
+}
+
+p {
+    width: 100%;
+}
+
+.BMI > img {
+    height: 160px;
+    position: relative;
+    left: -165px;
+}
+
+.BMI > p {
+    color: rgb(244, 244, 244);
+    text-shadow: 4px 4px 8px rgb(56, 56, 56), 2px 2px rgb(56, 56, 56);
+    position: absolute;
+    z-index: 3;
+}
+
+.BMI:hover > p {
+    color: rgb(230, 230, 230);
+}
+
+.BMI:hover > img {
+    animation: przybliz 2s ease-in-out infinite alternate;
+}
+
+.kalorie > img {
+    height: 160px;
+    position: relative;
+    left: -20px;
+}
+
+.kalorie > p {
+    color: rgb(244, 244, 244);
+    text-shadow: 4px 4px 8px rgb(56, 56, 56), 2px 2px rgb(56, 56, 56);
+    position: absolute;
+    z-index: 3;
+}
+
+.kalorie:hover > p {
+    color: rgb(230, 230, 230);
+}
+
+.kalorie:hover > img {
+    animation: przybliz 2s ease-in-out infinite alternate;
+}
+
+.kliker > p {
+    color: rgb(244, 244, 244);
+    text-shadow: 4px 4px 8px rgb(56, 56, 56), 2px 2px rgb(56, 56, 56);
+    position: absolute;
+    z-index: 3;
+}
+
+.kliker > img {
+    height: 160px;
+    position: relative;
+    left: -55px;
+}
+
+.kliker:hover > p {
+    color: rgb(230, 230, 230);
+}
+
+.kliker:hover > img {
+    animation: przybliz 2s ease-in-out infinite alternate;
+}
+
+.quiz > p {
+    position: absolute;
+    z-index: 3;
+}
+
+.quiz > img {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+}
+
+.quiz:hover > img {
+    animation: przybliz 2s ease-in-out infinite alternate;
+}
+
+.button > img
+{
+    height: 160px;
+    position: absolute;
+    left:-58px;
+    top:0;
+}
+
+.button > p
+{
+    position: absolute;
+    z-index: 3;
+}
+
+
+.button:hover > p {
+    color: rgb(230, 230, 230);
+}
+
+.button:hover > img {
+    animation: przybliz 2s ease-in-out infinite alternate;
+}
+
+.do > p {
+    position: absolute;
+    z-index: 3;
+}
+
+.do > img {
+    position: absolute;
+    left: -240px;
+    top: -160px;
+    transform: scale(0.3);
+}
+
+.do:hover > img {
+    animation: przyblizMaly 2s ease-in-out infinite alternate;
+}
+
+footer
+{
+    height:120px;
+    padding: 16px;
+    background: linear-gradient(to bottom, rgb(200, 154, 206),rgb(165, 53, 180));
+    display: flex;
+}
+
+.author
+{
+    height:inherit;
+    width:33vw;
+}
+.socials
+{
+    height:inherit;
+    width:33vw;
+}
+.kontakt
+{
+    height:inherit;
+    width:33vw;
+}
+.author > i 
+{
+    display: inline-block;
+    position: relative;
+    top:20px;
+}
+.author > h4
+{
+    position: relative;
+    top:-40px;
+    left:32px;
+}
+.socials
+{
+    display: grid;
+}
+.YT
+{
+    height:30px;
+    width:auto;
+    cursor: pointer;
+}
+.instagram
+{
+    height:30px;
+    width:auto;
+    cursor: pointer;
+}
+.facebook
+{
+    height:30px;
+    width:auto;
+    cursor: pointer;
+}
+.socials > a
+{
+    color:black;
+    text-decoration: none;
+}
+.kontakt
+{
+    display: grid;
 }

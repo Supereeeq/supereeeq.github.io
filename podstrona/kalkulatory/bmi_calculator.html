@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../style/style_bmi.css">
+    <link rel="stylesheet" href="../../style/style_header.css?v1.0.9">
+    <link rel="icon" href="../../images/favicon.ico">
+    <title>Bmi- calculator</title>
+    
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ol>
+                <li>
+                    <img src="../../images/menu.png" class="menu" id="menu-icon" alt="logo">
+                    <ul class="menu-list">
+                        <li>
+                            <a href="./../sklep.html" id="position1" class="position">
+                                Sklep
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../kalkulatory.html" id="position2" class="position">
+                                Kalkulatory
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../quiz.html" id="position3" class="position">
+                                Quiz
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../gry.html" id="position4" class="position">
+                                Gry
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../to_do.html" id="position5" class="position">
+                                To do
+                            </a>
+                        </li>
+                    
+                    </ul>
+                </li>
+
+            </ol>
+        </nav>
+
+        
+
+        <a href="../../index.html" class="homepage">
+            <img src="../../images/logo.png" class="logo">
+        </a>
+    </header>
+
+    <script src="../../scripts/menu.js"></script>
+    <div id="container" class="container">
+        <div id="formularz">
+            <form method="POST">
+                <label for="wzrost">Podaj Wzrost</label><br>
+                <input type="number" name="wzrost" id="wzrost" placeholder="cm"  /><br><br>
+
+                <label for="waga">Podaj Wagę</label><br>
+                <input type="number" name="waga" id="waga" placeholder="kg" /><br><br>
+
+                <button id="submit" type="submit" class="submit">Wyślij</button>
+            </form>
+        </div>
+    </div>
+    <div id="wynik" class="wynik">
+    </div>
+    <script src="../../scripts/script_bmi.js"></script>
+</body>
+</html>
