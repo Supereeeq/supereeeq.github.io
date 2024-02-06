@@ -7,7 +7,8 @@ let produkty =
         link:"./sklep/ryz.html",
         tags:"ryż niskokaloryczny dieta chudnięcie",
         type:"dieta",
-        stars:2
+        stars:2,
+        promocja: true
     },
     {
         name: "Mieszanka orzechowa",
@@ -16,7 +17,8 @@ let produkty =
         link: "./sklep/mieszanka_orzechowa.html",
         tags: "owoce orzechy zdrowe przekąski",
         type: "jedzenie",
-        stars: 4
+        stars: 4,
+        promocja: false
     },    
     {
         name: "Chia Seeds Organic",
@@ -25,7 +27,8 @@ let produkty =
         link: "./sklep/chia_seeds.html",
         tags: "chia nasiona organiczne superfoods",
         type: "jedzenie",
-        stars: 3
+        stars: 3,
+        promocja: false
     },
     {
         name: "Kwasy omega-3",
@@ -34,7 +37,8 @@ let produkty =
         link: "./sklep/omega3.html",
         tags: "omega-3 zdrowa dieta suplementy",
         type: "dieta",
-        stars: 4
+        stars: 4,
+        promocja: true
     },
     {
         name: "Legginsy sportowe",
@@ -43,7 +47,8 @@ let produkty =
         link: "./sklep/legginsy_sportowe.html",
         tags: "ubrania sportowe fitness legginsy",
         type: "ubranie",
-        stars: 2
+        stars: 2,
+        promocja: false
     },
     {
         name: "Koszulka termoaktywna",
@@ -52,7 +57,8 @@ let produkty =
         link: "./sklep/koszula_termoaktywna.html",
         tags: "odzież sportowa termoaktywna fitness",
         type: "ubranie",
-        stars: 4
+        stars: 4,
+        promocja: true
     },
     {
         name: "Trening ABS",
@@ -61,7 +67,8 @@ let produkty =
         link: "./sklep/trening_brzucha.html",
         tags: "trening brzuch fitness plan",
         type: "plan",
-        stars: 1
+        stars: 1,
+        promocja: true
     },
     {
         name: "Kettlebell Workout Plan",
@@ -70,7 +77,8 @@ let produkty =
         link: "./sklep/kettlebell.html",
         tags: "trening kettlebell siła fitness",
         type: "plan",
-        stars: 5
+        stars: 5,
+        promocja: false
     },    
     {
         name: "Quinoa Organiczna",
@@ -79,7 +87,8 @@ let produkty =
         link: "./sklep/quinoa.html",
         tags: "quinoa zdrowe jedzenie organiczne",
         type: "jedzenie",
-        stars: 4
+        stars: 4,
+        promocja: false
     },
     {
         name: "Mieszanka superfoods",
@@ -88,7 +97,8 @@ let produkty =
         link: "./sklep/superfoods.html",
         tags: "superfoods dieta zdrowie",
         type: "dieta",
-        stars: 3
+        stars: 3,
+        promocja: false
     },
     {
         name: "Buty do biegania",
@@ -97,7 +107,8 @@ let produkty =
         link: "./sklep/buty_bieganie.html",
         tags: "buty sportowe bieganie fitness",
         type: "ubranie",
-        stars: 4
+        stars: 4,
+        promocja: false
     },
     {
         name: "Yoga Guide",
@@ -106,7 +117,8 @@ let produkty =
         link: "./sklep/yoga.html",
         tags: "yoga plan treningowy mindfulness",
         type: "plan",
-        stars: 4
+        stars: 4,
+        promocja: false
     },                
 ]
 
@@ -343,8 +355,6 @@ function generuj() {
             }
         }
     }
-
-
     else if (wyswietlanie == "lista") {
         
         zmienWyswietlanie.innerHTML = '<img src="../images/galeria.png"</img>'
@@ -377,6 +387,11 @@ function generuj() {
                             okno.classList.add("oknoLista");
                             okno.classList.add("okno" + numerOkna);
                             okno.innerHTML = '<div class="zdj' + numerOkna +' zdj"><img src="' + produkty[i].image +'"></div><div class="opis' + numerOkna + ' opis"><p>' + produkty[i].name + '</p></div>'
+
+                            if (produkty[i].promocja == true)
+                            {
+                                okno.classList.add("promocja");
+                            }
                     
                             let ocenaProduktu = document.createElement("div");
                             ocenaProduktu.classList.add("ocenaProduktu");

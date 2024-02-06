@@ -25,11 +25,11 @@
 {
     height:50px;
     width:50px;
-    border:2px solid black;
+    border: 2px solid rgb(200,150,150);
     position: absolute;
     top:65px;
     left:150px;
-
+    box-shadow: 2px 2px 4px black;
 }
 .search
 {
@@ -255,14 +255,6 @@
     padding:10px 0;
     font-size: 30px;
 }
-.rzadek
-{
-    display: grid;
-}
-.oknoLista
-{
-    width:700px;
-}
 .oknoLista .zdj
 {
     margin:0;
@@ -277,6 +269,7 @@
 .zdj > img
 {
     height:150px;
+    max-width: 180px;
 }
 .opis
 {
@@ -298,4 +291,34 @@
 {
     padding:10px 0;
     font-size: 30px;
+}
+.rzadek
+{
+    display: grid;
+}
+.oknoLista
+{
+    width:700px;
+    height:150px;
+    position: relative;
+}
+.oknoLista > .opis
+{
+    position: absolute;
+    top:-24px;
+    left:200px;
+    font-size: 36px;
+}
+.oknoLista > .ocenaProduktu
+{
+    position: absolute;
+    top:86px;
+    left:200px;
+}
+.oknoLista > .cenaProduktu
+{
+    position: absolute;
+    top:100px;
+    left:200px;
+    font-size: 42px;
 }
