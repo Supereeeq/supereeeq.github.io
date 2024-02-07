@@ -217,6 +217,7 @@
     margin:16px;
     overflow: hidden;
     border: 2px solid rgb(197, 197, 150);
+    position: relative;
 }
 .okno:hover
 {
@@ -291,6 +292,22 @@
 {
     padding:10px 0;
     font-size: 30px;
+}
+.addToCart
+{
+    height:40px;
+    width:80px;
+    background-color: rgba(150, 150, 150, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right:8px;
+    bottom:8px;
+}
+.addToCart:hover
+{
+    background-color: rgba(150, 150, 150, 0.50);
 }
 .rzadek
 {

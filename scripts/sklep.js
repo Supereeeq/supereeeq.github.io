@@ -314,6 +314,16 @@ function generuj() {
                             
                             okno.appendChild(ocenaProduktu);
 
+                                                        
+                            let addToCart = document.createElement("div")
+                            addToCart.classList.add("addToCart")
+                            
+                            let shoppingBasket = document.createElement("i")
+                            shoppingBasket.classList.add("icon-shopping-basket")
+
+                            addToCart.appendChild(shoppingBasket)
+                            okno.appendChild(addToCart)
+
 
                             let cenaProduktu = document.createElement("div")
                             cenaProduktu.classList.add("cenaProduktu")
@@ -422,6 +432,11 @@ function generuj() {
                             
                             okno.appendChild(ocenaProduktu);
 
+                            
+                            let addToCart = document.createElement("div")
+                            addToCart.classList.add("addToCart")
+
+                            okno.appendChild(addToCart)
 
                             let cenaProduktu = document.createElement("div")
                             cenaProduktu.classList.add("cenaProduktu")
