@@ -9,7 +9,7 @@ body
     width:600px;
     position: absolute;
     left: calc(50vw - 300px);
-    top: calc(50vh - 200px);
+    top: 130px;
     text-align:center;
     padding:16px;
 }

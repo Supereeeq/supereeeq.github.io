@@ -4,70 +4,68 @@ let dolny = document.getElementById("dolny")
 let prawy = document.getElementById("prawy")
 let lewy = document.getElementById("lewy")
 
-let left = 600
-let pTop = 300
-position()
+let left = 45; 
+let pTop = 45; 
+position();
 
-function position ()
-{
-    button.style.position = "absolute"
-    button.style.left = `${left}px`
-    button.style.top = `${pTop}px`
+function position() {
+    button.style.position = "absolute";
+    button.style.left = `${left}vw`; 
+    button.style.top = `${pTop}vh`;
 }
 
-gorny.addEventListener("mouseover", function(){
+gorny.addEventListener("mouseover", function() {
     const intervalId = setInterval(() => {
-        pTop += 30;
-        if (pTop > 500) {
-            pTop = 150;
+        pTop += 2; 
+        if (pTop > 90) {
+            pTop = 10;
         }
         position();
     }, 10);
     
-    gorny.addEventListener("mouseout", function(){
+    gorny.addEventListener("mouseout", function() {
         clearInterval(intervalId);
     });
 });
 
-dolny.addEventListener("mouseover", function(){
+dolny.addEventListener("mouseover", function() {
     const intervalId = setInterval(() => {
-        pTop -= 30;
-        if (pTop < 150) {
-            pTop = 500;
+        pTop -= 2;
+        if (pTop < 10) {
+            pTop = 80; 
         }
         position();
     }, 10);
     
-    dolny.addEventListener("mouseout", function(){
+    dolny.addEventListener("mouseout", function() {
         clearInterval(intervalId);
     });
 });
 
-lewy.addEventListener("mouseover", function(){
+lewy.addEventListener("mouseover", function() {
     const intervalId = setInterval(() => {
-        left += 30;
-        if (left > 1100) {
-            left = 50;
+        left += 2; 
+        if (left > 90) {
+            left = 10;
         }
         position();
     }, 10);
     
-    lewy.addEventListener("mouseout", function(){
+    lewy.addEventListener("mouseout", function() {
         clearInterval(intervalId);
     });
 });
 
-
-prawy.addEventListener("mouseover", function(){
+prawy.addEventListener("mouseover", function() {
     const intervalId = setInterval(() => {
-        left -= 30;
-        if (left < 100) {
-            left = 1100;
+        left -= 2; 
+        if (left < 0) {
+            left = 85; 
         }
         position();
     }, 10);
     
-    prawy.addEventListener("mouseout", function(){
+    prawy.addEventListener("mouseout", function() {
         clearInterval(intervalId);
     });
 });

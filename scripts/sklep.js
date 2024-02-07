@@ -147,6 +147,10 @@ let zmienWyswietlanie = document.getElementById("widok")
 
 let wyswietlanie = "galeria"
 
+let basket = document.getElementById("basket")
+
+let iloscZakupow = 0
+
 generuj()
 
 
@@ -226,7 +230,6 @@ zmienWyswietlanie.addEventListener("click",function()
     console.log(wyswietlanie)
     generuj()
 })
-
 
 function generuj() {
     przedmioty.innerHTML = "";
@@ -320,6 +323,12 @@ function generuj() {
                             
                             let shoppingBasket = document.createElement("i")
                             shoppingBasket.classList.add("icon-shopping-basket")
+
+                            addToCart.addEventListener("click",function()
+                            {
+                                changeBasket()
+                            })
+                            
 
                             addToCart.appendChild(shoppingBasket)
                             okno.appendChild(addToCart)
@@ -436,6 +445,11 @@ function generuj() {
                             let addToCart = document.createElement("div")
                             addToCart.classList.add("addToCart")
 
+                            let shoppingBasket = document.createElement("i")
+                            shoppingBasket.classList.add("icon-shopping-basket")
+                            
+
+                            addToCart.appendChild(shoppingBasket)
                             okno.appendChild(addToCart)
 
                             let cenaProduktu = document.createElement("div")
@@ -457,4 +471,30 @@ function generuj() {
             }
         }
     }
+}
+
+function changeBasket() {
+    iloscZakupow++;
+
+    let usun = document.querySelector(".numerZakupow"); 
+
+    if (usun) {
+        basket.removeChild(usun); 
+    }
+
+    let numerZakupow = document.createElement("div");
+
+    if(iloscZakupow < 10)
+    {
+        numerZakupow.innerText = iloscZakupow;
+    }
+    else
+    {
+        numerZakupow.innerText = "..."
+    }
+
+
+    numerZakupow.classList.add("numerZakupow");
+
+    basket.appendChild(numerZakupow);
 }

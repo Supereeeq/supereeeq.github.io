@@ -42,10 +42,11 @@ function send (){
     let wartosc = wpis.value;
         wpis.value = ""
 
-        if (ilosc >= 5) { 
-            console.log("You've reached the maximum limit for items.");
+        if (ilosc >= 8) { 
+            errorMessage = "Zbyt duża ilość rzeczy"
+            createError(errorMessage);
         }
-        else if (wartosc.trim() !== "" && wartosc.length < 23) {
+        else if (wartosc.trim() !== "" && wartosc.length < 21) {
             let zrobienie = document.createElement("div");
             zrobienie.classList.add("zrobienie");
 
@@ -103,16 +104,9 @@ function send (){
             });
 
         } 
-        else if (wartosc.length >= 23) {
-            let blad = document.createElement("div")
-            blad.classList.add("blad")
-            blad.innerText = "Maks. ilość znaków - 22"
-
-            things.appendChild(blad)
-
-            setTimeout(function() {
-                things.removeChild(blad)
-            }, 2000);
+        else if (wartosc.length >= 21) {
+            errorMessage = "Zbyt duża ilość znaków"
+            createError(errorMessage);
         }
 }
 
@@ -215,4 +209,17 @@ function dodajNowyTekst(nowyTekst, tekst, zrobienie)
     }
     createOptions(zrobienie, tekst);
     console.log(zrobienie, tekst)
+}
+
+function createError (errorMessage) 
+{
+    let blad = document.createElement("div")
+    blad.classList.add("blad")
+    blad.innerText = errorMessage
+
+    container.appendChild(blad)
+
+    setTimeout(function() {
+        things.removeChild(blad)
+    }, 2000);
 }

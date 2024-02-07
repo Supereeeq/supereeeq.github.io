@@ -1,6 +1,6 @@
-body {
-    background: rgb(201,230,183);
-    background: linear-gradient(90deg, rgba(201,230,183,1) 0%, rgba(151,223,130,1) 100%);
+body 
+{
+    background-color:rgb(107, 187, 107);
     color: black;
     font-size: 24px;
     font-family: sans-serif;
@@ -17,37 +17,32 @@ header {
     width:100vw;
     padding: 0;
     margin: 0;
-    background-color: rgb(144, 223, 120);
+    background: rgb(0,153,102);
     width:100vw;
     z-index: 5;
 }
-
 .menu {
     height: 60px;
     padding: 0;
     margin: 0;
 }
-
 li {
     list-style: none;
 }
-
 nav {
     position: absolute;
     top: -5px;
     font-size: 26px;
     width: 130px;
 }
-
 nav > ol > li > ul {
     position: relative;
     font-size: 20px;
     left: -43px;
     top: 12px;
     width:150px;
-    background-color: rgb(144, 223, 120);
+    background-color:  rgb(0,153,102);
 }
-
 nav > ol > li > ul > li {
     position: relative;
     display: block; 

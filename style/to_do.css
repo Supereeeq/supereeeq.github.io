@@ -5,11 +5,11 @@ body
 .container
 {
     background-color: beige;
-    height:500px;
+    height:700px;
     width:600px;
     position: absolute;
     left: calc(50vw - 300px);
-    top: calc(50vh - 200px);
+    top: 120px;
     text-align:center;
 }
 .title
@@ -185,12 +185,13 @@ body
 }
 .blad
 {
-    height:50px;
-    width:100px;
+    height:fit-content;
+    width:90px;
     background-color: rgb(225, 13, 14);
     position: absolute;
     top:70px;
     right:0;
     font-size:18px;
+    padding:4px;
     border:1px dashed rgb(0,0,0)
 }
