@@ -22,7 +22,7 @@ let produkty =
     },    
     {
         name: "Chia Seeds Organic",
-        cena: 15.49,
+        cena: 19.99,
         image: "../images/chia_seeds.jpg",
         link: "./sklep/chia_seeds.html",
         tags: "chia nasiona organiczne superfoods",
@@ -151,6 +151,8 @@ let basket = document.getElementById("basket")
 
 let iloscZakupow = 0
 
+let rzeczyZakupione = []
+
 generuj()
 
 
@@ -227,7 +229,6 @@ zmienWyswietlanie.addEventListener("click",function()
     {
         wyswietlanie = "galeria"
     }
-    console.log(wyswietlanie)
     generuj()
 })
 
@@ -327,6 +328,8 @@ function generuj() {
                             addToCart.addEventListener("click",function()
                             {
                                 changeBasket()
+
+                                rzeczyZakupione.push(produkty[i].name)
                             })
                             
 
@@ -441,12 +444,18 @@ function generuj() {
                             
                             okno.appendChild(ocenaProduktu);
 
-                            
                             let addToCart = document.createElement("div")
                             addToCart.classList.add("addToCart")
-
+                            
                             let shoppingBasket = document.createElement("i")
                             shoppingBasket.classList.add("icon-shopping-basket")
+
+                            addToCart.addEventListener("click",function()
+                            {
+                                changeBasket()
+
+                                rzeczyZakupione.push(produkty[i].name)
+                            })
                             
 
                             addToCart.appendChild(shoppingBasket)
@@ -474,7 +483,6 @@ function generuj() {
 }
 
 function changeBasket() {
-    iloscZakupow++;
 
     let usun = document.querySelector(".numerZakupow"); 
 
@@ -486,7 +494,7 @@ function changeBasket() {
 
     if(iloscZakupow < 10)
     {
-        numerZakupow.innerText = iloscZakupow;
+        numerZakupow.innerText = rzeczyZakupione.length + 1;
     }
     else
     {
