@@ -324,6 +324,32 @@
 {
     padding:10px 0;
     font-size: 30px;
+    position: relative;
+}
+.staraCena
+{
+    position: absolute;
+    top:-15px;
+    font-size: 20px;
+    right:-30px;
+    color:rgba(99, 99, 99, 0.8);
+    text-decoration:line-through;
+}
+.nowaCena 
+{
+    color:rgb(255, 30, 50);
+    text-shadow: 2px 2px 4px rgb(148, 148, 148);
+}
+.oznaczeniePromocji
+{
+    height:60px;
+    position: absolute;
+    top:0;
+    right:0px;
+}
+.oznaczeniePromocji > img
+{
+    height:60px;
 }
 .addToCart
 {

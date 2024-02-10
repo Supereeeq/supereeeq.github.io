@@ -13,7 +13,7 @@ let wybieranie =
     {
         nazwa:"Kalkulator BMI",
         link:"./podstrona/kalkulatory/bmi_calculator.html",
-        innerCode:'<a href="./podstrona/kalkulatory/calories_calculator.html"><div id="BMI" class="BMI front"><p>Kalkulator BMI</p><img src="./images/BMI.jpg" alt="Kalkulator BMI"></div></a>'
+        innerCode:'<a href="./podstrona/kalkulatory/calories_calculator.html"><div id="BMI" class="BMI front"><p>Kalkulator BMI</p><img src="./images/bmi.jpg" alt="Kalkulator BMI"></div></a>'
     },
     {
         nazwa:"Kalkulator Kalorii",

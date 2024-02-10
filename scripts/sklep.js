@@ -119,7 +119,138 @@ let produkty =
         type: "plan",
         stars: 4,
         promocja: false
-    },                
+    },
+    {
+        name: "Kasza jaglana",
+        cena: 12.99,
+        image: "../images/kasza_jaglana.jpg",
+        link: "./sklep/kasza_jaglana.html",
+        tags: "kasza jaglana dieta zdrowe jedzenie",
+        type: "dieta",
+        stars: 3,
+        promocja: false
+    },
+    {
+        name: "Top sportowy",
+        cena: 29.99,
+        image: "../images/top_sportowy.jpg",
+        link: "./sklep/top_sportowy.html",
+        tags: "top sport ubranie fitness",
+        type: "ubranie",
+        stars: 3,
+        promocja: true
+    },
+    {
+        name: "Sałatka z kurczakiem",
+        cena: 24.99,
+        image: "../images/salatka_z_kurczakiem.jpg",
+        link: "./sklep/salatka_z_kurczakiem.html",
+        tags: "sałatka kurczak zdrowe jedzenie",
+        type: "jedzenie",
+        stars: 5,
+        promocja: true
+    },
+    {
+        name: "Spodnie do biegania",
+        cena: 49.99,
+        image: "../images/spodnie_biegowe.jpg",
+        link: "./sklep/spodnie_biegowe.html",
+        tags: "spodnie bieganie ubranie sportowe",
+        type: "ubranie",
+        stars: 4,
+        promocja: true
+    },
+    {
+        name: "Omlet ze szpinakiem",
+        cena: 14.99,
+        image: "../images/omlet_ze_szpinakiem.jpg",
+        link: "./sklep/omlet_ze_szpinakiem.html",
+        tags: "omlet szpinak dieta zdrowe jedzenie",
+        type: "jedzenie",
+        stars: 4,
+        promocja: false
+    },
+    {
+        name: "Sałatka grecka",
+        cena: 18.99,
+        image: "../images/salatka_grecka.jpg",
+        link: "./sklep/salatka_grecka.html",
+        tags: "sałatka grecka dieta zdrowe jedzenie",
+        type: "jedzenie",
+        stars: 4,
+        promocja: false
+    },
+    {
+        name: "Hantle",
+        cena: 49.99,
+        image: "../images/hantle.jpg",
+        link: "./sklep/zestaw_treningowy.html",
+        tags: "hantle zestaw treningowy fitness",
+        type: "plan",
+        stars: 5,
+        promocja: true
+    },
+    {
+        name: "Kurtka narciarska",
+        cena: 129.99,
+        image: "../images/kurtka_narciarska.jpg",
+        link: "./sklep/kurtka_narciarska.html",
+        tags: "kurtka narciarska ubranie sportowe",
+        type: "ubranie",
+        stars: 5,
+        promocja: true
+    },
+    {
+        name: "Shake białkowy",
+        cena: 34.99,
+        image: "../images/shake_bialkowy.jpg",
+        link: "./sklep/shake_bialkowy.html",
+        tags: "shake białko dieta trening",
+        type: "dieta",
+        stars: 4,
+        promocja: false
+    },
+    {
+        name: "Plan treningowy masa",
+        cena: 59.99,
+        image: "../images/plan_treningowy_masa.jpg",
+        link: "./sklep/plan_treningowy_masa.html",
+        tags: "trening plan treningowy masa mięśnie",
+        type: "plan",
+        stars: 4,
+        promocja: false
+    },
+    {
+        name: "Płatki owsiane",
+        cena: 9.99,
+        image: "../images/platki_owsiane.jpg",
+        link: "./sklep/platki_owsiane.html",
+        tags: "płatki owsiane śniadanie dieta",
+        type: "Dieta",
+        stars: 3,
+        promocja: true
+    },
+    {
+        name: "T-shirt",
+        cena: 19.99,
+        image: "../images/tshirt.jpg",
+        link: "./sklep/tshirt_krotki_rekaw.html",
+        tags: "t-shirt ubranie casual",
+        type: "ubranie",
+        stars: 3,
+        promocja: false
+    } ,
+    {
+        name: "Pilatesowa mata",
+        cena: 24.99,
+        image: "../images/pilates_mata.jpg",
+        link: "./sklep/pilatesowy_mat.html",
+        tags: "mat pilates trening fitness",
+        type: "plan",
+        stars: 4,
+        promocja: true
+    }
+
 ]
 
 //kategorie
@@ -149,9 +280,10 @@ let wyswietlanie = "galeria"
 
 let basket = document.getElementById("basket")
 
-let iloscZakupow = 0
-
 let rzeczyZakupione = []
+
+let searchBar = document.getElementById("searchBar")
+
 
 generuj()
 
@@ -177,6 +309,7 @@ ocena.addEventListener("input",function(){
 szukaj.addEventListener("click",function()
 {
     generuj();
+    
 })
 
 wyszukaj.addEventListener("click",function()
@@ -264,6 +397,27 @@ function generuj() {
         rzadPiaty.classList.add("rzad")
         rzadPiaty.classList.add("rzad5")
 
+        let rzadSzosty = document.createElement("div")
+        rzadSzosty.classList.add("rzad")
+        rzadSzosty.classList.add("rzad6")
+
+        let rzadSiodmy = document.createElement("div")
+        rzadSiodmy.classList.add("rzad")
+        rzadSiodmy.classList.add("rzad7")
+
+        let rzadOsmy = document.createElement("div")
+        rzadOsmy.classList.add("rzad")
+        rzadOsmy.classList.add("rzad8")
+
+        let rzadDziewiaty = document.createElement("div")
+        rzadDziewiaty.classList.add("rzad")
+        rzadDziewiaty.classList.add("rzad9")
+
+        let rzadDziesiaty = document.createElement("div")
+        rzadDziesiaty.classList.add("rzad")
+        rzadDziesiaty.classList.add("rzad10")
+
+        
         for (let i = 0; i < produkty.length; i++) 
         {
             if (cena.value >= produkty[i].cena) 
@@ -283,94 +437,271 @@ function generuj() {
                             produkty[i].stars >= ranking.value
                         )
                         {
-
-                            let okno = document.createElement("div");
-                            okno.classList.add("okno");
-                            okno.classList.add("okno" + numerOkna);
-                            okno.innerHTML = '<div class="zdj' + numerOkna +' zdj"><img src="' + produkty[i].image +'"></div><div class="opis' + numerOkna + ' opis"><p>' + produkty[i].name + '</p></div>'
-                    
-                            let ocenaProduktu = document.createElement("div");
-                            ocenaProduktu.classList.add("ocenaProduktu");
-
-                            
-                            let iloscOceny = produkty[i].stars;
-                            
-                            while (iloscOceny > 0) 
+                            if (searchBar.value !== null && searchBar.value.trim() !== "") 
                             {
-                                if (iloscOceny >= 1) 
-                                {         
-                                    let gwiazdka = document.createElement("img");
-                                    gwiazdka.src = '../images/star.png';
+                                wyszukiwanie = searchBar.value 
+                        
+                                wyszukiwanieSlowaKlucze = wyszukiwanie.split(" ")
 
-                                    iloscOceny -= 1;
-                                    ocenaProduktu.appendChild(gwiazdka);
+                                if(produkty[i].tags.includes(wyszukiwanieSlowaKlucze))
+                                {
+                                    let okno = document.createElement("div");
+                                    okno.classList.add("okno");
+                                    okno.classList.add("okno" + numerOkna);
+                                    okno.innerHTML = '<div class="zdj' + numerOkna +' zdj"><img src="' + produkty[i].image +'"></div><div class="opis' + numerOkna + ' opis"><p>' + produkty[i].name + '</p></div>'
+                            
+                                    let ocenaProduktu = document.createElement("div");
+                                    ocenaProduktu.classList.add("ocenaProduktu");
 
-                                } else if (iloscOceny >= 0.5) 
-                                {                     
-                                    let polGwiazdki = document.createElement("img");
-                                    polGwiazdki.src = '../images/halfStar.png';
+                                    
+                                    let iloscOceny = produkty[i].stars;
+                                    
+                                    while (iloscOceny > 0) 
+                                    {
+                                        if (iloscOceny >= 1) 
+                                        {         
+                                            let gwiazdka = document.createElement("img");
+                                            gwiazdka.src = '../images/star.png';
 
-                                    iloscOceny -= 0.5;
-                                    ocenaProduktu.appendChild(polGwiazdki);
-                                
+                                            iloscOceny -= 1;
+                                            ocenaProduktu.appendChild(gwiazdka);
+
+                                        } else if (iloscOceny >= 0.5) 
+                                        {                     
+                                            let polGwiazdki = document.createElement("img");
+                                            polGwiazdki.src = '../images/halfStar.png';
+
+                                            iloscOceny -= 0.5;
+                                            ocenaProduktu.appendChild(polGwiazdki);
+                                        
+                                        }
+                                    }
+                                    
+                                    okno.appendChild(ocenaProduktu);
+
+                                                                
+                                    let addToCart = document.createElement("div")
+                                    addToCart.classList.add("addToCart")
+                                    
+                                    let shoppingBasket = document.createElement("i")
+                                    shoppingBasket.classList.add("icon-shopping-basket")
+
+                                    addToCart.addEventListener("click",function()
+                                    {
+                                        changeBasket()
+
+                                        rzeczyZakupione.push(produkty[i].name)
+                                    })
+                                    
+
+                                    addToCart.appendChild(shoppingBasket)
+                                    okno.appendChild(addToCart)
+
+
+                                    let cenaProduktu = document.createElement("div")
+                                    cenaProduktu.classList.add("cenaProduktu")
+
+                                    if(produkty[i].promocja == true)
+                                    {
+                                        cenaProduktu.innerText = (produkty[i].cena * 0.8).toFixed(2) + "zł"
+                                        cenaProduktu.classList.add("promocja")
+
+                                        let oznaczeniePromocji = document.createElement("div")
+                                        oznaczeniePromocji.classList.add("oznaczeniePromocji")
+                                        oznaczeniePromocji.innerHTML = '<img src="../images/promocja.png"></img>'
+
+                                        okno.appendChild(oznaczeniePromocji)
+                                    }
+                                    else
+                                    {
+                                        cenaProduktu.innerText = produkty[i].cena + "zł"
+                                    }
+
+                                    okno.appendChild(cenaProduktu)
+
+
+                                    let row
+                                    if (numerOkna < 4) 
+                                    {
+                                        row = rzadPierwszy
+                                    } 
+                                    else if (numerOkna < 7) 
+                                    {
+                                        row = rzadDrugi
+                                    } 
+                                    else if (numerOkna < 10) 
+                                    {
+                                        row = rzadTrzeci
+                                    } 
+                                    else if (numerOkna < 13) 
+                                    {
+                                        row = rzadCzwarty
+                                    } 
+                                    else if (numerOkna < 16) 
+                                    {
+                                        row = rzadPiaty
+                                    }
+                                    else if (numerOkna < 19) 
+                                    {
+                                        row = rzadSzosty
+                                    }
+                                    else if (numerOkna < 22) 
+                                    {
+                                        row = rzadSiodmy
+                                    }
+                                    else if (numerOkna < 25) 
+                                    {
+                                        row = rzadOsmy
+                                    }
+                                    else if (numerOkna < 28) 
+                                    {
+                                        row = rzadDziewiaty
+                                    }
+                                    else if (numerOkna < 31) 
+                                    {
+                                        row = rzadDziesiaty
+                                    }
+
+                                    row.appendChild(okno)
+                                    przedmioty.appendChild(row)
+
+                                    numerOkna++
+
+                                }
+                        
+                            }
+                            else
+                            {
+                                wyszukiwanie = searchBar.value 
+                        
+                                wyszukiwanieSlowaKlucze = wyszukiwanie.split(" ")
+
+                                if(produkty[i].tags.includes(wyszukiwanieSlowaKlucze))
+                                {
+                                    let okno = document.createElement("div");
+                                    okno.classList.add("okno");
+                                    okno.classList.add("okno" + numerOkna);
+                                    okno.innerHTML = '<div class="zdj' + numerOkna +' zdj"><img src="' + produkty[i].image +'"></div><div class="opis' + numerOkna + ' opis"><p>' + produkty[i].name + '</p></div>'
+                            
+                                    let ocenaProduktu = document.createElement("div");
+                                    ocenaProduktu.classList.add("ocenaProduktu");
+
+                                    
+                                    let iloscOceny = produkty[i].stars;
+                                    
+                                    while (iloscOceny > 0) 
+                                    {
+                                        if (iloscOceny >= 1) 
+                                        {         
+                                            let gwiazdka = document.createElement("img");
+                                            gwiazdka.src = '../images/star.png';
+
+                                            iloscOceny -= 1;
+                                            ocenaProduktu.appendChild(gwiazdka);
+
+                                        } else if (iloscOceny >= 0.5) 
+                                        {                     
+                                            let polGwiazdki = document.createElement("img");
+                                            polGwiazdki.src = '../images/halfStar.png';
+
+                                            iloscOceny -= 0.5;
+                                            ocenaProduktu.appendChild(polGwiazdki);
+                                        
+                                        }
+                                    }
+                                    
+                                    okno.appendChild(ocenaProduktu);
+
+                                                                
+                                    let addToCart = document.createElement("div")
+                                    addToCart.classList.add("addToCart")
+                                    
+                                    let shoppingBasket = document.createElement("i")
+                                    shoppingBasket.classList.add("icon-shopping-basket")
+
+                                    addToCart.addEventListener("click",function()
+                                    {
+                                        changeBasket()
+
+                                        rzeczyZakupione.push(produkty[i].name)
+                                    })
+                                    
+
+                                    addToCart.appendChild(shoppingBasket)
+                                    okno.appendChild(addToCart)
+
+
+                                    let cenaProduktu = document.createElement("div")
+                                    cenaProduktu.classList.add("cenaProduktu")
+
+                                    if(produkty[i].promocja == true)
+                                    {
+                                        cenaProduktu.innerText = (produkty[i].cena * 0.8).toFixed(2) + "zł"
+                                        cenaProduktu.classList.add("promocja")
+
+                                        let oznaczeniePromocji = document.createElement("div")
+                                        oznaczeniePromocji.classList.add("oznaczeniePromocji")
+                                        oznaczeniePromocji.innerHTML = '<img src="../images/promocja.png"></img>'
+
+                                        okno.appendChild(oznaczeniePromocji)
+                                    }
+                                    else
+                                    {
+                                        cenaProduktu.innerText = produkty[i].cena + "zł"
+                                    }
+
+                                    okno.appendChild(cenaProduktu)
+
+
+                                    let row;
+                                    if (numerOkna < 4) 
+                                    {
+                                        row = rzadPierwszy
+                                    } 
+                                    else if (numerOkna < 7) 
+                                    {
+                                        row = rzadDrugi
+                                    } 
+                                    else if (numerOkna < 10) 
+                                    {
+                                        row = rzadTrzeci
+                                    } 
+                                    else if (numerOkna < 13) 
+                                    {
+                                        row = rzadCzwarty
+                                    } 
+                                    else if (numerOkna < 16) 
+                                    {
+                                        row = rzadPiaty
+                                    }
+                                    else if (numerOkna < 19) 
+                                    {
+                                        row = rzadSzosty
+                                    }
+                                    else if (numerOkna < 22) 
+                                    {
+                                        row = rzadSiodmy
+                                    }
+                                    else if (numerOkna < 25) 
+                                    {
+                                        row = rzadOsmy
+                                    }
+                                    else if (numerOkna < 28) 
+                                    {
+                                        row = rzadDziewiaty
+                                    }
+                                    else if (numerOkna < 31) 
+                                    {
+                                        row = rzadDziesiaty
+                                    }
+
+                                    row.appendChild(okno);
+                                    przedmioty.appendChild(row);
+
+                                    numerOkna++;
+
                                 }
                             }
-                            
-                            okno.appendChild(ocenaProduktu);
-
-                                                        
-                            let addToCart = document.createElement("div")
-                            addToCart.classList.add("addToCart")
-                            
-                            let shoppingBasket = document.createElement("i")
-                            shoppingBasket.classList.add("icon-shopping-basket")
-
-                            addToCart.addEventListener("click",function()
-                            {
-                                changeBasket()
-
-                                rzeczyZakupione.push(produkty[i].name)
-                            })
-                            
-
-                            addToCart.appendChild(shoppingBasket)
-                            okno.appendChild(addToCart)
-
-
-                            let cenaProduktu = document.createElement("div")
-                            cenaProduktu.classList.add("cenaProduktu")
-                            cenaProduktu.innerText = produkty[i].cena + "zł"
-
-                            okno.appendChild(cenaProduktu)
-
-                            if(numerOkna < 4)
-                            {
-                                rzadPierwszy.appendChild(okno)
-                                przedmioty.append(rzadPierwszy)
-                            }
-                            else if(numerOkna < 7)
-                            {    
-                                przedmioty.append(rzadDrugi)
-                                rzadDrugi.appendChild(okno)
-                            }
-                            else if(numerOkna < 10)
-                            {    
-                                przedmioty.append(rzadTrzeci)
-                                rzadTrzeci.appendChild(okno)
-                            }
-                            else if(numerOkna < 13)
-                            {    
-                                przedmioty.append(rzadCzwarty)
-                                rzadCzwarty.appendChild(okno)
-                            }
-                            else if(numerOkna < 16)
-                            {
-                                przedmioty.appendChild(rzadPiaty)
-                                rzadPiaty.appendChild(okno)
-                            }
-
-                            numerOkna++;
-                        
                         }
                     }
                 }
@@ -463,14 +794,34 @@ function generuj() {
 
                             let cenaProduktu = document.createElement("div")
                             cenaProduktu.classList.add("cenaProduktu")
-                            cenaProduktu.innerText = produkty[i].cena + "zł"
+
+                            
+                            if(produkty[i].promocja == true)
+                            {
+                                let nowaCena = document.createElement("div");
+                                nowaCena.innerText = (produkty[i].cena * 0.8).toFixed(2) + "zł"
+                                nowaCena.classList.add("nowaCena")
+                            
+                                let staraCena = document.createElement("div")
+                                staraCena.classList.add("staraCena")
+                                staraCena.innerText = produkty[i].cena + "zł"
+
+                                cenaProduktu.appendChild(nowaCena)
+                                cenaProduktu.appendChild(staraCena)
+
+                            }
+                            else
+                            {
+                                cenaProduktu.innerText = produkty[i].cena + "zł"
+                            }
+
 
                             okno.appendChild(cenaProduktu)
 
 
                             rzadek.appendChild(okno)
                             przedmioty.append(rzadek)
-           
+            
 
                             numerOkna++;
                         
@@ -492,7 +843,7 @@ function changeBasket() {
 
     let numerZakupow = document.createElement("div");
 
-    if(iloscZakupow < 10)
+    if(rzeczyZakupione.length < 9)
     {
         numerZakupow.innerText = rzeczyZakupione.length + 1;
     }
@@ -506,3 +857,5 @@ function changeBasket() {
 
     basket.appendChild(numerZakupow);
 }
+
+
