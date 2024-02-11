@@ -1,0 +1,29 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container
+{
+    height:600px;
+    width:900px;
+    padding:16px;
+    background-color: aliceblue;
+    box-shadow: 4px 4px 8px black;
+    position: relative;
+}
+.postac
+{
+    height:150px;
+    width:70px;
+    background-color: black;
+    position: absolute;
+}
+.przeszkodaZiemna
+{
+    height:130px;
+    width:50px;
+    background-color: rgb(190, 138, 60);
+    position: absolute;
+}
