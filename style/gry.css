@@ -50,6 +50,7 @@ td
     overflow: hidden;
     border: 1px solid black;
     box-shadow: 4px 4px 8px black;
+    position: relative;
 }
 .game > p
 {
@@ -72,4 +73,21 @@ td
 .game:hover
 {
     box-shadow: 2px 2px 4px black; 
+}
+.clicker > p
+{
+    left:65px;
+}
+.button > p
+{
+    left:35px;
+    top:30px;
+}
+.skakanie > p
+{
+    left:40px;
+}
+.pong > p
+{
+    left:40px;
 }
