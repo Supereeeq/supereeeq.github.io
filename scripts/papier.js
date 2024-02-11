@@ -3,16 +3,15 @@ let container = document.getElementById('container');
 let pozycjaBokow = "right"
 let pozycjaGorna = "top"
 
-let predkoscPilkiPozioma = 10
-let predkoscPilkiPionowa = 20
+let predkoscPilkiPozioma = 2
+let predkoscPilkiPionowa = 4
 
 let licznikPunktow1 = 0
 
 let licznikPunktow2 = 0
 
 wyswietlPostaci()
-wyswietlPunkty()
-stworzPilke()
+
 
 
 function wyswietlPostaci() 
@@ -72,6 +71,9 @@ function wyswietlPostaci()
     
         }
     });
+
+    wyswietlPunkty()
+    stworzPilke()
 }
 
 
@@ -98,7 +100,7 @@ function stworzPilke() {
     let pilkaLeft = 430
 
     container.appendChild(pilka);
-    setInterval(ruszPilke, 100)
+    setInterval(ruszPilke, 10)
 
     function ruszPilke()
     {
@@ -129,24 +131,24 @@ function stworzPilke() {
         // Check collision with postac1
         if (checkCollision(pilka, postac1)) {
             pozycjaBokow = "right"
-            pozycjaGorna = "top"
         }
 
         // Check collision with postac2
         if (checkCollision(pilka, postac2)) {
             pozycjaBokow = "left"
-            pozycjaGorna = "bottom"
         }
     }
 
     function moveLeft()
     { 
-        if(pilkaLeft < 20)
+        if(pilkaLeft < 0)
         {
             licznikPunktow2++
             wyswietlPunkty()
             pozycjaBokow = "right"
-            predkoscPilkiPionowa++
+
+            pilkaTop = 350;
+            pilkaLeft = 430;
         }
         pilkaLeft -= predkoscPilkiPionowa;
         pilka.style.left = pilkaLeft + "px";
@@ -154,15 +156,20 @@ function stworzPilke() {
 
     function moveRight()
     {
-        if(pilkaLeft > 740)
+        if(pilkaLeft > 1180)
         {
             licznikPunktow1++
             wyswietlPunkty()
             pozycjaBokow = "left"
-            predkoscPilkiPionowa++
+
+            pilkaTop = 350;
+            pilkaLeft = 430;
         }
-        pilkaLeft += predkoscPilkiPionowa;
-        pilka.style.left = pilkaLeft + "px";
+        else
+        {
+            pilkaLeft += predkoscPilkiPionowa;
+            pilka.style.left = pilkaLeft + "px";
+        }
     }
 
     function moveTop()
@@ -170,22 +177,28 @@ function stworzPilke() {
         if(pilkaTop < 20)
         {
             pozycjaGorna = "bottom"
-            predkoscPilkiPozioma++
         }
-        pilkaTop -= predkoscPilkiPozioma;
-        pilka.style.top = pilkaTop + "px";
+        else
+        {
+            pilkaTop -= predkoscPilkiPozioma;
+            pilka.style.top = pilkaTop + "px";
+        }
+
 
     }
 
     function moveBottom()
     {
-        if(pilkaTop > 740)
+        if(pilkaTop > 780)
         {
             pozycjaGorna = "top"
-            predkoscPilkiPozioma++
         }
-        pilkaTop += predkoscPilkiPozioma;
-        pilka.style.top = pilkaTop + "px";
+        else
+        {
+            pilkaTop += predkoscPilkiPozioma;
+            pilka.style.top = pilkaTop + "px";
+        }
+
 
     }
 
@@ -197,4 +210,5 @@ function stworzPilke() {
                  rect1.bottom < rect2.top || 
                  rect1.top > rect2.bottom);
     }
+
 }
