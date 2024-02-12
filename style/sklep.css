@@ -232,13 +232,8 @@
 {
     height:auto;
     width:800px;
-    display: grid;
-}
-.rzad
-{
-    width:800px;
-    height:300px;
     display: flex;
+    flex-wrap: wrap;
 }
 .okno
 {
@@ -246,7 +241,7 @@
     width:220px;
     padding:8px;
     background-color: aliceblue;
-    margin:16px;
+    margin:8px;
     overflow: hidden;
     border: 2px solid rgb(197, 197, 150);
     position: relative;
@@ -362,6 +357,7 @@
     position: absolute;
     right:8px;
     bottom:8px;
+    z-index:3;
 }
 .rzadek
 {

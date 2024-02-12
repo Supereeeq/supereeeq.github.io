@@ -374,49 +374,6 @@ function generuj() {
     {
         zmienWyswietlanie.innerHTML = '<img src="../images/lista.png"</img>'
 
-        let rzadPierwszy = document.createElement("div")
-        rzadPierwszy.classList.add("rzad")
-        rzadPierwszy.classList.add("rzad1")
-
-
-        let rzadDrugi = document.createElement("div")
-        rzadDrugi.classList.add("rzad")
-        rzadDrugi.classList.add("rzad2")
-
-
-        let rzadTrzeci = document.createElement("div")
-        rzadTrzeci.classList.add("rzad")
-        rzadTrzeci.classList.add("rzad3")
-
-
-        let rzadCzwarty = document.createElement("div")
-        rzadCzwarty.classList.add("rzad")
-        rzadCzwarty.classList.add("rzad4")
-
-        let rzadPiaty = document.createElement("div")
-        rzadPiaty.classList.add("rzad")
-        rzadPiaty.classList.add("rzad5")
-
-        let rzadSzosty = document.createElement("div")
-        rzadSzosty.classList.add("rzad")
-        rzadSzosty.classList.add("rzad6")
-
-        let rzadSiodmy = document.createElement("div")
-        rzadSiodmy.classList.add("rzad")
-        rzadSiodmy.classList.add("rzad7")
-
-        let rzadOsmy = document.createElement("div")
-        rzadOsmy.classList.add("rzad")
-        rzadOsmy.classList.add("rzad8")
-
-        let rzadDziewiaty = document.createElement("div")
-        rzadDziewiaty.classList.add("rzad")
-        rzadDziewiaty.classList.add("rzad9")
-
-        let rzadDziesiaty = document.createElement("div")
-        rzadDziesiaty.classList.add("rzad")
-        rzadDziesiaty.classList.add("rzad10")
-
         
         for (let i = 0; i < produkty.length; i++) 
         {
@@ -439,7 +396,7 @@ function generuj() {
                         {
                             if (searchBar.value !== null && searchBar.value.trim() !== "") 
                             {
-                                wyszukiwanie = searchBar.value 
+                                wyszukiwanie = searchBar.value.toLowerCase()
                         
                                 wyszukiwanieSlowaKlucze = wyszukiwanie.split(" ")
 
@@ -520,50 +477,7 @@ function generuj() {
                                     okno.appendChild(cenaProduktu)
 
 
-                                    let row
-                                    if (numerOkna < 4) 
-                                    {
-                                        row = rzadPierwszy
-                                    } 
-                                    else if (numerOkna < 7) 
-                                    {
-                                        row = rzadDrugi
-                                    } 
-                                    else if (numerOkna < 10) 
-                                    {
-                                        row = rzadTrzeci
-                                    } 
-                                    else if (numerOkna < 13) 
-                                    {
-                                        row = rzadCzwarty
-                                    } 
-                                    else if (numerOkna < 16) 
-                                    {
-                                        row = rzadPiaty
-                                    }
-                                    else if (numerOkna < 19) 
-                                    {
-                                        row = rzadSzosty
-                                    }
-                                    else if (numerOkna < 22) 
-                                    {
-                                        row = rzadSiodmy
-                                    }
-                                    else if (numerOkna < 25) 
-                                    {
-                                        row = rzadOsmy
-                                    }
-                                    else if (numerOkna < 28) 
-                                    {
-                                        row = rzadDziewiaty
-                                    }
-                                    else if (numerOkna < 31) 
-                                    {
-                                        row = rzadDziesiaty
-                                    }
-
-                                    row.appendChild(okno)
-                                    przedmioty.appendChild(row)
+                                    przedmioty.appendChild(okno)
 
                                     numerOkna++
 
@@ -618,18 +532,16 @@ function generuj() {
                                     
                                     let shoppingBasket = document.createElement("i")
                                     shoppingBasket.classList.add("icon-shopping-basket")
-
+        
                                     addToCart.addEventListener("click",function()
                                     {
                                         changeBasket()
-
+        
                                         rzeczyZakupione.push(produkty[i].name)
                                     })
                                     
-
                                     addToCart.appendChild(shoppingBasket)
                                     okno.appendChild(addToCart)
-
 
                                     let cenaProduktu = document.createElement("div")
                                     cenaProduktu.classList.add("cenaProduktu")
@@ -653,50 +565,8 @@ function generuj() {
                                     okno.appendChild(cenaProduktu)
 
 
-                                    let row;
-                                    if (numerOkna < 4) 
-                                    {
-                                        row = rzadPierwszy
-                                    } 
-                                    else if (numerOkna < 7) 
-                                    {
-                                        row = rzadDrugi
-                                    } 
-                                    else if (numerOkna < 10) 
-                                    {
-                                        row = rzadTrzeci
-                                    } 
-                                    else if (numerOkna < 13) 
-                                    {
-                                        row = rzadCzwarty
-                                    } 
-                                    else if (numerOkna < 16) 
-                                    {
-                                        row = rzadPiaty
-                                    }
-                                    else if (numerOkna < 19) 
-                                    {
-                                        row = rzadSzosty
-                                    }
-                                    else if (numerOkna < 22) 
-                                    {
-                                        row = rzadSiodmy
-                                    }
-                                    else if (numerOkna < 25) 
-                                    {
-                                        row = rzadOsmy
-                                    }
-                                    else if (numerOkna < 28) 
-                                    {
-                                        row = rzadDziewiaty
-                                    }
-                                    else if (numerOkna < 31) 
-                                    {
-                                        row = rzadDziesiaty
-                                    }
+                                    przedmioty.appendChild(okno)
 
-                                    row.appendChild(okno);
-                                    przedmioty.appendChild(row);
 
                                     numerOkna++;
 
@@ -834,6 +704,8 @@ function generuj() {
 }
 
 function changeBasket() {
+
+    console.log("JD")
 
     let usun = document.querySelector(".numerZakupow"); 
 
