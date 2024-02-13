@@ -249,6 +249,16 @@ let produkty =
         type: "plan",
         stars: 4,
         promocja: true
+    },
+    {
+        name:"Tren",
+        cena: 159.99,
+        image: "../images/tren.jpg",
+        link: "./sklep/pilatesowy_mat.html",
+        tags: "tren sterydy trening fitness",
+        type: "jedzenie",
+        stars: 5,
+        promocja: false
     }
 
 ]
