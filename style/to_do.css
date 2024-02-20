@@ -11,6 +11,7 @@ body
     left: calc(50vw - 300px);
     top: 120px;
     text-align:center;
+    overflow-y:auto;
 }
 .title
 {
