@@ -228,49 +228,40 @@ showNumberOfLifes();
 
 function zapytaj() {
     if (currentQuestionIndex < questions.length && numberOfLifes > 0) {
-
-        let currentQuestion = questions[currentQuestionIndex];
-
-
+        let currentQuestion = questions[Math.floor(Math.random() * questions.length)];
+    
         quiz.innerHTML = "";
-
+    
         let pytanie = document.createElement("div");
         pytanie.innerText = currentQuestion.pytanie;
         pytanie.classList.add("pytanie");
         quiz.appendChild(pytanie);
-
+    
         currentQuestion.odpowiedzi.forEach((answer, index) => {
             let odpowiedzDiv = document.createElement("div");
             odpowiedzDiv.classList.add("odpowiedz");
             odpowiedzDiv.classList.add("odpowiedz" + (index + 1));
             quiz.appendChild(odpowiedzDiv);
-
+    
             let input = document.createElement("input");
             input.type = "radio";
             input.setAttribute("name", "odpowiedz");
             input.id = "odpowiedz" + index;
             odpowiedzDiv.appendChild(input);
-
+    
             let label = document.createElement("label");
             label.setAttribute("for", "odpowiedz" + index);
             label.textContent = answer;
             odpowiedzDiv.appendChild(label);
         });
-
+    
         currentQuestionIndex++;
     } 
-    else if(numberOfLifes <= 0)
-    {
+    else if (numberOfLifes <= 0 || currentQuestionIndex == questions.length) {
         endQuiz();
     }
-    else if(currentQuestionIndex == questions.length && numberOfLifes > 0)
-    {
-        currentQuestionIndex++;
-        showWin();
-        console.log("Wygrałeś")
-    }
+    
 }
-
 function showNumberOfLifes () 
 {
 
