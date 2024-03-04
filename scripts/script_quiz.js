@@ -358,7 +358,19 @@ function endQuiz(){
 
 
 submit.addEventListener("click", function() {
-    if(numberOfLifes !== 0 && currentQuestionIndex <= questions.length){
+    sprawdz()
+});
+
+document.addEventListener("keypress", function(){
+    if (event.key === "Enter")
+    {
+        sprawdz()
+    }
+})
+
+
+function sprawdz () {
+        if(numberOfLifes !== 0 && currentQuestionIndex <= questions.length){
 
         const radioInputs = document.querySelectorAll('input[type="radio"][name="odpowiedz"]');
         let checkedLabelValue = null;
@@ -404,7 +416,7 @@ submit.addEventListener("click", function() {
         endQuiz();
     }
     
-});
+}
 
 function showGoodAnswer() {
     goodAnswer.classList.add("show");

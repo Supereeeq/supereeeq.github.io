@@ -41,12 +41,7 @@ function showEmpty()
 function send (){
     let wartosc = wpis.value;
         wpis.value = ""
-
-        if (ilosc >= 8) { 
-            errorMessage = "Zbyt duża ilość rzeczy"
-            createError(errorMessage);
-        }
-        else if (wartosc.trim() !== "" && wartosc.length < 21) {
+        if (wartosc.trim() !== "" && wartosc.length < 21) {
             let zrobienie = document.createElement("div");
             zrobienie.classList.add("zrobienie");
 
