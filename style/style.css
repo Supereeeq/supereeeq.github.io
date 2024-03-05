@@ -439,7 +439,8 @@ footer
     .do > img
     {
         position: absolute;
-        left:0;
-        top:90px;
+        left:-10px;
+        top:-2px;
+        height:350px;
     }
 }
