@@ -33,7 +33,7 @@ let wybieranie =
     {
         nazwa:"To do",
         link:"./podstrona/to_do.html",
-        innerCode: '<a href="./podstrona/to_do.html"><div id="do" class="do front"><p>To do</p><img src="./images/do.png" alt="To do"></div></a>'
+        innerCode: '<a href="./podstrona/to_do.html"><div id="do" class="do front"><p>To do</p><img src="./images/to_do.png" alt="To do"></div></a>'
     },
     {
         nazwa:"Button",

@@ -1,12 +1,9 @@
 body {
     margin: 0;
     padding: 0;
+    width:100vw;
+    height:100vh;
 }
-
-body {
-    height: 100vh;
-}
-
 .container {
     width: 700px;
     height: fit-content;
@@ -15,7 +12,6 @@ body {
     padding: 0 0 16px;
     position: relative;
 }
-
 .diety {
     width: 100%;
     height: 400px;
@@ -23,13 +19,11 @@ body {
     position: relative;
     border-bottom: 2px dashed rgb(56, 56, 56);
 }
-
 .dieta {
     width: 100%;
     height: auto;
     display: block;
 }
-
 @keyframes przybliz {
     0% {
         transform: scale(1);
@@ -270,22 +264,6 @@ p {
     animation: przybliz 2s ease-in-out infinite alternate;
 }
 
-.do > p {
-    position: absolute;
-    z-index: 3;
-}
-
-.do > img {
-    position: absolute;
-    left: -240px;
-    top: -160px;
-    transform: scale(0.3);
-}
-
-.do:hover > img {
-    animation: przyblizMaly 2s ease-in-out infinite alternate;
-}
-
 footer
 {
     height:120px;
@@ -351,4 +329,117 @@ footer
 .kontakt
 {
     display: grid;
+}
+
+@media screen and (max-width:767px) 
+{
+    body
+    {
+        width:100%;
+    }
+    header
+    {
+        width:100%;
+    }
+    .container
+    {
+        top:-30px;
+        width:90vw;
+        height:850px;
+        border-radius:0.5em;
+        overflow: hidden;
+        margin-bottom:0;
+    }
+    .diety
+    {
+        height: 25vh;
+    }
+    .dietyText
+    {
+        position: absolute;
+        left:10px;
+        font-size:0.9em;
+    }
+    .sklep
+    {
+        font-size:1.1em;
+    }
+    .promocje
+    {
+        height:30vh;
+    }
+    .promocja3Link > div > img, .promocja3Link > div
+    {
+        display: none;
+    }
+    .promocja1Link > div > img, .promocja1Link > div, .promocja2Link > div > img, .promocja2Link > div
+    {
+        display: block;
+        height:20vh;
+    }
+    .promocja1Link > div
+    {
+        position: absolute;
+        left:2vw;
+    }
+    .promocja2Link > div
+    {
+        position: absolute;
+        left:45vw;
+    }
+    .poprzedniaFunkcja, .nastepnaFunkcja
+    {
+        display:none;
+    }
+    .obecnaFunkcja
+    {
+        position: static;
+        margin:auto;
+        border-radius:0.3em;
+    }
+    .obecnaFunkcja > div, .obecnaFunkcja > div > a, .obecnaFunkcja > div > a > div
+    {
+        height:235px;
+        width:190px;
+        border-radius:0.3em;
+    }
+    .obecnaFunkcja > div > a > div > img
+    {
+        height:260px;
+    }
+    footer
+    {
+        top:-300px;
+    }
+    .kontakt, .author
+    {
+        display: none;
+    }
+    .socials
+    {
+        width:100%;
+        font-size:1.1em;
+    }
+    .do
+    {
+        z-index: 2;
+        height:190px;
+        position: absolute;
+    }
+    .button > img
+    {
+        position: absolute;
+        left:-80px;
+    }
+    .BMI > img
+    {
+        position: absolute;
+        left:-250px;
+    }
+    .do > img
+    {
+        position: absolute;
+        left:0;
+        top:90px;
+    }
 }
