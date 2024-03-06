@@ -108,20 +108,19 @@ a.homepage {
     }
     nav > ol > li > ul
     {
-        position: relative;
-        width:200px;
-        top:-7px;
-        left:-43px; 
+        position: absolute;
+        top:calc(10vh + 5px);
+        width:30vw;
+        font-size:1.3em;
+        left:0; 
         background-color: rgb(122, 212, 119);
     }
     nav > ol > li > ul > li
     {
         position:relative;  
         display:inline-block;
-        width: 200px;
-        height:50px;
-        margin-bottom:50px;
-        padding:8px;
+        margin-left: 10px;;
+        width:100%;
     }
     nav > ol > li > ul > li
     {
@@ -135,13 +134,7 @@ a.homepage {
         position:absolute;
         width: 20vh;
         height: 10vh;
-        padding: 0;
         top:0;
         right:0;
-    }
-    .menu-list
-    {
-        z-index: 3;
-        width:40vw;
     }
 }

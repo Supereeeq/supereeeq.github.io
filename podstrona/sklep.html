@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Sklep Health&Life">
     <link rel="stylesheet" href="../style/sklep.css">
     <link rel="stylesheet" href="../style/style_header.css">
     <link rel="icon" href="../images/favicon.ico">
@@ -65,15 +66,13 @@
         
         
         <div id="medium" class="medium">
-            <a href="./sklep/koszyk.html">
-                <div id="basket" class="basket">
-                    <i class="icon-basket"></i>
-                </div>
-            </a> 
-
-
+            <div id="basket" class="basket">
+                <i class="icon-basket"></i>
+            </div>
+            <div class="filtrowanie" id="filtrowanie">
+                <h3>Filtry</h3>
+            </div>
             <div id="widok" class="widok">
-
             </div>
             <div id="search" class="search">
                 <input type="text" min="1" max="20" class="searchbar" id="searchBar" placeholder="Wyszukaj">
@@ -153,6 +152,6 @@
 
     <script src="../scripts/menu.js"></script>
     <script src="../scripts/sklep.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 </body>
 </html>

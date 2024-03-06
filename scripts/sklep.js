@@ -8,7 +8,8 @@ let produkty =
         tags:"ryż niskokaloryczny dieta chudnięcie",
         type:"dieta",
         stars:2,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "Mieszanka orzechowa",
@@ -18,7 +19,8 @@ let produkty =
         tags: "owoce orzechy zdrowe przekąski",
         type: "jedzenie",
         stars: 4,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },    
     {
         name: "Chia Seeds Organic",
@@ -28,7 +30,8 @@ let produkty =
         tags: "chia nasiona organiczne superfoods",
         type: "jedzenie",
         stars: 3,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Kwasy omega-3",
@@ -38,7 +41,8 @@ let produkty =
         tags: "omega-3 zdrowa dieta suplementy",
         type: "dieta",
         stars: 4,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "Legginsy sportowe",
@@ -48,7 +52,8 @@ let produkty =
         tags: "ubrania sportowe fitness legginsy",
         type: "ubranie",
         stars: 2,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Koszulka termoaktywna",
@@ -58,7 +63,8 @@ let produkty =
         tags: "odzież sportowa termoaktywna fitness",
         type: "ubranie",
         stars: 4,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "Trening ABS",
@@ -68,7 +74,8 @@ let produkty =
         tags: "trening brzuch fitness plan",
         type: "plan",
         stars: 1,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "Kettlebell Workout Plan",
@@ -78,7 +85,8 @@ let produkty =
         tags: "trening kettlebell siła fitness",
         type: "plan",
         stars: 5,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },    
     {
         name: "Quinoa Organiczna",
@@ -88,7 +96,8 @@ let produkty =
         tags: "quinoa zdrowe jedzenie organiczne",
         type: "jedzenie",
         stars: 4,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Mieszanka superfoods",
@@ -98,7 +107,8 @@ let produkty =
         tags: "superfoods dieta zdrowie",
         type: "dieta",
         stars: 3,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Buty do biegania",
@@ -108,7 +118,8 @@ let produkty =
         tags: "buty sportowe bieganie fitness",
         type: "ubranie",
         stars: 4,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Yoga Guide",
@@ -118,7 +129,8 @@ let produkty =
         tags: "yoga plan treningowy mindfulness",
         type: "plan",
         stars: 4,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Kasza jaglana",
@@ -128,7 +140,8 @@ let produkty =
         tags: "kasza jaglana dieta zdrowe jedzenie",
         type: "dieta",
         stars: 3,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Top sportowy",
@@ -138,7 +151,8 @@ let produkty =
         tags: "top sport ubranie fitness",
         type: "ubranie",
         stars: 3,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "Sałatka z kurczakiem",
@@ -148,7 +162,8 @@ let produkty =
         tags: "sałatka kurczak zdrowe jedzenie",
         type: "jedzenie",
         stars: 5,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "Spodnie do biegania",
@@ -158,7 +173,8 @@ let produkty =
         tags: "spodnie bieganie ubranie sportowe",
         type: "ubranie",
         stars: 4,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "Omlet ze szpinakiem",
@@ -168,7 +184,8 @@ let produkty =
         tags: "omlet szpinak dieta zdrowe jedzenie",
         type: "jedzenie",
         stars: 4,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Sałatka grecka",
@@ -178,7 +195,8 @@ let produkty =
         tags: "sałatka grecka dieta zdrowe jedzenie",
         type: "jedzenie",
         stars: 4,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Hantle",
@@ -188,7 +206,8 @@ let produkty =
         tags: "hantle zestaw treningowy fitness",
         type: "plan",
         stars: 5,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "Kurtka narciarska",
@@ -198,7 +217,8 @@ let produkty =
         tags: "kurtka narciarska ubranie sportowe",
         type: "ubranie",
         stars: 5,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "Shake białkowy",
@@ -208,7 +228,8 @@ let produkty =
         tags: "shake białko dieta trening",
         type: "dieta",
         stars: 4,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Plan treningowy masa",
@@ -218,7 +239,8 @@ let produkty =
         tags: "trening plan treningowy masa mięśnie",
         type: "plan",
         stars: 4,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     },
     {
         name: "Płatki owsiane",
@@ -228,7 +250,8 @@ let produkty =
         tags: "płatki owsiane śniadanie dieta",
         type: "Dieta",
         stars: 3,
-        promocja: true
+        promocja: true,
+        iloscWKoszyku:0
     },
     {
         name: "T-shirt",
@@ -238,7 +261,8 @@ let produkty =
         tags: "t-shirt ubranie casual",
         type: "ubranie",
         stars: 3,
-        promocja: false
+        promocja: false,
+        iloscWKoszyku:0
     } ,
     {
         name: "Pilatesowa mata",
@@ -248,19 +272,9 @@ let produkty =
         tags: "mat pilates trening fitness",
         type: "plan",
         stars: 4,
-        promocja: true
-    },
-    {
-        name:"Tren",
-        cena: 159.99,
-        image: "../images/tren.jpg",
-        link: "./sklep/pilatesowy_mat.html",
-        tags: "tren sterydy trening fitness",
-        type: "jedzenie",
-        stars: 5,
-        promocja: false
+        promocja: true,
+        iloscWKoszyku:0
     }
-
 ]
 
 //kategorie
@@ -294,6 +308,8 @@ let rzeczyZakupione = []
 
 let searchBar = document.getElementById("searchBar")
 
+let container = document.getElementById("container")
+
 
 generuj()
 
@@ -325,6 +341,11 @@ szukaj.addEventListener("click",function()
 wyszukaj.addEventListener("click",function()
 {
     generuj();
+})
+
+basket.addEventListener("click",function()
+{
+    pokazKoszyk()
 })
 
 sort.addEventListener("input",function()
@@ -375,7 +396,8 @@ zmienWyswietlanie.addEventListener("click",function()
     generuj()
 })
 
-function generuj() {
+function generuj() 
+{
     przedmioty.innerHTML = "";
     zmienWyswietlanie.innerHTML = ""
 
@@ -468,22 +490,8 @@ function generuj() {
                                     let cenaProduktu = document.createElement("div")
                                     cenaProduktu.classList.add("cenaProduktu")
 
-                                    if(produkty[i].promocja == true)
-                                    {
-                                        cenaProduktu.innerText = (produkty[i].cena * 0.8).toFixed(2) + "zł"
-                                        cenaProduktu.classList.add("promocja")
-
-                                        let oznaczeniePromocji = document.createElement("div")
-                                        oznaczeniePromocji.classList.add("oznaczeniePromocji")
-                                        oznaczeniePromocji.innerHTML = '<img src="../images/promocja.png"></img>'
-
-                                        okno.appendChild(oznaczeniePromocji)
-                                    }
-                                    else
-                                    {
-                                        cenaProduktu.innerText = produkty[i].cena + "zł"
-                                    }
-
+                                    cenaProduktu.innerText = produkty[i].cena + "zł"
+                                
                                     okno.appendChild(cenaProduktu)
 
 
@@ -713,9 +721,9 @@ function generuj() {
     }
 }
 
-function changeBasket() {
+function changeBasket()
+ {
 
-    console.log("JD")
 
     let usun = document.querySelector(".numerZakupow"); 
 
@@ -740,4 +748,196 @@ function changeBasket() {
     basket.appendChild(numerZakupow);
 }
 
+function pokazKoszyk()
+{
+    let tlo = document.createElement("div")
+    tlo.classList.add("tlo")
 
+        let schowaj = document.createElement("div")
+        schowaj.classList.add("schowaj")
+
+            let zamknij = document.createElement("img")        
+            zamknij.src = "../images/wrongAnswer.png"
+
+        let opis = document.createElement("p")
+        opis.innerText = "Przedmioty zakupione: "
+
+        let przedmioty = document.createElement("div")
+        przedmioty.classList.add("przedmiotyKupione")
+
+
+
+    document.body.appendChild(tlo)
+
+        tlo.appendChild(schowaj)
+            
+            schowaj.appendChild(zamknij)
+
+        tlo.appendChild(opis)
+
+        tlo.appendChild(przedmioty)
+
+
+
+    schowaj.addEventListener("click",function()
+    {
+        document.body.removeChild(tlo)
+    })
+
+    let numerOkna = 1;
+
+    for (let i = 0; i < produkty.length; i++) 
+    {
+        if (rzeczyZakupione.includes(produkty[i].name)) 
+        {
+            produkty[i].iloscWKoszyku++
+
+        let zakup = document.createElement("zakup")
+        zakup.classList.add("zakup")
+
+            let wartosc = document.createElement("div")
+            wartosc.classList.add("wartosc")
+
+            let zawartosc = document.createElement("div")
+            zawartosc.classList.add("zawartosc")
+
+
+        przedmioty.appendChild(zakup)
+        zakup.appendChild(wartosc)
+        zakup.appendChild(zawartosc)
+
+        let ilosc = _.countBy(rzeczyZakupione)
+        console.log(ilosc)
+
+        let dodaj = document.createElement("div")
+        dodaj.classList.add("dodaj")
+
+            let plus = document.createElement("img")
+            plus.src = "../images/plus.png"
+
+        let odejmij = document.createElement("div")
+        odejmij.classList.add("odejmij")
+
+            let minus = document.createElement("img")
+            minus.src = "../images/minus.png"
+
+        let numer = document.createElement("div")
+        numer.classList.add("numer")
+
+        numer.innerText =  produkty[i].iloscWKoszyku++
+
+        wartosc.appendChild(dodaj)
+            dodaj.appendChild(plus)
+
+        wartosc.appendChild(numer)
+
+        wartosc.appendChild(odejmij)
+            odejmij.appendChild(minus)
+
+        let okno = document.createElement("div");
+        okno.classList.add("okno");
+        okno.classList.add("okno" + numerOkna);
+        okno.innerHTML = '<div class="zdj' + numerOkna +' zdj"><img src="' + produkty[i].image +'"></div><div class="opis' + numerOkna + ' opis"><p>' + produkty[i].name + '</p></div>'
+
+        let ocenaProduktu = document.createElement("div");
+        ocenaProduktu.classList.add("ocenaProduktu");
+
+        
+        let iloscOceny = produkty[i].stars;
+        
+        while (iloscOceny > 0) 
+        {
+            if (iloscOceny >= 1) 
+            {         
+                let gwiazdka = document.createElement("img");
+                gwiazdka.src = '../images/star.png';
+
+                iloscOceny -= 1;
+                ocenaProduktu.appendChild(gwiazdka);
+
+            } else if (iloscOceny >= 0.5) 
+            {                     
+                let polGwiazdki = document.createElement("img");
+                polGwiazdki.src = '../images/halfStar.png';
+
+                iloscOceny -= 0.5;
+                ocenaProduktu.appendChild(polGwiazdki);
+            
+            }
+        }
+        
+        okno.appendChild(ocenaProduktu);
+
+                                    
+        let addToCart = document.createElement("div")
+        addToCart.classList.add("addToCart")
+        
+        let shoppingBasket = document.createElement("i")
+        shoppingBasket.classList.add("icon-shopping-basket")
+
+
+        let cenaProduktu = document.createElement("div")
+        cenaProduktu.classList.add("cenaProduktu")
+
+        if(produkty[i].promocja == true)
+        {
+            cenaProduktu.innerText = (produkty[i].cena * 0.8).toFixed(2) + "zł"
+            cenaProduktu.classList.add("promocja")
+
+            let oznaczeniePromocji = document.createElement("div")
+            oznaczeniePromocji.classList.add("oznaczeniePromocji")
+            oznaczeniePromocji.innerHTML = '<img src="../images/promocja.png"></img>'
+
+            okno.appendChild(oznaczeniePromocji)
+        }
+        else
+        {
+            cenaProduktu.innerText = produkty[i].cena + "zł"
+        }
+
+        okno.appendChild(cenaProduktu)
+
+
+        zawartosc.appendChild(okno)
+
+        }
+    }
+
+    let odejmij = document.querySelector(".odejmij")
+    let dodaj = document.querySelector(".dodaj")
+
+    odejmij.addEventListener("click",function()
+    {
+        zmienNumer(-1)
+    })
+    dodaj.addEventListener("click",function()
+    {
+        zmienNumer(1)
+    })
+
+    function zmienNumer(liczba)
+    {
+        numer = document.querySelector(".numer")
+        numerek = parseFloat(numer.innerText)
+
+        if(liczba == -1 && numerek == 1)
+        {
+            usunOkno()
+        }
+        else
+        {
+            numerek += liczba
+        }
+
+        numer.innerText = numerek
+
+        let zakupy = document.querySelector(".zakupy")
+    }
+
+    function usunOkno()
+    {
+        let przedmiotyZakupione = document.querySelector(".przedmiotyZakupione")
+        let zakup = document.querySelector(".zakup")
+        przedmiotyZakupione.removeChild(zakup)
+    }
+}

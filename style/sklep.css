@@ -1,3 +1,7 @@
+body
+{
+    width:100vw;
+}
 .container
 {
     height:fit-content;
@@ -393,4 +397,231 @@
 {
     height:80px;
     width:160px;
+}
+
+.filtrowanie
+{
+    display: none;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .container
+    {
+        margin-top:-20px;
+        width:85vw;
+        border-radius: 10px;
+    }
+    .medium
+    {
+        width:85vw;
+        height:130px;
+        position: relative;
+    }
+    .widok
+    {
+        display: none;
+    }
+    .basket
+    {
+        top:0;
+        left:0;
+        height:45px;
+        width:45px;
+        padding:4px;
+    }
+    .filtrowanie
+    {
+        display: block;
+        position: absolute;
+        top:0;
+        left:22vw;
+        width:25vw;
+        height:45px;
+        padding:4px;
+        padding:0;
+        text-align: left;
+        padding:4px;
+        border: 2px solid rgb(200,150,150);
+        box-shadow: 2px 2px 4px black;
+        text-align: center;
+    }
+    .filtrowanie > h3
+    {
+        position:relative;
+        padding:0;
+        margin:0;
+        font-weight: 500;
+        font-size:1.6em;
+    }
+    .sort
+    {
+        top:0;
+        right:0;
+        height:53px;
+        width:35%;
+    }
+    .sort > p
+    {
+        position: absolute;
+        top:-20px;
+        left:10px;
+        z-index:2;
+    }
+    .sort > select
+    {
+        position: absolute;
+        top:0;
+        right:0;
+        width:100%;
+        height:100%;
+    }
+    .search
+    {
+        position: static;
+        margin:auto;
+        width:100%;
+        height:fit-content;
+        position: absolute;
+        bottom:20px;
+    }
+    .searchbar
+    {
+        width:90%;
+    }
+    .find
+    {
+        width:30%;
+    }
+    .lower
+    {
+        width:85vw;
+    }
+    .kategorie
+    {
+        display:none;
+    }
+    .okno
+    {
+        width:100%;
+    }
+    .addToCart
+    {
+        height:20%;
+    }
+    .tlo
+    {
+        height:90vh;
+        width:100vw;
+        background-color: rgba(240, 248, 255, 0.9);
+        z-index: 5;
+        position: sticky;
+        left:0;
+        bottom:0;
+    }
+    .schowaj
+    {
+        position: sticky;
+        top:15vh;
+        left:85%;
+        height:5%;
+        width:10%;
+    }
+    .schowaj > img
+    {
+        height:100%;
+        width:100%;
+    }
+    .tlo > p
+    {
+        position: absolute;
+        left:5%;
+        top:5vh;
+        padding: 0;
+        margin:0;
+        font-size: 1.2em;
+        font-family: serif;
+    }
+    .przedmiotyKupione
+    {
+        height:88%;
+        width:90%;
+        position: absolute;
+        left:5%;
+        bottom:0;
+    }
+    .zakup
+    {
+        display: flex;
+        height:20%;
+        background-color: aliceblue;
+        overflow: hidden;
+        border: 2px solid rgb(197, 197, 150);
+        margin-bottom:1%;
+    }
+    .wartosc
+    {
+        width:10%;
+        display: grid;
+    }
+    .dodaj, .numer, .odejmij
+    {
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dodaj > img, .odejmij > img
+    {
+        width:inherit;
+    }
+    .zawartosc
+    {
+        width:90%;
+    }
+    .zawartosc > .okno
+    {
+        width:100%;
+        padding: 0;
+        margin:0;
+        height:100%;
+        margin-bottom:1%;
+        border:none;
+        border-left:2px dashed rgb(165, 165, 165);
+    }
+    .przedmiotyKupione .zdj
+    {
+        width:50%;
+        text-align: right;
+    }
+    .przedmiotyKupione  .okno .zdj
+    {
+        position: absolute;
+        right:2%;
+        height:100%;
+        max-width:100%;
+    }
+    .przedmiotyKupione  .okno  .zdj  img
+    {
+        height:100%;
+    }
+    .przedmiotyKupione  .okno  .oznaczeniePromocji  img
+    {
+        height:70%;
+    }
+    .przedmiotyKupione .opis
+    {
+        height:50%;
+        width:60%;
+        position:relative;
+        bottom:15%;
+    }
+    .przedmiotyKupione .opis > p
+    {
+        padding:4px 4px;
+    }
+    .okno:hover
+    {
+        background-color: aliceblue;
+    }
 }
