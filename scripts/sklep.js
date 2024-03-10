@@ -476,12 +476,10 @@ function generuj()
                                     shoppingBasket.classList.add("icon-shopping-basket")
 
                                     addToCart.addEventListener("click",function()
-                                    {
+                                    {                      
                                         changeBasket()
 
                                         rzeczyZakupione.push(produkty[i].name)
-
-                                        produkty[i].iloscWKoszyku++
                                     })
                                     
 
@@ -555,9 +553,11 @@ function generuj()
         
                                     addToCart.addEventListener("click",function()
                                     {
-                                        changeBasket()
-        
                                         rzeczyZakupione.push(produkty[i].name)
+
+                                        produkty[i].iloscWKoszyku++
+
+                                        changeBasket()
                                     })
                                     
                                     addToCart.appendChild(shoppingBasket)
@@ -735,209 +735,153 @@ function changeBasket()
 
     if(rzeczyZakupione.length < 9)
     {
-        numerZakupow.innerText = rzeczyZakupione.length + 1;
+        numerZakupow.innerText = rzeczyZakupione.length;
     }
     else
     {
         numerZakupow.innerText = "..."
     }
 
-
     numerZakupow.classList.add("numerZakupow");
 
-    basket.appendChild(numerZakupow);
+    if(rzeczyZakupione.length !== 0)
+    {
+        basket.appendChild(numerZakupow);
+    }
 }
 
 function pokazKoszyk()
 {
+    let stare = document.querySelector(".tlo")
+    if(stare)
+    {
+        document.body.removeChild(stare)
+    }
+
+
     let tlo = document.createElement("div")
-    tlo.classList.add("tlo")
+            tlo.classList.add("tlo")
 
-        let schowaj = document.createElement("div")
-        schowaj.classList.add("schowaj")
+            let schowaj = document.createElement("div")
+            schowaj.classList.add("schowaj")
 
-            let zamknij = document.createElement("img")        
-            zamknij.src = "../images/wrongAnswer.png"
+                let zamknij = document.createElement("img")        
+                zamknij.src = "../images/wrongAnswer.png"
 
-        let opis = document.createElement("p")
-        opis.innerText = "Przedmioty zakupione: "
+            let opis = document.createElement("p")
+            opis.innerText = "Przedmioty zakupione: "
 
-        let przedmioty = document.createElement("div")
-        przedmioty.classList.add("przedmiotyKupione")
-
+            let przedmioty = document.createElement("div")
+            przedmioty.classList.add("przedmiotyKupione")
 
 
     document.body.appendChild(tlo)
 
-        tlo.appendChild(schowaj)
-            
-            schowaj.appendChild(zamknij)
+    tlo.appendChild(schowaj)
+        
+        schowaj.appendChild(zamknij)
 
-        tlo.appendChild(opis)
+    tlo.appendChild(opis)
 
-        tlo.appendChild(przedmioty)
-
-
+    tlo.appendChild(przedmioty)
 
     schowaj.addEventListener("click",function()
     {
         document.body.removeChild(tlo)
     })
 
-    let numerOkna = 1;
 
-    for (let i = 0; i < produkty.length; i++) 
+    for(let i = 0; i < produkty.length; i++)
     {
-        if (produkty[i].iloscWKoszyku > 0) 
+        if(produkty[i].iloscWKoszyku > 0)
         {
-            produkty[i].iloscWKoszyku
 
-        let zakup = document.createElement("zakup")
-        zakup.classList.add("zakup")
+            let zakup = document.createElement("zakup")
+            zakup.classList.add("zakup")
 
-            let wartosc = document.createElement("div")
-            wartosc.classList.add("wartosc")
+                let wartosc = document.createElement("div")
+                wartosc.classList.add("wartosc")
 
-            let zawartosc = document.createElement("div")
-            zawartosc.classList.add("zawartosc")
+                let zawartosc = document.createElement("div")
+                zawartosc.classList.add("zawartosc")
 
+                przedmioty.appendChild(zakup)
+                zakup.appendChild(wartosc)
+                zakup.appendChild(zawartosc)
 
-        przedmioty.appendChild(zakup)
-        zakup.appendChild(wartosc)
-        zakup.appendChild(zawartosc)
+                let ilosc = _.countBy(rzeczyZakupione)
 
-        let ilosc = _.countBy(rzeczyZakupione)
-        console.log(ilosc)
-
-        let dodaj = document.createElement("div")
-        dodaj.classList.add("dodaj")
-
-            let plus = document.createElement("img")
-            plus.src = "../images/plus.png"
-
-        let odejmij = document.createElement("div")
-        odejmij.classList.add("odejmij")
-
-            let minus = document.createElement("img")
-            minus.src = "../images/minus.png"
-
-        let numer = document.createElement("div")
-        numer.classList.add("numer")
-
-        numer.innerText =  produkty[i].iloscWKoszyku
-
-        wartosc.appendChild(dodaj)
-            dodaj.appendChild(plus)
-
-        wartosc.appendChild(numer)
-
-        wartosc.appendChild(odejmij)
-            odejmij.appendChild(minus)
-
-        let okno = document.createElement("div");
-        okno.classList.add("okno");
-        okno.classList.add("okno" + numerOkna);
-        okno.innerHTML = '<div class="zdj' + numerOkna +' zdj"><img src="' + produkty[i].image +'"></div><div class="opis' + numerOkna + ' opis"><p>' + produkty[i].name + '</p></div>'
-
-        let ocenaProduktu = document.createElement("div");
-        ocenaProduktu.classList.add("ocenaProduktu");
-
+                let dodaj = document.createElement("div")
+                dodaj.classList.add("dodaj")
         
-        let iloscOceny = produkty[i].stars;
+                    let plus = document.createElement("img")
+                    plus.src = "../images/plus.png"
         
-        while (iloscOceny > 0) 
-        {
-            if (iloscOceny >= 1) 
-            {         
-                let gwiazdka = document.createElement("img");
-                gwiazdka.src = '../images/star.png';
+                let odejmij = document.createElement("div")
+                odejmij.classList.add("odejmij")
+        
+                    let minus = document.createElement("img")
+                    minus.src = "../images/minus.png"
+        
+                let numer = document.createElement("div")
+                numer.classList.add("numer")
+        
+                numer.innerText =  produkty[i].iloscWKoszyku
+        
+                wartosc.appendChild(dodaj)
+                dodaj.appendChild(plus)
 
-                iloscOceny -= 1;
-                ocenaProduktu.appendChild(gwiazdka);
+                wartosc.appendChild(numer)
 
-            } else if (iloscOceny >= 0.5) 
-            {                     
-                let polGwiazdki = document.createElement("img");
-                polGwiazdki.src = '../images/halfStar.png';
+                wartosc.appendChild(odejmij)
+                    odejmij.appendChild(minus)
+        
+                let okno = document.createElement("div");
+                okno.classList.add("okno");
+                okno.innerHTML = '<div class="zdj"><img src="' + produkty[i].image +'"></div><div class="opis"><p>' + produkty[i].name + '</p></div>'
+        
+                let ocenaProduktu = document.createElement("div");
+                ocenaProduktu.classList.add("ocenaProduktu");
 
-                iloscOceny -= 0.5;
-                ocenaProduktu.appendChild(polGwiazdki);
+                let cenaProduktu = document.createElement("div")
+                cenaProduktu.classList.add("cenaProduktu")
+        
+                cenaProduktu.innerText = produkty[i].cena + "zł"
+    
+                okno.appendChild(cenaProduktu)
+                zawartosc.appendChild(okno)
+
+
+                odejmij.addEventListener("click",function()
+                {
+                    produkty[i].iloscWKoszyku -= 1
+                    pokazKoszyk()
+
+                    // rzeczyZakupione.remove(produkty[i].name)
+                    function usunTablice(tablica, nazwa)
+                    {
+                        const index = tablica.indexOf(nazwa);
+                        if (index !== -1) {
+                            tablica.splice(index, 1);
+                        }
+                        return tablica;
+                    }
+
+                    usunTablice(rzeczyZakupione, produkty[i].name)
+
+                    changeBasket()
+                })
+
+                dodaj.addEventListener("click",function()
+                {
+                    produkty[i].iloscWKoszyku += 1
+                    pokazKoszyk()
+
+                    rzeczyZakupione.push(produkty[i].name)
+
+                    changeBasket()
+                })
             
-            }
         }
-        
-        okno.appendChild(ocenaProduktu);
-
-                                    
-        let addToCart = document.createElement("div")
-        addToCart.classList.add("addToCart")
-        
-        let shoppingBasket = document.createElement("i")
-        shoppingBasket.classList.add("icon-shopping-basket")
-
-
-        let cenaProduktu = document.createElement("div")
-        cenaProduktu.classList.add("cenaProduktu")
-
-        if(produkty[i].promocja == true)
-        {
-            cenaProduktu.innerText = (produkty[i].cena * 0.8).toFixed(2) + "zł"
-            cenaProduktu.classList.add("promocja")
-
-            let oznaczeniePromocji = document.createElement("div")
-            oznaczeniePromocji.classList.add("oznaczeniePromocji")
-            oznaczeniePromocji.innerHTML = '<img src="../images/promocja.png"></img>'
-
-            okno.appendChild(oznaczeniePromocji)
-        }
-        else
-        {
-            cenaProduktu.innerText = produkty[i].cena + "zł"
-        }
-
-        okno.appendChild(cenaProduktu)
-
-
-        zawartosc.appendChild(okno)
-
-        }
-    }
-
-    let odejmij = document.querySelector(".odejmij")
-    let dodaj = document.querySelector(".dodaj")
-
-    odejmij.addEventListener("click",function()
-    {
-        zmienNumer(-1)
-    })
-    dodaj.addEventListener("click",function()
-    {
-        zmienNumer(1)
-    })
-
-    function zmienNumer(liczba)
-    {
-        numer = document.querySelector(".numer")
-        numerek = parseFloat(numer.innerText)
-
-        if(liczba == -1 && numerek == 1)
-        {
-            usunOkno()
-        }
-        else
-        {
-            numerek += liczba
-        }
-
-        numer.innerText = numerek
-
-        let zakupy = document.querySelector(".zakupy")
-    }
-
-    function usunOkno()
-    {
-        let przedmiotyZakupione = document.querySelector(".przedmiotyZakupione")
-        let zakup = document.querySelector(".zakup")
-        przedmiotyZakupione.removeChild(zakup)
     }
 }
