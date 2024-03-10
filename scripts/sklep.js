@@ -480,6 +480,8 @@ function generuj()
                                         changeBasket()
 
                                         rzeczyZakupione.push(produkty[i].name)
+
+                                        produkty[i].iloscWKoszyku++
                                     })
                                     
 
@@ -723,8 +725,6 @@ function generuj()
 
 function changeBasket()
  {
-
-
     let usun = document.querySelector(".numerZakupow"); 
 
     if (usun) {
@@ -788,9 +788,9 @@ function pokazKoszyk()
 
     for (let i = 0; i < produkty.length; i++) 
     {
-        if (rzeczyZakupione.includes(produkty[i].name)) 
+        if (produkty[i].iloscWKoszyku > 0) 
         {
-            produkty[i].iloscWKoszyku++
+            produkty[i].iloscWKoszyku
 
         let zakup = document.createElement("zakup")
         zakup.classList.add("zakup")
@@ -824,7 +824,7 @@ function pokazKoszyk()
         let numer = document.createElement("div")
         numer.classList.add("numer")
 
-        numer.innerText =  produkty[i].iloscWKoszyku++
+        numer.innerText =  produkty[i].iloscWKoszyku
 
         wartosc.appendChild(dodaj)
             dodaj.appendChild(plus)
