@@ -477,9 +477,13 @@ function generuj()
 
                                     addToCart.addEventListener("click",function()
                                     {                      
-                                        changeBasket()
-
                                         rzeczyZakupione.push(produkty[i].name)
+
+                                        produkty[i].iloscWKoszyku++
+                                        
+                                        changeBasket()
+        
+                                        uAddedToCart()
                                     })
                                     
 
@@ -556,8 +560,10 @@ function generuj()
                                         rzeczyZakupione.push(produkty[i].name)
 
                                         produkty[i].iloscWKoszyku++
-
+                                        
                                         changeBasket()
+        
+                                        uAddedToCart()
                                     })
                                     
                                     addToCart.appendChild(shoppingBasket)
@@ -566,21 +572,8 @@ function generuj()
                                     let cenaProduktu = document.createElement("div")
                                     cenaProduktu.classList.add("cenaProduktu")
 
-                                    if(produkty[i].promocja == true)
-                                    {
-                                        cenaProduktu.innerText = (produkty[i].cena * 0.8).toFixed(2) + "zł"
-                                        cenaProduktu.classList.add("promocja")
-
-                                        let oznaczeniePromocji = document.createElement("div")
-                                        oznaczeniePromocji.classList.add("oznaczeniePromocji")
-                                        oznaczeniePromocji.innerHTML = '<img src="../images/promocja.png"></img>'
-
-                                        okno.appendChild(oznaczeniePromocji)
-                                    }
-                                    else
-                                    {
-                                        cenaProduktu.innerText = produkty[i].cena + "zł"
-                                    }
+                                    cenaProduktu.innerText = produkty[i].cena + "zł"
+                                    
 
                                     okno.appendChild(cenaProduktu)
 
@@ -673,9 +666,13 @@ function generuj()
 
                             addToCart.addEventListener("click",function()
                             {
+                                rzeczyZakupione.push(produkty[i].name)
+
+                                produkty[i].iloscWKoszyku++
+                                
                                 changeBasket()
 
-                                rzeczyZakupione.push(produkty[i].name)
+                                uAddedToCart()
                             })
                             
 
@@ -722,6 +719,66 @@ function generuj()
         }
     }
 }
+
+function uAddedToCart() 
+{
+    let usun = document.querySelector(".popUp")
+    if(usun)
+    {
+        document.body.removeChild(usun)
+    }
+
+    let popUp = document.createElement("div");
+    popUp.innerHTML = "Dodałeś do koszyka";
+    popUp.classList.add("popUp")
+
+    let wybor = document.createElement("div");
+    wybor.classList.add("wybor");
+
+    let kontynuuje = document.createElement("div");
+    kontynuuje.classList.add("kontynuuje");
+    kontynuuje.innerText = "Kontynuuj";
+
+    let ide = document.createElement("div")
+    ide.classList.add("ide")
+    ide.innerText = "Do koszyka";
+
+    document.body.appendChild(popUp);
+    popUp.appendChild(wybor);
+    wybor.appendChild(kontynuuje);
+    wybor.appendChild(ide);
+
+
+    setInterval(function()
+    {
+        let usun = document.querySelector(".popUp")
+        if(usun)
+        {
+            document.body.removeChild(usun)
+        }
+    }, 6000)
+
+    kontynuuje.addEventListener("click", function()
+    {
+        let usun = document.querySelector(".popUp")
+        if(usun)
+        {
+            document.body.removeChild(usun)
+        }
+    })
+
+    ide.addEventListener("click", function()
+    {
+        pokazKoszyk()
+
+        let usun = document.querySelector(".popUp")
+        if(usun)
+        {
+            document.body.removeChild(usun)
+        }
+    })
+}
+
 
 function changeBasket()
  {
@@ -857,7 +914,6 @@ function pokazKoszyk()
                     produkty[i].iloscWKoszyku -= 1
                     pokazKoszyk()
 
-                    // rzeczyZakupione.remove(produkty[i].name)
                     function usunTablice(tablica, nazwa)
                     {
                         const index = tablica.indexOf(nazwa);
