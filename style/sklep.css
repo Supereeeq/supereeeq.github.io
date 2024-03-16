@@ -418,24 +418,28 @@ body
         height:130px;
         position: relative;
     }
+    .ikony
+    {
+        display:flex;
+        width:100%;
+        height:50%;
+        justify-content: space-between;
+    }
     .widok
     {
         display: none;
     }
     .basket
     {
-        top:0;
-        left:0;
         height:45px;
         width:45px;
         padding:4px;
+        position: static;
     }
     .filtrowanie
     {
+        position: static;
         display: block;
-        position: absolute;
-        top:0;
-        left:22vw;
         width:25vw;
         height:45px;
         padding:4px;
@@ -456,10 +460,12 @@ body
     }
     .sort
     {
-        top:0;
-        right:0;
+        position: relative;
         height:53px;
         width:35%;
+        top:0;
+        left:0;
+        padding:4px;
     }
     .sort > p
     {
@@ -470,7 +476,6 @@ body
     }
     .sort > select
     {
-        position: absolute;
         top:0;
         right:0;
         width:100%;
@@ -513,7 +518,7 @@ body
     {
         height:90vh;
         width:100vw;
-        background-color: rgba(240, 248, 255, 0.9);
+        background-color: rgb(240, 248, 255);
         z-index: 5;
         position: sticky;
         left:0;
@@ -549,6 +554,7 @@ body
         position: absolute;
         left:5%;
         bottom:0;
+        overflow: scroll;
     }
     .zakup
     {
@@ -558,6 +564,14 @@ body
         overflow: hidden;
         border: 2px solid rgb(197, 197, 150);
         margin-bottom:1%;
+    }
+    .przedmiotyKupione .cenaProduktu
+    {
+        top:-15%;
+    }
+    .przedmiotyKupione .opis
+    {
+        top:-10%;
     }
     .wartosc
     {
@@ -630,33 +644,38 @@ body
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(119, 119, 119, 0.9);
+        background-color: rgb(201, 210, 218);
         padding: 8px;
         z-index: 4;
-        height:15%;
-        width:80%;
+        height:10%;
+        width:70%;
         display: grid;
         text-align: center;
+        font-size: 0.9em;
     }
     .wybor
     {
         display:flex;
         justify-content: space-between;
         width:100%;
-        height:90%;
+        height:100%;
     }
     .kontynuuje
     {
-        width:40%;
+        width:45%;
         height:80%;
         padding:0.2em;
         border:2px dashed rgb(180,180,180);
     }
     .ide
     {
-        width:40%;
+        width:45%;
         height:80%;
         padding:0.2em;
         border:2px dashed rgb(180,180,180);
+    }
+    .dużo 
+    {
+        font-size:0.75em;
     }
 }

@@ -476,7 +476,7 @@ function generuj()
                                     shoppingBasket.classList.add("icon-shopping-basket")
 
                                     addToCart.addEventListener("click",function()
-                                    {                      
+                                    { 
                                         rzeczyZakupione.push(produkty[i].name)
 
                                         produkty[i].iloscWKoszyku++
@@ -748,15 +748,17 @@ function uAddedToCart()
     wybor.appendChild(kontynuuje);
     wybor.appendChild(ide);
 
+    container.addEventListener('click', function(event) {
+        let klikniete = event.target;
 
-    setInterval(function()
-    {
-        let usun = document.querySelector(".popUp")
-        if(usun)
-        {
-            document.body.removeChild(usun)
+        if (!klikniete.closest('.addToCart')) {
+            let usun = document.querySelector(".popUp")
+            if(usun)
+            {
+                document.body.removeChild(usun)
+            }
         }
-    }, 6000)
+    })
 
     kontynuuje.addEventListener("click", function()
     {
@@ -777,6 +779,8 @@ function uAddedToCart()
             document.body.removeChild(usun)
         }
     })
+
+    
 }
 
 
@@ -866,8 +870,6 @@ function pokazKoszyk()
                 zakup.appendChild(wartosc)
                 zakup.appendChild(zawartosc)
 
-                let ilosc = _.countBy(rzeczyZakupione)
-
                 let dodaj = document.createElement("div")
                 dodaj.classList.add("dodaj")
         
@@ -884,6 +886,10 @@ function pokazKoszyk()
                 numer.classList.add("numer")
         
                 numer.innerText =  produkty[i].iloscWKoszyku
+                if(produkty[i].iloscWKoszyku > 99)
+                {
+                    numer.classList.add("dużo")
+                }
         
                 wartosc.appendChild(dodaj)
                 dodaj.appendChild(plus)
@@ -940,4 +946,5 @@ function pokazKoszyk()
             
         }
     }
+
 }
