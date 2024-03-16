@@ -158,7 +158,7 @@ body
     height:80px;
     background-color: aliceblue;
     border-bottom:4px dashed rgb(200,180,180);
-    padding-top: 16px;
+    padding: 16px;
     text-align: center;
 }
 .lower label:hover, 
@@ -404,6 +404,272 @@ body
     display: none;
 }
 
+@media screen and (min-width: 769px) 
+{
+    .tlo > p
+    {
+        padding: 8px;
+        width: fit-content;
+        font-size:1.2em;
+    }
+    .tlo
+    {
+        position: fixed;
+        height:80%;
+        width:60%;
+        background-color:rgb(240, 248, 255);
+        z-index: 5;
+        top:100px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .tlo > p
+    {
+        left:8px;
+        top:8px;
+    }
+    .schowaj
+    {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+    .zakup
+    {
+        display: flex;
+        height:150px;
+        width:80%;
+        background-color: aliceblue;
+        overflow: hidden;
+        border: 2px solid rgb(197, 197, 150);
+        margin-top:10px;
+        margin:5px auto;
+    }
+    .przedmiotyKupione .cenaProduktu
+    {
+        top:-15%;
+    }
+    .przedmiotyKupione .opis
+    {
+        top:-10%;
+    }
+    .wartosc
+    {
+        width:10%;
+        height:100px;
+        display: grid;
+    }
+    .dodaj, .odejmij
+    {
+        width:100%;
+        height:50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .numer
+    {
+        height:50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dodaj > img, .odejmij > img
+    {
+        height:inherit;
+    }
+    .zawartosc
+    {
+        width:90%;
+    }
+    .zawartosc > .okno
+    {
+        width:100%;
+        padding: 0;
+        margin:0;
+        height:100%;
+        margin-bottom:1%;
+        border:none;
+        border-left:2px dashed rgb(165, 165, 165);
+    }
+    .przedmiotyKupione .zdj
+    {
+        width:50%;
+        text-align: right;
+    }
+    .przedmiotyKupione  .okno .zdj
+    {
+        position: absolute;
+        right:2%;
+        height:100%;
+        max-width:100%;
+    }
+    .przedmiotyKupione  .okno  .zdj  img
+    {
+        height:100%;
+    }
+    .przedmiotyKupione  .okno  .oznaczeniePromocji  img
+    {
+        height:70%;
+    }
+    .przedmiotyKupione .opis
+    {
+        height:50%;
+        width:60%;
+        position:relative;
+        bottom:15%;
+    }
+    .przedmiotyKupione .opis > p
+    {
+        padding:4px 4px;
+    }
+    .przedmiotyKupione
+    {
+        height:70%;
+        width:90%;
+        position: absolute;
+        left:5%;
+        top:12%;
+        overflow-y: scroll;
+    }
+    .okno:hover
+    {
+        background-color: aliceblue;
+    }
+    .popUp
+    {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(201, 210, 218);
+        padding: 8px;
+        z-index: 4;
+        height:10%;
+        width:30%;
+        display: grid;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    .wybor
+    {
+        display:flex;
+        justify-content: space-between;
+        width:100%;
+        height:100%;
+    }
+    .kontynuuje
+    {
+        width:45%;
+        height:80%;
+        padding:0.2em;
+        border:2px dashed rgb(180,180,180);
+    }
+    .ide
+    {
+        width:45%;
+        height:80%;
+        padding:0.2em;
+        border:2px dashed rgb(180,180,180);
+    }
+    .dużo 
+    {
+        font-size:0.75em;
+    }
+    .podsumowanie
+    {
+        position: fixed;
+        bottom:0;
+        width:100%;
+        height:15%;
+        display: flex;
+    }
+    .podsumowanie > .cena
+    {
+        font-size:1.1em;
+        margin-left:2%;
+        border-radius: 0.5em;
+        box-shadow: 4px 4px 8px rgb(134, 134, 134);
+        background-color: rgb(240, 248, 255);
+        padding:0.5em;
+        width:fit-content;
+        width:40%;
+        color: #eee;
+        background: linear-gradient(160deg, #b9b8b8, #696868);
+        border: 3px outset #a0a0a0;
+        font-family: verdana;
+        font-size: 28px;
+        font-weight: bolder;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+        padding:0.3em;
+    }
+    .kup 
+    {
+        width:40%;
+        border-radius: 12px;
+        border: 3px outset #888;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: #eee;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+        font-family: verdana;
+        font-size: 28px;
+        font-weight: bolder;
+        text-decoration: none;
+        background: linear-gradient(160deg, #b9b8b8, #696868);
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+        transition: 0.2s;
+        animation: glow 1.5s infinite alternate;
+      }
+      
+      .kup span {
+        position: absolute;
+        display: block;
+      }
+      
+      .kup span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #eee);
+        animation: slide 2s infinite;
+      }
+      
+      @keyframes slide {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+      
+      .kup span:nth-child(2),
+      .kup span:nth-child(4) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #eee);
+        animation: slide 2s infinite;
+      }
+      
+      .kup span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #eee);
+        animation: slide 2s infinite;
+      }
+    
+    
+}
 @media screen and (max-width: 768px) 
 {
     .container
@@ -689,11 +955,10 @@ body
         position: fixed;
         bottom:0;
         width:100%;
-        height:10%;
-        background-color: rgb(199, 206, 212);
+        height:15%;
         display: flex;
     }
-    .cena
+    .podsumowanie > .cena
     {
         font-size:1.1em;
         margin-left:2%;
