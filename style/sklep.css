@@ -435,6 +435,12 @@ body
         width:45px;
         padding:4px;
         position: static;
+    } 
+    .numerZakupow
+    {
+        position: absolute;
+        top:30%;
+        left:95%;
     }
     .filtrowanie
     {
@@ -527,8 +533,8 @@ body
     .schowaj
     {
         position: sticky;
-        top:15vh;
-        left:85%;
+        top:15%;
+        left:80%;
         height:5%;
         width:10%;
     }
