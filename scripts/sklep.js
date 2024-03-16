@@ -947,4 +947,42 @@ function pokazKoszyk()
         }
     }
 
+    let podsumowanie = document.createElement("div")
+    podsumowanie.classList.add("podsumowanie")
+
+        let cena = document.createElement("div")
+        cena.classList.add("cena")
+
+        let suma = 0
+
+        for(let i = 0; i < produkty.length; i++)
+        {
+            suma+= produkty[i].iloscWKoszyku * produkty[i].cena
+        }
+        suma = suma.toFixed(2)
+        if(suma > 0)
+        {
+            cena.innerText = "Cena to: \n" + suma + " zł"
+        }
+
+        let kup = document.createElement("div")
+        kup.classList.add("kup")
+        kup.innerText = "Kupuję"
+
+
+
+    tlo.appendChild(podsumowanie)
+        if(suma > 0)
+        {
+            podsumowanie.appendChild(cena)
+            podsumowanie.appendChild(kup)
+                let a = document.createElement("a")
+                kup.appendChild(a)
+                for(let i = 0; i < 4; i++)
+                {
+                    let span = document.createElement("span")
+                    a.appendChild(span)
+                }
+        }
+        
 }
