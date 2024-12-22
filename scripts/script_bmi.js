@@ -14,7 +14,7 @@ button.addEventListener(
             const bmi = Number(waga) / (Number(mWzrost) * Number(mWzrost));
 
             const result = getResult(bmi)
-            showResult(result, wzrost, waga, bmi);
+            showResult(result);
         }
         else
         {
@@ -60,7 +60,7 @@ function getResult (bmi){
 
 }
 
-function showResult (result,) {
+function showResult (result) {
 
     const score = document.getElementById("wynik");
         score.style.textAlign = "center";
