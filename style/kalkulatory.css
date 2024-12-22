@@ -6,10 +6,8 @@ body
 {
     background-color: beige;
     height:fit-content;
-    width:600px;
-    position: absolute;
-    left: calc(50vw - 300px);
-    top: 130px;
+    width:95%;
+    margin-top: 20%;
     text-align:center;
     padding:16px;
 }
@@ -26,4 +24,17 @@ h1
 h1:hover
 {
     color:rgb(50,50,50)
+}
+
+@media screen and (max-width:767px) {
+    p
+    {
+        font-size:0.8em;
+    }
+    h1
+    {
+        font-size:1em;
+        margin-bottom:0.5em;
+    }
+    
 }
